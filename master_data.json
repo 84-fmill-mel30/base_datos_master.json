@@ -1,0 +1,1173 @@
+{
+  "propart_api": {
+    "status": "online",
+    "last_update": "2024",
+    "assets": 5247,
+    "diagnostics": [
+      {
+        "vehiculo": "CHEVROLET S10 1989",
+        "modulo": "SWITCH IGNICION",
+        "pines": {
+          "B+": "Rojo (Entrada)",
+          "IGN": "Rosa (Tablero)",
+          "ACC": "Café (Accesorios)",
+          "START": "Morado (Marcha)",
+          "KEY_REM": "Verde Delgado (Aviso)"
+        },
+        "tip_pro": "Si el rosa no tiene corriente, la pastilla está quemada."
+      },
+      {
+        "vehiculo": "NISSAN D21 2002",
+        "modulo": "FUSILERA / ECU",
+        "pines": {
+          "PIN_1": "Blanco (B+)",
+          "PIN_2": "Rojo/Blanco (IGN)",
+          "PIN_5": "Rojo/Azul (Bomba)",
+          "BOMBA": "Verde/Negro (Fusilera)"
+        },
+        "tip_pro": "Checa el fusible de 10A en cabina para la señal IGN."
+      }
+    ]
+  }
+},
+      {
+        "vehiculo": "FORD F-150 / RANGER (97-03)",
+        "modulo": "GEM / ECU 104 PINES",
+        "pines": {
+          "PIN_24": "Blanco/Azul (Corriente PCM)",
+          "PIN_25": "Negro/Naranja (Tierra)",
+          "PIN_91": "Gris/Rojo (Referencia Sensores 5V)",
+          "PIN_19": "Azul/Rojo (Señal CKP)"
+        },
+        "tip_pro": "Si no hay comunicación, checa el fusible 21 del cofre (20A)."
+      },
+      {
+        "vehiculo": "CHRYSLER VOYAGER / RAM (96-00)",
+        "modulo": "PCM (CONECTORES GRIS/BLANCO)",
+        "pines": {
+          "A11": "Rojo/Blanco (Batería +30)",
+          "A12": "Negro/Blanco (Tierra)",
+          "A20": "Naranja (5V Sensores)",
+          "C3": "Gris/Negro (Señal de Bobina)"
+        },
+        "tip_pro": "Falla común: El relevador ASD se corta si el sensor de cigüeñal está en corto."
+      },
+      {
+        "vehiculo": "DODGE NEON / STRATUS (01-05)",
+        "modulo": "PCM 4 CONECTORES",
+        "pines": {
+          "C1_PIN_1": "Rojo/Verde (B+)",
+          "C1_PIN_11": "Negro/Tan (GND)",
+          "C2_PIN_32": "Café/Amarillo (Inyector 1)"
+        },
+        "tip_pro": "Checa el conector C1 (el verde) si tienes fallas de alimentación total."
+      },
+      {
+        "vehiculo": "TOYOTA HILUX / TACOMA (05-15) 2.7L",
+        "modulo": "ECU 4 CONECTORES (1TR-FE)",
+        "pines": {
+          "BATT": "Negro/Rojo (Corriente Constante)",
+          "+B": "Negro/Amarillo (Ignición vía Relé EFI)",
+          "VC": "Azul (5V Referencia)",
+          "NE+": "Negro (Señal CKP)",
+          "NE-": "Blanco (Tierra CKP)"
+        },
+        "tip_pro": "Si no hay pulso, checa el relé EFI en la caja del cofre, suele falsear."
+      },
+      {
+        "vehiculo": "HONDA CIVIC (01-05) 1.7L",
+        "modulo": "PCM (4 CONECTORES GRISES)",
+        "pines": {
+          "A15": "Amarillo/Negro (Ignición)",
+          "A2": "Negro (Tierra)",
+          "C18": "Verde/Amarillo (Bomba Gasolina)",
+          "B10": "Azul/Blanco (Señal VTEC)"
+        },
+        "tip_pro": "Mucho ojo con el sensor de cigüeñal detrás de la polea; si se llena de aceite de la bomba, se corta la señal."
+      },
+      {
+        "vehiculo": "MAZDA 3 (04-09) 2.0L / 2.3L",
+        "modulo": "PCM (CONECTOR DOBLE)",
+        "pines": {
+          "PIN_1": "Gris/Rojo (B+)",
+          "PIN_7": "Negro (GND)",
+          "PIN_23": "Blanco/Verde (Control Alternador)"
+        },
+        "tip_pro": "Este alternador es controlado por la ECU. Si no carga, checa el cable Blanco/Verde antes de bajar el alternador."
+      },
+      {
+        "vehiculo": "NISSAN NP300 DIESEL (08-15) YD25",
+        "modulo": "ECM 3 CONECTORES (DENSO)",
+        "pines": {
+          "PIN_1": "Rojo/Negro (Alimentación ECM)",
+          "PIN_101": "Amarillo/Verde (Inyector 1 +)",
+          "PIN_102": "Gris (Inyector 1 -)",
+          "PIN_41": "Blanco (Señal de Riel de Combustible - FRP)"
+        },
+        "tip_pro": "Si no arranca y hay código de FRP, checa que el conector del riel no esté derretido, es falla clásica."
+      },
+      {
+        "vehiculo": "MITSUBISHI L200 DIESEL (06-14) 2.5L",
+        "modulo": "ECM 4 CONECTORES (4D56)",
+        "pines": {
+          "C_112": "Azul/Rojo (Control Válvula SCV)",
+          "B_51": "Negro/Blanco (Tierra de Potencia)",
+          "A_1": "Rojo/Azul (Corriente de Ignición)"
+        },
+        "tip_pro": "La válvula SCV se pega y causa ralentí inestable. Si el código es P0089, dale una limpieza a la SCV antes de cambiarla."
+      },
+      {
+        "vehiculo": "ISUZU ELF 400/500 (DIESEL)",
+        "modulo": "ECM CONECTORES AZUL/GRIS (4HK1)",
+        "pines": {
+          "PIN_121": "Verde/Blanco (Señal CKP)",
+          "PIN_122": "Rojo/Amarillo (Señal CMP)",
+          "PIN_20": "Azul (Alimentación Sensores 5V)"
+        },
+        "tip_pro": "Si pierde potencia de la nada, checa el arnés que pasa por arriba de la transmisión, suele rozar con la lámina y ponerse a corto."
+      },
+      {
+        "vehiculo": "TOYOTA HILUX DIESEL (10-20) 2.5L / 3.0L",
+        "modulo": "ECM + DRIVER DE INYECTORES (EDU)",
+        "pines": {
+          "EDU_PIN_1": "Negro/Rojo (Señal de Activación)",
+          "ECM_PIN_20": "Amarillo (Comunicación con EDU)",
+          "BATT": "Blanco/Rojo (Corriente Directa)"
+        },
+        "tip_pro": "Si no hay pulsos, no solo busques en la ECU; estas trocas usan un módulo aparte (EDU) para los inyectores. Checa su tierra."
+      },
+      {
+        "vehiculo": "CHEVROLET SILVERADO / CHEYENNE (2014-2019) 5.3L",
+        "modulo": "ECM E83 (3 CONECTORES)",
+        "pines": {
+          "X1_PIN_1": "Rojo/Blanco (B+ Batería)",
+          "X1_PIN_3": "Negro/Gris (Tierra)",
+          "X2_PIN_50": "Verde/Azul (Señal Sensor Presión de Riel)",
+          "CAN_H": "Azul (Comunicación)",
+          "CAN_L": "Blanco (Comunicación)"
+        },
+        "tip_pro": "Estas camionetas sufren de tierras sucias en el poste G102 (cerca de la batería). Si hay códigos de comunicación 'U', limpia las tierras antes de diagnosticar la computadora."
+      },
+      {
+        "vehiculo": "FORD MUSTANG / F-150 (2015-2020) COYOTE 5.0L",
+        "modulo": "PCM 3 CONECTORES (BOSCH)",
+        "pines": {
+          "PIN_B1": "Amarillo/Rojo (Alimentación VPWR)",
+          "PIN_B10": "Negro/Blanco (Tierra PWR)",
+          "PIN_C45": "Azul/Verde (Señal MAF)",
+          "PIN_A12": "Gris/Naranja (Control de Cuerpo de Aceleración)"
+        },
+        "tip_pro": "Si el carro entra en 'Modo LIMP' (sin fuerza), checa el conector del cuerpo de aceleración; los pines suelen abrirse y falsear."
+      },
+      {
+        "vehiculo": "JEEP GRAND CHEROKEE / WRANGLER (2014-2018) PENTASTAR 3.6L",
+        "modulo": "PCM (CONECTORES NEGRO/ANARANJADO)",
+        "pines": {
+          "C1_PIN_1": "Rojo/Gris (Corriente Constante)",
+          "C1_PIN_2": "Negro/Verde (Tierra)",
+          "C2_PIN_10": "Café/Blanco (Señal Sensor de Árbol CMP 1)",
+          "C2_PIN_33": "Verde/Naranja (Pulso Inyector 3)"
+        },
+        "tip_pro": "Falla muy común de códigos de falla de encendido (Misfire). Checa que el arnés no esté rozando con la base del filtro de aceite."
+      },,
+      {
+        "vehiculo": "MOTOR CUMMINS ISX (CM871) - FREIGHTLINER / KENWORTH",
+        "modulo": "ECM 2 CONECTORES (MOTOR Y CHASIS)",
+        "pines": {
+          "PIN_01": "Rojo (Alimentación Directa B+)",
+          "PIN_20": "Negro (Tierra de Potencia)",
+          "PIN_43": "Amarillo (Comunicación CAN High)",
+          "PIN_44": "Verde (Comunicación CAN Low)",
+          "PIN_11": "Naranja (Señal Sensor Presión Aceite)"
+        },
+        "tip_pro": "Si el motor no arranca y no hay comunicación con el escáner, checa el fusible de 30A en la caja de baterías, suele sulfatarse por el ácido."
+      },
+      {
+        "vehiculo": "FREIGHTLINER CASCADIA (M2) - SISTEMA SAM CAB",
+        "modulo": "MÓDULO DE DISTRIBUCIÓN DE ENERGÍA",
+        "pines": {
+          "B1_A": "Gris/Rojo (Señal de Ignición)",
+          "C2_F": "Blanco (Tierra Principal)",
+          "D3_G": "Amarillo/Negro (Control de Luces Frontales)"
+        },
+        "tip_pro": "Si fallan los limpiaparabrisas o las luces de la nada, el problema suele estar en los conectores de la SAM CAB que se aflojan con la vibración del motor."
+      },
+      {
+        "vehiculo": "INTERNATIONAL 4300 (DT466E / MAXXFORCE)",
+        "modulo": "ECM 3 CONECTORES (PLÁSTICO)",
+        "pines": {
+          "X1_01": "Rojo/Azul (B+)",
+          "X2_15": "Azul/Blanco (Señal Sensor IAT)",
+          "X3_10": "Verde (Control del Inyector 1)"
+        },
+        "tip_pro": "Este motor es muy sensible a la presión de aceite (ICP). Si no arranca, desconecta el sensor ICP; si arranca, el sensor o la válvula IPR están dañados."
+      },
+      {
+        "vehiculo": "HINO 300 / 500 SERIES (DIESEL)",
+        "modulo": "ECM 5 CONECTORES (DENSO)",
+        "pines": {
+          "PIN_A1": "Blanco/Rojo (B+)",
+          "PIN_A5": "Negro (GND)",
+          "PIN_E10": "Amarillo (Señal de Sensor de Posición de Pedal - TPS)"
+        },
+        "tip_pro": "Si el camión se queda en ralentí y no acelera, checa el arnés del pedal. El cable amarillo suele trozarse cerca de la base del pedal."
+      },
+      {
+        "vehiculo": "RAM 2500 / 3500 DIESEL (2010-2018) CUMMINS 6.7L",
+        "modulo": "PCM (CONECTOR 58 PINES)",
+        "pines": {
+          "PIN_1": "Rojo/Blanco (B+ Batería)",
+          "PIN_2": "Negro/Café (Tierra)",
+          "PIN_35": "Azul/Blanco (Señal Sensor Presión Riel)",
+          "PIN_14": "Amarillo/Naranja (Control Solenoide VGT Turbo)"
+        },
+        "tip_pro": "Si el turbo no carga, checa el Pin 14. Estos motores sufren de depósitos de carbón en el turbo variable, pero a veces es solo el cableado tostado por el calor."
+      },
+      {
+        "vehiculo": "FORD SUPER DUTY F-250/F-350 (2011-2019) POWERSTROKE 6.7L",
+        "modulo": "PCM (CONECTORES DE 3 BLOQUES)",
+        "pines": {
+          "C1_PIN_10": "Blanco/Rojo (Alimentación VPWR)",
+          "C2_PIN_55": "Gris/Azul (Señal EGT - Temperatura Escape)",
+          "C3_PIN_4": "Azul/Blanco (Control Inyector Urea/DEF)"
+        },
+        "tip_pro": "Si se bloquea a 80 km/h por sistema de escape, checa los sensores EGT. El sensor 12 o 13 suele fallar y corta el arranque después de ciertos kilómetros."
+      },
+      {
+        "vehiculo": "CHEVROLET AVEO / OPTRA (08-17) 1.6L",
+        "modulo": "ECU SIRIUS D42 (2 CONECTORES)",
+        "pines": {
+          "PIN_29": "Naranja (B+ Constante)",
+          "PIN_30": "Rosa (Ignición)",
+          "PIN_3": "Verde/Blanco (Control Relevador Bomba)",
+          "PIN_1": "Negro/Blanco (Tierra Principal)"
+        },
+        "tip_pro": "Falla clásica: El coche se apaga y no prende. Checa el Pin 30 (Rosa); si no hay voltaje, el relevador principal debajo del cofre está flameado."
+      },
+      {
+        "vehiculo": "NISSAN SENTRA B15 / ALMERA (01-06) 1.8L",
+        "modulo": "ECU 81 PINES",
+        "pines": {
+          "PIN_121": "Rojo (B+)",
+          "PIN_111": "Negro (GND)",
+          "PIN_101": "Azul/Rojo (Pulso Bobina 1)",
+          "PIN_1": "Verde/Blanco (Control Válvula IAC)"
+        },
+        "tip_pro": "¡Peligro! Si la válvula IAC se pone en corto, quema el driver dentro de la computadora. Siempre que cambies la IAC, revisa que la compu no huela a quemado."
+      },
+      {
+        "vehiculo": "MERCEDES BENZ SPRINTER (07-18) 2.1L / 3.0L DIESEL",
+        "modulo": "ECU BOSCH EDC16 / EDC17",
+        "pines": {
+          "PIN_01": "Rojo/Azul (B+)",
+          "PIN_02": "Marrón (Tierra)",
+          "CAN_H": "Amarillo/Negro (Comunicación)",
+          "PIN_15": "Azul/Blanco (Señal Sensor Presión Turbo)"
+        },
+        "tip_pro": "Si pierde potencia y entra en 'Limp Mode', revisa las mangueras del intercooler. Si están bien, checa el Pin 15; el sensor de presión suele fallar por carbonilla."
+      },
+      {
+        "vehiculo": "NISSAN URVAN (08-20) 2.5L QR25DE / YD25",
+        "modulo": "ECU 121 PINES",
+        "pines": {
+          "PIN_111": "Rojo/Negro (Ignición)",
+          "PIN_1": "Negro/Blanco (Tierra)",
+          "PIN_41": "Blanco/Rojo (Señal de Sensor de Fase CMP)",
+          "PIN_102": "Verde (Control de Relevador de Gasolina)"
+        },
+        "tip_pro": "En la Urvan gasolina, si no arranca, checa el relevador que está debajo del asiento del copiloto. Se calienta y se desuelda por dentro."
+      },
+      {
+        "vehiculo": "FORD TRANSIT (13-20) 2.2L DIESEL",
+        "modulo": "PCM (CONECTORES DE 3 BLOQUES)",
+        "pines": {
+          "PIN_A1": "Gris/Naranja (Corriente Directa)",
+          "PIN_B12": "Azul/Rojo (Control de Inyectores)",
+          "PIN_C5": "Amarillo (Señal de Sensor de Cigueñal)"
+        },
+        "tip_pro": "Si el motor vibra mucho o se apaga, checa el arnés que pasa cerca del filtro de aceite; con la vibración del diesel se corta el cable del CKP."
+      },
+      {
+        "vehiculo": "VW JETTA / GOLF TGI-TSI (13-19) 1.4L TURBO",
+        "modulo": "ECU BOSCH MED 17.5.21",
+        "pines": {
+          "PIN_1": "Rojo/Negro (B+)",
+          "PIN_4": "Marrón (GND)",
+          "PIN_60": "Blanco/Amarillo (Control Válvula Wastegate Turbo)",
+          "PIN_105": "Gris/Rojo (Sensor Presión de Riel G247)"
+        },
+        "tip_pro": "Si marca código de sobrepresión de turbo, checa la varilla del actuador eléctrico (Wastegate). A veces solo necesita ajuste o lubricación, no cambies todo el turbo."
+        },
+      {
+        "vehiculo": "HYUNDAI TUCSON / KIA SPORTAGE (16-22) 2.0L / 2.4L GDI",
+        "modulo": "ECU SIM2K-240/241",
+        "pines": {
+          "PIN_1": "Rojo (B+ Batería)",
+          "PIN_2": "Negro (Tierra)",
+          "PIN_78": "Azul/Negro (Inyector 1 High Side)",
+          "PIN_79": "Blanco/Verde (Inyector 1 Low Side)"
+        },
+        "tip_pro": "¡Cuidado! Los inyectores GDI trabajan con hasta 100V. No los pruebes con una lámpara de prueba común o quemarás la salida de la ECU."
+      },
+      {
+        "vehiculo": "FORD LOBO / RAPTOR (17-21) 3.5L ECOBOOST HIGH OUTPUT",
+        "modulo": "PCM (CONECTORES DE ALTA DENSIDAD)",
+        "pines": {
+          "C1_PIN_1": "Amarillo (Alimentación Directa)",
+          "C1_PIN_15": "Negro/Gris (GND)",
+          "C2_PIN_10": "Gris/Naranja (Sensor Presión Riel Combustible)",
+          "CAN_H": "Blanco/Azul (Red de Alta Velocidad)"
+        },
+        "tip_pro": "Si la camioneta tironea en alta, checa la presión del riel de alta. El sensor del pin 10 suele mentir antes de morir por completo."
+      },
+      {
+        "vehiculo": "CHEVROLET SUBURBAN / TAHOE (15-20) 6.2L V8",
+        "modulo": "ECM E80",
+        "pines": {
+          "X1_PIN_2": "Rojo/Blanco (B+)",
+          "X2_PIN_1": "Lila/Blanco (Control de Solenoide de Desactivación de Cilindros - AFM)",
+          "X3_PIN_40": "Azul/Gris (Señal de Sensor de Posición de Cigüeñal)"
+        },
+        "tip_pro": "El sistema AFM (desactivación de cilindros) falla mucho por falta de presión de aceite. Si tienes códigos de misfire, checa el conector del solenoide X2."
+      },
+      {
+        "vehiculo": "TOYOTA SIENNA / HIGHLANDER (11-18) 3.5L V6",
+        "modulo": "ECU 5 CONECTORES",
+        "pines": {
+          "PIN_A21": "Negro/Blanco (Ignición)",
+          "PIN_D1": "Amarillo (Pulso Bobina 1)",
+          "PIN_B10": "Verde (Señal Sensor de Detonación - Knock Sensor)"
+        },
+        "tip_pro": "Si marca código de Knock Sensor, revisa el arnés que pasa por debajo del múltiple de admisión; las ratas suelen anidar ahí y morder los cables."
+},
+      {
+        "vehiculo": "SISTEMA ABS BOSCH 8.0 / 9.0 (GENÉRICO VW/GM/NISSAN)",
+        "modulo": "CONECTOR DE 38 PINES",
+        "pines": {
+          "PIN_1": "Rojo (B+ Potencia Bomba)",
+          "PIN_2": "Negro (Tierra de Potencia)",
+          "PIN_15": "Verde (Sensor Rueda Delantera Derecha +)",
+          "PIN_16": "Café (Sensor Rueda Delantera Derecha -)"
+        },
+        "tip_pro": "Si el escáner no entra al ABS, primero checa el Pin 1 y 2. Sin esa tierra de potencia, el módulo parece muerto aunque los fusibles estén bien."
+      },
+      {
+        "vehiculo": "CHEVROLET BEAT / SPARK (11-21) 1.2L",
+        "modulo": "ECU 2 CONECTORES (DELPHI)",
+        "pines": {
+          "PIN_K20": "Azul/Blanco (Ignición)",
+          "PIN_K1": "Negro (GND)",
+          "PIN_K51": "Verde/Negro (Control Relevador Ventilador Alta)",
+          "PIN_M12": "Azul/Rojo (Señal Sensor Oxígeno 1)"
+        },
+        "tip_pro": "Falla común: Se calienta porque el relevador de baja o alta (Pin K51) no activa. Revisa el conector de la resistencia del ventilador, suele quemarse."
+      },
+      {
+        "vehiculo": "NISSAN VERSA / MARCH (12-23) 1.6L",
+        "modulo": "IPDM (CAJA DE FUSIBLES INTELIGENTE)",
+        "pines": {
+          "PIN_E15": "Rojo (Alimentación a Bobinas)",
+          "PIN_E11": "Blanco (Señal de Marcha / Starter)",
+          "PIN_E20": "Azul (Control de Compresor A/C)"
+        },
+        "tip_pro": "Si el carro no da marcha pero la batería está buena, el relevador interno de la IPDM (Pin E11) puede estar pegado. Dale un golpe leve a la caja y ve si arranca."
+      },
+      {
+        "vehiculo": "SISTEMA AIRBAG TAKATA (GENÉRICO FORD/TOYOTA/NISSAN)",
+        "modulo": "CONECTOR AMARILLO SEGURIDAD",
+        "pines": {
+          "PIN_1": "Amarillo (Detonador Piloto +)",
+          "PIN_2": "Amarillo/Negro (Detonador Piloto -)",
+          "PIN_3": "Naranja (Sensor de Impacto Frontal)"
+        },
+        "tip_pro": "¡Peligro! Nunca midas continuidad con un multímetro en los pines amarillos del detonador; la pequeña pila del multímetro puede activar la bolsa."
+        },
+      {
+        "vehiculo": "TRANSMISIÓN FORD 6R80 (F-150 / MUSTANG 2009-2017)",
+        "modulo": "CONECTOR DE 16 PINES (LADO TRANSMISIÓN)",
+        "pines": {
+          "PIN_1": "Violeta/Verde (Alimentación 12V)",
+          "PIN_13": "Azul/Blanco (Señal Sensor de Velocidad de Salida OSS)",
+          "CAN_H": "Blanco/Azul (Comunicación TCM)",
+          "CAN_L": "Blanco (Comunicación TCM)"
+        },
+        "tip_pro": "Si la transmisión se bloquea en 5ta o marca falla de OSS, revisa el conector principal; el aceite se filtra por los pines y hace corto."
+      },
+      {
+        "vehiculo": "TRANSMISIÓN NISSAN CVT (SENTRA / VERSA / ALTIMA)",
+        "modulo": "CONECTOR VERDE DE 22 PINES",
+        "pines": {
+          "PIN_19": "Azul (Solenoide de Presión de Línea)",
+          "PIN_3": "Verde/Blanco (Sensor de Velocidad de Entrada)",
+          "PIN_2": "Amarillo (Sensor de Velocidad de Salida)"
+        },
+        "tip_pro": "Si el carro no acelera y marca P0746, checa el nivel de aceite primero. Si está bien, el Pin 19 es el que controla la presión; mide su resistencia."
+      },
+      {
+        "vehiculo": "SISTEMA INMOVILIZADOR NISSAN (NATS 5 / 6)",
+        "modulo": "ANTENA EN EL SWICH DE IGNICIÓN",
+        "pines": {
+          "PIN_1": "Rojo (B+ Constante)",
+          "PIN_2": "Negro (Tierra)",
+          "PIN_4": "Naranja (Línea de Datos K-Line)",
+          "PIN_5": "Azul (Ignición)"
+        },
+        "tip_pro": "Si el testigo de seguridad se queda prendido fijo, revisa el Pin 4. Es la comunicación entre la antena y la ECU; si el cable está trozado, no habrá arranque."
+      },
+      {
+        "vehiculo": "TRANSMISIÓN GM 6L80 / 6L90 (SILVERADO / SIERRA)",
+        "modulo": "TEHCM (MÓDULO INTERNO)",
+        "pines": {
+          "PIN_1": "Rojo/Negro (B+)",
+          "PIN_4": "Negro (GND)",
+          "PIN_11": "Blanco (Señal de Interruptor de Presión de Aceite)"
+        },
+        "tip_pro": "Esta transmisión trae la computadora ADENTRO. Si tienes códigos de solenoides, antes de bajarla, checa que el Pin 1 reciba voltaje real bajo carga."
+      },,
+      {
+        "vehiculo": "CUERPO DE ACELERACIÓN ELECTRÓNICO (VW / SEAT / AUDI) 6 PINES",
+        "modulo": "ACTUADOR MARIPOSA (J338)",
+        "pines": {
+          "PIN_1": "Café/Azul (Motor de Mariposa -)",
+          "PIN_2": "Café/Blanco (Motor de Mariposa +)",
+          "PIN_3": "Gris (Tierra de Sensores)",
+          "PIN_4": "Verde (Señal TPS 1)",
+          "PIN_5": "Lila (Referencia 5V)",
+          "PIN_6": "Blanco (Señal TPS 2)"
+        },
+        "tip_pro": "Si el carro no acelera y marca EPC, limpia el conector con limpia-contactos. El sarro en los pines 1 y 2 causa caídas de voltaje que la ECU detecta como falla grave."
+      },
+      {
+        "vehiculo": "SENSOR DE OXÍGENO BANDA ANCHA (AFR) - TOYOTA / NISSAN",
+        "modulo": "SENSOR DE 4 O 5 CABLES",
+        "pines": {
+          "PIN_1": "Negro (Calefactor - Control PWM)",
+          "PIN_2": "Blanco (Calefactor + B+)",
+          "PIN_3": "Azul (Señal de Corriente Ip)",
+          "PIN_4": "Amarillo (Voltaje de Referencia V-Ref)"
+        },
+        "tip_pro": "No midas estos sensores como los viejos; el voltaje aquí es casi fijo. Lo que importa es la corriente. Si el cable blanco no tiene 12V, el sensor nunca va a entrar en lazo cerrado."
+      },
+      {
+        "vehiculo": "CUERPO DE ACELERACIÓN GM (CHEYENNE / AVEO / CAPTIVA)",
+        "modulo": "MARIPOSA ELECTRÓNICA",
+        "pines": {
+          "PIN_A": "Café (Control Motor +)",
+          "PIN_B": "Negro/Blanco (Control Motor -)",
+          "PIN_C": "Negro (Tierra)",
+          "PIN_D": "Morado (Señal TPS 2)",
+          "PIN_E": "Gris (5V)",
+          "PIN_F": "Verde (Señal TPS 1)"
+        },
+        "tip_pro": "Si tienes códigos de correlación de pedal, revisa que el Pin E tenga los 5V exactos. Si hay 4.5V, hay una resistencia o corto en el arnés que va hacia la ECU."
+      },
+      {
+        "vehiculo": "SENSOR DE POSICIÓN DE PEDAL (APP) - HONDA / MAZDA",
+        "modulo": "PEDAL ELECTRÓNICO",
+        "pines": {
+          "PIN_1": "Amarillo (5V A)",
+          "PIN_2": "Rojo (5V B)",
+          "PIN_3": "Blanco (Señal A)",
+          "PIN_4": "Azul (Señal B)",
+          "PIN_5": "Negro (GND A)",
+          "PIN_6": "Café (GND B)"
+        },
+        "tip_pro": "Honda usa dos señales que suben al revés o a diferente escala. Si una señal se pierde, el carro entra en modo 'tortuga' por seguridad."
+        },
+      {
+        "vehiculo": "VENTILADOR ELECTRÓNICO PWM (FORD F-150 / EDGE / EXPLORER)",
+        "modulo": "MÓDULO DE CONTROL DE VENTILADOR (EN EL TOLDO)",
+        "pines": {
+          "PIN_GRANDE_1": "Rojo (B+ Batería)",
+          "PIN_GRANDE_2": "Negro (Tierra)",
+          "PIN_CHICO_3": "Azul/Naranja (Señal PWM de la PCM)",
+          "PIN_CHICO_4": "Amarillo (Referencia de encendido)"
+        },
+        "tip_pro": "Si el ventilador no entra, no lo mandes directo a la batería; la PCM manda una señal de pulsos (PWM) por el cable azul. Si le metes 12V directos al pin de señal, quemas la PCM."
+      },
+      {
+        "vehiculo": "BCM / MÓDULO DE CARROCERÍA (GM SILVERADO / CHEYENNE 07-13)",
+        "modulo": "CONECTORES DEBAJO DEL VOLANTE",
+        "pines": {
+          "X1_PIN_1": "Rojo/Blanco (B+ Principal)",
+          "X4_PIN_2": "Blanco (Señal de Switch de Ignición)",
+          "X2_PIN_10": "Gris (Control de Seguros Eléctricos - Cerrar)",
+          "X2_PIN_11": "Tan (Control de Seguros Eléctricos - Abrir)"
+        },
+        "tip_pro": "Si los seguros o las luces interiores fallan, revisa el conector X1. Se sobrecalienta porque por ahí pasa toda la carga de los accesorios."
+      },
+      {
+        "vehiculo": "BOMBA DE AGUA ELÉCTRICA (BMW SERIE 3 / 5 - MOTORES N52/N54)",
+        "modulo": "BOMBA ELECTRÓNICA DE 4 PINES",
+        "pines": {
+          "PIN_1": "Rojo (B+ Constante)",
+          "PIN_2": "Naranja (Señal de Activación BSD)",
+          "PIN_3": "Marrón (Tierra)",
+          "PIN_4": "Rojo/Blanco (Corriente de Switch)"
+        },
+        "tip_pro": "Si el coche se calienta de la nada, checa el Pin 2. Es una línea de datos; si la bomba no recibe esa señal, no va a girar aunque tenga corriente y tierra."
+      },
+      {
+        "vehiculo": "MÓDULO DE LUCES / TIPM (CHRYSLER RAM / JOURNEY / JEEP)",
+        "modulo": "CAJA DE FUSIBLES INTELIGENTE",
+        "pines": {
+          "C1_PIN_A": "Verde/Blanco (Control de Bomba de Gasolina)",
+          "C3_PIN_12": "Blanco/Azul (Señal de Luces Altas)",
+          "C5_PIN_5": "Negro/Verde (Tierra de Chasis)"
+        },
+        "tip_pro": "Falla clásica: La camioneta da marcha pero no prende porque el relevador interno de la bomba de gasolina (dentro de la TIPM) se quema. No es necesario cambiar toda la caja, se puede puentear por fuera."
+        },
+      {
+        "vehiculo": "DIRECCIÓN ELECTRO-ASISTIDA (EPS) - NISSAN SENTRA / TIIDA",
+        "modulo": "MÓDULO DE COLUMNA DE DIRECCIÓN",
+        "pines": {
+          "PIN_1": "Rojo Grueso (B+ Batería)",
+          "PIN_2": "Negro Grueso (Tierra)",
+          "PIN_3": "Azul (Ignición)",
+          "CAN_H": "Rosa (Comunicación)",
+          "CAN_L": "Blanco (Comunicación)"
+        },
+        "tip_pro": "Si el volante se pone duro y el testigo PS prende, revisa el conector de potencia (rojo y negro). Por la vibración, los pines se abren y dejan de pasar el amperaje necesario."
+      },
+      {
+        "vehiculo": "TOYOTA PRIUS (10-18) SISTEMA HÍBRIDO HSD",
+        "modulo": "INVERSOR / CONVERSOR",
+        "pines": {
+          "V_L": "Naranja (Cables de Alta Tensión - ¡PELIGRO!)",
+          "PIN_12V": "Blanco/Negro (Auxiliar)",
+          "PIN_COMM": "Verde (Señal de Interlock de Seguridad)"
+        },
+        "tip_pro": "¡Seguridad primero! Antes de tocar cualquier cable naranja, retira el 'Service Plug' (puente naranja) de la batería trasera y espera 10 minutos para que los capacitores se descarguen."
+      },
+      {
+        "vehiculo": "DIRECCIÓN ASISTIDA (EPS) - CHEVROLET MÉRIDA / TORNADO",
+        "modulo": "MÓDULO DE DIRECCIÓN (DEBAJO DEL VOLANTE)",
+        "pines": {
+          "PIN_A": "Rojo (Corriente)",
+          "PIN_B": "Marrón (Tierra)",
+          "PIN_C": "Azul (Señal de RPM del motor)"
+        },
+        "tip_pro": "Falla rara: Si la dirección se corta a veces, checa el Pin C. Si el módulo no recibe la señal de que el motor está encendido (RPM), apaga la asistencia para ahorrar batería."
+      },
+      {
+        "vehiculo": "FORD FUSION HYBRID / ESCAPE HYBRID (13-19)",
+        "modulo": "BATERÍA DE ALTO VOLTAJE (HV)",
+        "pines": {
+          "CAN_H": "Gris/Naranja (Red de Control)",
+          "CAN_L": "Morado/Naranja (Red de Control)",
+          "PIN_FAN": "Azul/Blanco (Control de Ventiladores de Batería)"
+        },
+        "tip_pro": "Si marca error de batería híbrida, revisa los ventiladores del Pin_FAN. Si se llenan de polvo y se traban, la batería se calienta y el sistema se bloquea por protección."
+},,
+      {
+        "vehiculo": "ALTERNADOR INTELIGENTE (LIN/PWM) - FORD / MAZDA / GM",
+        "modulo": "CONECTOR DE 2 O 3 PINES",
+        "pines": {
+          "PIN_AS": "Rojo (Sensor de Voltaje de Batería)",
+          "PIN_LI": "Azul (Señal de Comunicación con la ECU)",
+          "PIN_RC": "Gris (Control de Carga PWM)"
+        },
+        "tip_pro": "Si el alternador es nuevo y no carga, no lo regreses a la refaccionaria. Revisa el cable azul (LI); si la computadora no 'despierta' al alternador por esa línea, nunca va a mandar corriente."
+      },
+      {
+        "vehiculo": "SISTEMA DE AUDIO / PANTALLA - NISSAN (VERSA / SENTRA / KICKS)",
+        "modulo": "CONECTOR DE 20 PINES",
+        "pines": {
+          "PIN_19": "Amarillo (B+ Constante)",
+          "PIN_7": "Rojo (Accesorio / Switch)",
+          "PIN_20": "Negro (Tierra)",
+          "PIN_ILL": "Naranja (Iluminación de Noche)"
+        },
+        "tip_pro": "Si la pantalla no prende, revisa el pin 19. Si tiene corriente pero no hay audio, checa que los cables de las bocinas no estén aterrizados al chasis; el radio se protege y corta el sonido."
+      },
+      {
+        "vehiculo": "MÓDULO DE AUDIO / AMPLIFICADOR - CHRYSLER / JEEP (SISTEMA ALPINE)",
+        "modulo": "AMPLIFICADOR EN EL COSTADO TRASERO",
+        "pines": {
+          "PIN_1": "Gris/Rojo (B+)",
+          "PIN_11": "Negro/Verde (GND)",
+          "CAN_H": "Blanco/Azul (Señal de Encendido Digital)",
+          "CAN_L": "Blanco/Naranja (Señal de Encendido Digital)"
+        },
+        "tip_pro": "Estos estéreos no mandan el clásico cable de 'Remote' para prender el ampli; mandan una señal por la red CAN. Si el radio es de pantalla china y no suena, necesitas un adaptador de CAN-BUS."
+      },
+      {
+        "vehiculo": "ALTERNADOR DENSO (TOYOTA HILUX / TACOMA)",
+        "modulo": "CONECTOR DE 4 PINES (TIPO OVALADO)",
+        "pines": {
+          "PIN_S": "Blanco (Sensor de Batería)",
+          "PIN_IG": "Negro/Amarillo (Ignición)",
+          "PIN_L": "Blanco/Azul (Luz de Tablero)",
+          "PIN_M": "Verde (Monitor de Carga ECU)"
+        },
+        "tip_pro": "Falla común: El cable de Ignición (Negro/Amarillo) se troza cerca del conector por la vibración. Si ese cable no tiene 12V con la llave abierta, el alternador no va a cargar jamás."
+        },
+      {
+        "vehiculo": "FRENO DE ESTACIONAMIENTO ELECTRÓNICO (EPB) - VW / AUDI / SEAT",
+        "modulo": "ACTUADOR EN EL CALIPER (2 PINES)",
+        "pines": {
+          "PIN_1": "Rojo/Blanco (Motor +)",
+          "PIN_2": "Negro/Amarillo (Motor -)"
+        },
+        "tip_pro": "Para cambiar balatas sin escáner, puedes meterle 12V directos a estos pines para retraer el motor. Si gira al revés, solo invierte los cables. ¡Ojo! Desconecta el módulo antes para no quemar el driver."
+      },
+      {
+        "vehiculo": "BMW SERIE 3 / 5 (MOTOR N52 / N55) - VALVETRONIC",
+        "modulo": "MOTOR DE ACTUADOR VALVETRONIC",
+        "pines": {
+          "PIN_1": "Rojo Grueso (Fase U)",
+          "PIN_2": "Azul Grueso (Fase V)",
+          "PIN_3": "Negro Grueso (Fase W)",
+          "PIN_S": "Amarillo (Sensor de Posición)"
+        },
+        "tip_pro": "Si el carro pierde potencia y marca códigos de Valvetronic, revisa el conector circular. El aceite de la tapa de punterías se mete al conector y hace corto, causando fallas de aceleración."
+      },
+      {
+        "vehiculo": "AUDI A4 / Q5 (MOTORES 2.0T TFSI)",
+        "modulo": "BOBINAS DE ENCENDIDO (4 PINES)",
+        "pines": {
+          "PIN_1": "Rojo/Verde (12V B+)",
+          "PIN_2": "Marrón (Tierra de Electrónica)",
+          "PIN_3": "Gris (Señal de Pulso de ECU)",
+          "PIN_4": "Marrón/Negro (Tierra de Potencia)"
+        },
+        "tip_pro": "Mucho ojo con el Pin 4. Si esa tierra de potencia está floja, la bobina va a quemar el transistor de salida de la computadora. Siempre lija la tierra que va a la cabeza del motor."
+      },
+      {
+        "vehiculo": "HONDA CR-V / ACCORD (SISTEMA VSA - ESTABILIDAD)",
+        "modulo": "MODULADOR ABS/VSA",
+        "pines": {
+          "PIN_1": "Blanco (B+)",
+          "PIN_25": "Negro (GND)",
+          "CAN_H": "Rosa (Red)",
+          "CAN_L": "Azul (Red)"
+        },
+        "tip_pro": "Si el pedal del freno se va al fondo y ya purgaste, el problema suele ser interno en el modulador VSA. Revisa que el Pin 1 reciba voltaje; si hay caída de tensión, las válvulas internas no cierran bien."
+      },
+      {
+        "vehiculo": "SENSOR DE ÁNGULO DE DIRECCIÓN (SAS) - TOYOTA / LEXUS",
+        "modulo": "DETRÁS DEL VOLANTE (CLOCK SPRING)",
+        "pines": {
+          "PIN_1": "Rojo (B+)",
+          "PIN_2": "Negro (GND)",
+          "CAN_H": "Blanco (Señal Digital)",
+          "CAN_L": "Amarillo (Señal Digital)"
+        },
+        "tip_pro": "Si cambias la cremallera y el volante queda chueco, el SAS se bloquea. Antes de resetear, checa que los pines CAN tengan comunicación; si no, el control de estabilidad (VSC) nunca se va a apagar."
+      },
+      {
+        "vehiculo": "MOTOR DE VIDRIO ELÉCTRICO INTELIGENTE - NISSAN (SENTRA/PATHFINDER)",
+        "modulo": "ACTUADOR DE PUERTA DEL CONDUCTOR",
+        "pines": {
+          "PIN_1": "Verde (Motor +)",
+          "PIN_2": "Rojo (Motor -)",
+          "PIN_3": "Amarillo (Sensor de Pulso/Encoder)",
+          "PIN_4": "Negro (Tierra de Lógica)"
+        },
+        "tip_pro": "Si el vidrio sube y se regresa solo (sistema anti-pellizco), no es el motor; es que perdió la programación. Antes de desarmar, mantén el botón arriba 5 segundos para que el Pin 3 mande la señal de tope a la BCM."
+      },
+      {
+        "vehiculo": "SISTEMA DE DETECCIÓN DE PUNTO CIEGO (BSD) - MAZDA / FORD",
+        "modulo": "RADAR EN LAS ESQUINAS DE LA DEFENSA TRASERA",
+        "pines": {
+          "PIN_1": "Naranja (Alimentación 12V)",
+          "PIN_2": "Negro (Tierra)",
+          "CAN_H": "Gris/Blanco (Red de Datos)",
+          "CAN_L": "Violeta (Red de Datos)"
+        },
+        "tip_pro": "Estos sensores se dañan mucho por humedad o golpes leves en la defensa. Si el tablero dice 'Blind Spot Not Available', limpia el conector del Pin 2; la tierra suele sulfatarse por el lodo que avientan las llantas."
+      },
+      {
+        "vehiculo": "MÓDULO DE TECHO SOLAR / QUEMACOCOS - VW JETTA / TIGUAN",
+        "modulo": "MOTOR DE CONTROL EN EL PLAFÓN",
+        "pines": {
+          "PIN_1": "Rojo/Negro (B+)",
+          "PIN_2": "Marrón (GND)",
+          "PIN_3": "Azul/Blanco (Señal de Switch)",
+          "PIN_4": "Verde (Línea LIN-Bus)"
+        },
+        "tip_pro": "Si el quemacocos no cierra, revisa el Pin 4. Es una línea LIN. Si se corta, el motor no sabe en qué posición está y por seguridad no se mueve. No es el motor, es falta de comunicación."
+        },
+      {
+        "vehiculo": "MÓDULO DE CONTROL DE BOMBA (FPDM) - FORD F-150 / RANGER",
+        "modulo": "MÓDULO SOBRE EL CHASIS (CERCA DEL TANQUE)",
+        "pines": {
+          "PIN_1": "Blanco/Rojo (B+ desde Relevador)",
+          "PIN_2": "Negro (Tierra)",
+          "PIN_3": "Rosa/Negro (Control de Bomba +)",
+          "PIN_4": "Blanco/Negro (Control de Bomba -)",
+          "PIN_5": "Azul/Naranja (Señal de Monitoreo PCM)"
+        },
+        "tip_pro": "Si la troca no prende y no hay presión de gasolina, antes de bajar el tanque, checa este módulo. Se pudre por estar expuesto al agua y al lodo en el chasis. Si el Pin 1 tiene corriente pero la bomba no vibra, el módulo está muerto."
+      },
+      {
+        "vehiculo": "MAZDA SKYACTIV-G (MAZDA 3 / CX-5) 2.0L / 2.5L",
+        "modulo": "INYECTORES DE INYECCIÓN DIRECTA",
+        "pines": {
+          "INY_1_A": "Verde (Señal Positiva)",
+          "INY_1_B": "Azul (Señal Negativa)",
+          "DRIVER": "Módulo DC/DC Integrado en ECU"
+        },
+        "tip_pro": "Estos inyectores trabajan a presiones altísimas. Si notas un cascabelo fuerte o falta de potencia, revisa el sensor de presión de riel. Nunca desconectes un inyector con el motor prendido, el arco voltaico puede dañar el driver de la ECU."
+      },
+      {
+        "vehiculo": "BOMBA DE ALTA PRESIÓN (HPFP) - GM ECOTEC 2.4L / 2.0L",
+        "modulo": "ACTUADOR DE PRESIÓN EN LA BOMBA MECÁNICA",
+        "pines": {
+          "PIN_1": "Amarillo (Control PWM desde ECU)",
+          "PIN_2": "Negro/Amarillo (Tierra)"
+        },
+        "tip_pro": "Si marca código P0089 o P0087 (Baja presión), revisa el Pin 1 con un osciloscopio. Si la señal PWM está presente pero la presión no sube, el problema es mecánico (el seguidor del árbol de levas está gastado)."
+      },
+      {
+        "vehiculo": "CHEVROLET SONIC / CRUZE (1.4L TURBO / 1.8L)",
+        "modulo": "BOBINA DE ENCENDIDO (TIPO REGLETA)",
+        "pines": {
+          "PIN_1": "Rojo/Blanco (B+)",
+          "PIN_2": "Negro (GND)",
+          "PIN_3": "Verde (Disparo Cil 1)",
+          "PIN_4": "Azul (Disparo Cil 4)",
+          "PIN_5": "Amarillo (Disparo Cil 2)",
+          "PIN_6": "Blanco (Disparo Cil 3)"
+        },
+        "tip_pro": "Falla clásica: El coche tironea en subidas. Casi siempre es el conector de la regleta que falsea o un resorte interno de la bota de la bobina oxidado. Límpialos antes de cambiar la pieza completa."
+      },
+      {
+        "vehiculo": "MINI COOPER / PEUGEOT (MOTOR PRINCE 1.6T) - VALVETRONIC",
+        "modulo": "MOTOR DE LEVANTAMIENTO DE VÁLVULAS",
+        "pines": {
+          "PIN_1": "Rojo (Fase A)",
+          "PIN_2": "Blanco (Fase B)",
+          "PIN_3": "Negro (Fase C)",
+          "PIN_4": "Naranja (Sensor de Posición)"
+        },
+        "tip_pro": "Si el carro entra en 'Manejo de Emergencia', revisa el conector del Valvetronic. El aceite se filtra por los cables y llega hasta la computadora (DME). Limpia los pines con alcohol isopropílico antes de que el daño sea permanente."
+      },
+      {
+        "vehiculo": "SUSPENSIÓN ELECTRÓNICA (GM MAGNERIDE) - TAHOE / SUBURBAN / ESCALADE",
+        "modulo": "AMORTIGUADOR INTELIGENTE (2 PINES)",
+        "pines": {
+          "PIN_A": "Verde/Negro (Control de Fluido Magnético)",
+          "PIN_B": "Azul/Blanco (Referencia de Retorno)"
+        },
+        "tip_pro": "Si la camioneta se siente como 'brincador', revisa el cableado cerca del amortiguador. Con el lodo, los cables se trozan y el módulo desactiva la dureza del amortiguador por seguridad."
+      },
+      {
+        "vehiculo": "AUDI / VW (MOTOR 2.0T) - BOMBA DE AGUA ELECTRÓNICA Y TERMOSTATO",
+        "modulo": "CONECTOR DE 5 PINES (INTEGRADO)",
+        "pines": {
+          "PIN_1": "Rojo/Azul (B+)",
+          "PIN_2": "Marrón (GND)",
+          "PIN_3": "Verde (Señal PWM de posición)",
+          "PIN_4": "Gris (Sensor de Temperatura)",
+          "PIN_5": "Lila (Línea de Datos)"
+        },
+        "tip_pro": "Este sistema no usa un termostato de resorte normal, es un motorcito. Si el carro se calienta, checa el Pin 3. Si no hay pulsos de la ECU, el termostato nunca va a abrir aunque la bomba sea nueva."
+      },
+      {
+        "vehiculo": "JEEP / CHRYSLER (MOTOR HEMI 5.7L / 6.4L) - SOLENOIDES MDS",
+        "modulo": "SISTEMA DE DESACTIVACIÓN DE CILINDROS",
+        "pines": {
+          "SOL_1": "Café/Blanco (Cilindro 1)",
+          "SOL_4": "Café/Azul (Cilindro 4)",
+          "SOL_6": "Café/Verde (Cilindro 6)",
+          "SOL_7": "Café/Rosa (Cilindro 7)"
+        },
+        "tip_pro": "Si el motor vibra en carretera, checa el conector que va debajo del múltiple de admisión. Los cables se tuestan por el calor del motor y el sistema MDS falla, dejando el motor en 4 cilindros permanentemente."
+},
+      {
+        "vehiculo": "TRANSMISIÓN DSG 6/7 VEL (VW / AUDI / SEAT) - MECATRÓNICA",
+        "modulo": "CONECTOR CIRCULAR DE 25 PINES",
+        "pines": {
+          "PIN_10": "Rojo/Gris (B+ Potencia)",
+          "PIN_15": "Rojo/Negro (B+ Potencia)",
+          "PIN_19": "Marrón (Tierra de Potencia)",
+          "CAN_H": "Naranja/Negro (Comunicación)",
+          "CAN_L": "Naranja/Marrón (Comunicación)"
+        },
+        "tip_pro": "Si la transmisión se queda en 'N' parpadeando y no entra el escáner, checa los pines 10 y 15. Si hay voltaje pero no comunica, la mecatrónica tiene un corto interno por rebaba metálica en el aceite."
+      },
+      {
+        "vehiculo": "TRANSMISIÓN ZF 8HP (BMW / JEEP / DODGE RAM)",
+        "modulo": "CONECTOR DE 16 PINES",
+        "pines": {
+          "PIN_9": "Naranja/Rojo (Ignición)",
+          "PIN_13": "Marrón (Tierra)",
+          "CAN_H": "Azul/Blanco (Red de Datos)",
+          "CAN_L": "Azul (Red de Datos)"
+        },
+        "tip_pro": "Esta transmisión es electrónica pura. Si la batería está baja (menos de 12.2V), la caja se bloquea en 'P' y no te deja mover el carro. Antes de pedir la grúa, intenta pasar corriente directamente a los postes del motor."
+      },
+      {
+        "vehiculo": "CÁMARA DE REVERSA INTELIGENTE (FORD / NISSAN / TOYOTA)",
+        "modulo": "CONECTOR DE 4 A 6 PINES EN CAJUELA",
+        "pines": {
+          "V+": "Rojo (Alimentación 6V o 12V)",
+          "V-": "Negro (Tierra)",
+          "VIDEO+": "Amarillo o Transparente (Señal de Video)",
+          "VIDEO-": "Malla / Blindaje (Tierra de Video)"
+        },
+        "tip_pro": "Si la imagen se ve con lluvia o se corta, no es la cámara; es el cable de 'blindaje' (VIDEO-) que se troza en la bisagra de la cajuela de tanto abrir y cerrar. Puentéalo y ahorrarás el costo de la cámara."
+      },
+      {
+        "vehiculo": "SISTEMA DE ASISTENCIA DE ESTACIONAMIENTO (PARK ASSIST) - GM / CHRYSLER",
+        "modulo": "SENSORES DE ULTRASONIDO EN DEFENSA",
+        "pines": {
+          "PIN_1": "Rojo/Azul (Referencia 8V)",
+          "PIN_2": "Negro (GND)",
+          "PIN_3": "Amarillo (Línea de Datos LIN)"
+        },
+        "tip_pro": "Si un solo sensor falla, el sistema completo se desactiva. Para saber cuál es sin escáner, pon la oreja cerca del sensor con el switch abierto: el que no haga un pequeño 'tic-tic-tic' es el que está muerto."
+      },
+      {
+        "vehiculo": "MOTOR TOYOTA D-4S (TACOMA / 86) - INYECCIÓN DUAL",
+        "modulo": "INYECTORES DIRECTOS Y DE PUERTO",
+        "pines": {
+          "INY_DIR_1": "Negro/Rojo (Alta Presión)",
+          "INY_PUER_1": "Amarillo/Azul (Baja Presión)",
+          "DRIVER_EDU": "Módulo Externo de Alta Tensión"
+        },
+        "tip_pro": "Este motor usa inyectores normales para ralentí y directos para potencia. Si el carro falla solo al acelerar fuerte, el problema está en el riel de alta presión o en el driver EDU. No culpes a las bujías antes de checar el pulso en el driver."
+      },
+      {
+        "vehiculo": "MÓDULO DE REMOLQUE (TRAILER BRAKE) - FORD F-250 / RAM 2500",
+        "modulo": "TBC (TRAILER BRAKE CONTROL)",
+        "pines": {
+          "PIN_1": "Rojo/Naranja (B+ Batería)",
+          "PIN_5": "Azul (Salida de Freno al Remolque)",
+          "PIN_7": "Verde (Señal de pedal de freno)"
+        },
+        "tip_pro": "Si el tablero dice 'Trailer Disconnected' y no traes nada colgado, el conector de 7 pines atrás de la defensa está lleno de agua o salitre. Límpialo con aire a presión antes de querer cambiar el módulo de cabina."
+      },
+      {
+        "vehiculo": "MOTOR VW 2.0T (GENERACIÓN 3) - DOBLE INYECCIÓN",
+        "modulo": "ECU SIMOS 18",
+        "pines": {
+          "PIN_X1": "Control Inyectores MPI (Puerto)",
+          "PIN_X2": "Control Inyectores FSI (Directos)",
+          "PIN_VALV": "Lila/Blanco (Variador de alzada de válvulas)"
+        },
+        "tip_pro": "Si el motor vibra mucho en frío, casi siempre son los inyectores de puerto (MPI) que están sucios. En frío el motor no usa los directos. Una limpieza con laboratorio a los de puerto suele arreglar el 'check engine' mañanero."
+      },
+      {
+        "vehiculo": "QUINTA RUEDA ELECTRÓNICA / SENSOR DE ACOPLE (TRUCK PESADO)",
+        "modulo": "SENSOR DE SEGURIDAD DE ENGANCHE",
+        "pines": {
+          "PIN_A": "Blanco (Corriente 24V/12V)",
+          "PIN_B": "Negro (Tierra)",
+          "PIN_C": "Azul (Señal de Enganche Cerrado)"
+        },
+        "tip_pro": "En camiones grandes, si el sensor no marca 'locked', el camión se bloquea por seguridad. A veces solo es grasa vieja y dura que no deja que el sensor detecte el perno rey. Lava con desengrasante antes de cambiar el sensor."
+      },
+      {
+        "vehiculo": "SISTEMA DE CANCELACIÓN DE RUIDO (ANC) - HONDA PILOT / ODYSSEY",
+        "modulo": "MÓDULO ANC (DETRÁS DEL RADIO O GUANTERA)",
+        "pines": {
+          "PIN_1": "Rojo (Micrófono Frontal +)",
+          "PIN_2": "Blanco (Micrófono Trasero +)",
+          "PIN_10": "Rosa (Señal de RPM desde PCM)"
+        },
+        "tip_pro": "Si instalas un sonido con bajos (Subwoofer) y se oye un zumbido horrible al acelerar, es el sistema ANC tratando de cancelar el ruido del motor. Tienes que desconectar este módulo o el Pin 10 para que deje de interferir con tu sonido nuevo."
+      },
+      {
+        "vehiculo": "SENSOR DE CALIDAD DE AIRE / PM2.5 - VOLVO / BMW / MERCEDES",
+        "modulo": "SENSOR DE PARTÍCULAS EN CABINA",
+        "pines": {
+          "PIN_1": "Verde (Alimentación 12V)",
+          "PIN_2": "Marrón (Tierra)",
+          "PIN_3": "Lila/Blanco (Línea de Datos LIN-Bus)"
+        },
+        "tip_pro": "Si el aire acondicionado se queda en 'Recirculación' permanente y no mete aire de afuera, es porque este sensor detecta contaminación. Si está sucio o fallando (Pin 3), el sistema se bloquea. Límpialo con aire comprimido suave antes de cambiarlo."
+      },
+      {
+        "vehiculo": "SISTEMA START-STOP (CONVERSOR DC/DC) - MAZDA I-ELOOP / FORD",
+        "modulo": "CAPACITOR DE ALTA CAPACIDAD / MÓDULO DC-DC",
+        "pines": {
+          "B+": "Cable Rojo Grueso (Entrada)",
+          "OUT": "Cable Negro/Rojo (Salida a Accesorios)",
+          "COMM": "Azul/Verde (Comunicación con PCM)"
+        },
+        "tip_pro": "Si el sistema Start-Stop ya no apaga el motor en los semáforos, casi nunca es el módulo; es la batería que ya bajó del 80% de vida. Estos sistemas monitorean la batería por el cable COMM y si no está al 100%, desactivan el ahorro de combustible."
+      },
+      {
+        "vehiculo": "PURIFICADOR DE AIRE IONIZADOR - KIA / HYUNDAI MODERNO",
+        "modulo": "GENERADOR DE IONES (DENTRO DEL EVAPORADOR)",
+        "pines": {
+          "PIN_1": "Rojo (Corriente)",
+          "PIN_2": "Negro (Tierra)",
+          "PIN_3": "Amarillo (Pulso de activación de BCM)"
+        },
+        "tip_pro": "Si sale un olor raro por las ventilas y el clima está limpio, el ionizador puede estar en corto. Si el Pin 3 no recibe pulsos, el sistema de purificación no funciona. Revisa que no haya humedad en el conector."
+      },
+      {
+        "vehiculo": "CÁMARA DE MANTENIMIENTO DE CARRIL (ADAS) - HONDA / TOYOTA",
+        "modulo": "CÁMARA FRONTAL (DETRÁS DEL ESPEJO RETROVISOR)",
+        "pines": {
+          "PIN_1": "Rojo (Ignición)",
+          "PIN_2": "Negro (Tierra)",
+          "CAN_H": "Blanco (Comunicación)",
+          "CAN_L": "Rojo/Azul (Comunicación)"
+        },
+        "tip_pro": "Si cambias el parabrisas, la cámara DEBE recalibrarse. Si el tablero marca 'System Error', revisa que el Pin 1 tenga voltaje. A veces, al instalar cámaras de tablero (dashcams), los instaladores muerden este cable y bloquean el sistema de frenado autónomo."
+      },
+      {
+        "vehiculo": "MERCEDES-BENZ CGI (MOTOR 1.8T / 2.0T) - INYECCIÓN DIRECTA",
+        "modulo": "INYECTORES PIEZOELÉCTRICOS",
+        "pines": {
+          "INY_A": "Amarillo/Verde (Control de Alta Tensión)",
+          "INY_B": "Azul/Blanco (Retorno de Señal)",
+          "B+": "Rojo/Gris (Alimentación desde el Driver)"
+        },
+        "tip_pro": "¡Peligro! Estos inyectores no se pueden probar con pulsadores de inyectores convencionales. Funcionan con voltajes muy altos y tiempos de apertura micro-rápidos. Si el motor tiembla, checa el Pin B con osciloscopio; si la señal es plana, el driver de la ECU pasó a mejor vida."
+      },
+      {
+        "vehiculo": "RADAR DE CONTROL DE CRUCERO ADAPTATIVO - NISSAN / INFINITI",
+        "modulo": "SENSOR DE RADAR (DETRÁS DEL EMBLEMA FRONTAL)",
+        "pines": {
+          "PIN_1": "Naranja (B+)",
+          "PIN_2": "Negro (GND)",
+          "PIN_3": "Azul (CAN High)",
+          "PIN_4": "Rosa (CAN Low)"
+        },
+        "tip_pro": "Si el radar deja de funcionar tras un golpe leve en la defensa, checa la base de plástico. Si el radar está movido apenas 2 grados, el sistema se cancela. No es eléctrico, es alineación física; antes de cambiarlo, asegúrate de que esté perfectamente nivelado."
+      },
+      {
+        "vehiculo": "FRENO DE MANO ELÉCTRICO (EPB) - MAZDA CX-5 / MAZDA 3",
+        "modulo": "ACTUADORES TRASEROS",
+        "pines": {
+          "IZQ_+": "Verde/Amarillo",
+          "IZQ_-": "Negro/Blanco",
+          "DER_+": "Rojo/Blanco",
+          "DER_-": "Café"
+        },
+        "tip_pro": "Para ponerlo en 'Modo de Mantenimiento' sin escáner: Switch en ON, pisa acelerador a fondo, presiona el botón de freno hacia abajo y presiona 3 veces el botón de encendido. Los motores se retraerán solos. ¡Tip de oro para no romper los calípers!"
+      },
+      {
+        "vehiculo": "RED DE FIBRA ÓPTICA (MOST) - BMW / AUDI / MERCEDES",
+        "modulo": "ANILLO DE COMUNICACIÓN INFOTENIMIENTO",
+        "pines": {
+          "OPT_IN": "Cable de Fibra (Luz Roja)",
+          "OPT_OUT": "Cable de Fibra (Luz Roja)",
+          "PIN_1": "Rojo/Amarillo (B+)",
+          "PIN_2": "Marrón (Tierra)"
+        },
+        "tip_pro": "Si el radio prende pero no hay sonido o la pantalla se queda trabada, busca el cable de fibra óptica. Si ves luz roja en un extremo pero el siguiente módulo no la recibe, el cable está doblado o roto. ¡Nunca dobles estos cables a 90 grados!"
+      },
+      {
+        "vehiculo": "TRANSMISIÓN ALLISON (SERIE 1000/2000) - CAMIONES PESADOS",
+        "modulo": "TCM (COMPUTADORA DE TRANSMISIÓN)",
+        "pines": {
+          "PIN_J1_01": "Rojo (B+)",
+          "PIN_J1_02": "Negro (Tierra)",
+          "PIN_J1_15": "Azul (Sensor de Velocidad de Entrada)",
+          "PIN_J1_16": "Blanco (Sensor de Velocidad de Salida)"
+        },
+        "tip_pro": "Si la caja se protege y no hace cambios, checa los sensores de velocidad (Speed Sensors). El aceite caliente a veces tuesta los conectores. Mide resistencia en los pines 15 y 16; si está abierto, el sensor murió."
+      },
+      {
+        "vehiculo": "DIRECCIÓN ELECTRO-HIDRÁULICA - FORD TRANSIT / VOLVO",
+        "modulo": "BOMBA ELÉCTRICA DE DIRECCIÓN",
+        "pines": {
+          "PIN_1": "Cable Grueso Rojo (B+)",
+          "PIN_2": "Cable Grueso Negro (GND)",
+          "PIN_3": "Verde (Señal de Red CAN)",
+          "PIN_4": "Lila (Ignición)"
+        },
+        "tip_pro": "Esta bomba zumba cuando está trabajando. Si el volante está duro y no hace ruido, revisa el Pin 4. Si no tiene 12V con el switch abierto, la bomba nunca va a arrancar aunque tenga la corriente principal."
+      },
+      {
+        "vehiculo": "SENSOR DE NOX (ÓXIDOS DE NITRÓGENO) - DIESEL MODERNO",
+        "modulo": "SENSOR CON MÓDULO INTEGRADO AL ESCAPE",
+        "pines": {
+          "PIN_1": "Rojo (12V/24V)",
+          "PIN_2": "Negro (Tierra)",
+          "CAN_H": "Amarillo (Comunicación)",
+          "CAN_L": "Verde (Comunicación)"
+        },
+        "tip_pro": "Si el camión pierde potencia (Derate) y marca código de NOx, no cambies el sensor rápido. Revisa los cables CAN (Amarillo y Verde). Si hay sulfatación en el conector por la lluvia, la señal no llega y el motor se bloquea para no contaminar."
+},
+      {
+        "vehiculo": "CHEVROLET ONIX / TRACKER (21-24) 1.0L / 1.2L TURBO",
+        "modulo": "ECM (MOTORES 3 CILINDROS)",
+        "pines": {
+          "PIN_A1": "Verde/Blanco (Control Válvula de Purga)",
+          "PIN_B12": "Azul (Señal de Sensor de Presión de Aceite)",
+          "PIN_C5": "Amarillo/Negro (Control de Solenoide de Turbo - Wastegate)"
+        },
+        "tip_pro": "Estos motores usan banda de tiempo bañada en aceite. Si se empieza a desgranar, tapa el cedazo y el Pin B12 te marcará baja presión. ¡No es el sensor, es la banda deshaciéndose! Cambia el aceite cada 5,000km máximo."
+      },
+      {
+        "vehiculo": "SUSPENSIÓN DE AIRE (LINCOLN NAVIGATOR / FORD EXPEDITION)",
+        "modulo": "COMPRESOR DE SUSPENSIÓN",
+        "pines": {
+          "PIN_1": "Rojo Grueso (B+ Potencia)",
+          "PIN_2": "Negro Grueso (Tierra)",
+          "PIN_3": "Azul/Rojo (Señal de Relevador de Estado)",
+          "PIN_4": "Gris (Control de Válvula de Alivio)"
+        },
+        "tip_pro": "Si la camioneta está caída y el compresor no suena, checa el Pin 1. Si hay corriente pero no arranca, dale un golpe técnico al compresor; a veces se pegan los carbones por la humedad que genera el mismo aire."
+      },
+      {
+        "vehiculo": "VALVULA NIVELADORA DE AIRE (CAMIÓN PESADO / TRAILER)",
+        "modulo": "SENSOR DE ALTURA ELECTRÓNICO",
+        "pines": {
+          "PIN_A": "Naranja (Alimentación 5V/12V)",
+          "PIN_B": "Verde (Señal de Altura - Voltaje Variable)",
+          "PIN_C": "Negro (Tierra)"
+        },
+        "tip_pro": "En camiones con suspensión de bolsas, si el eje se queda arriba o abajo, revisa la varilla del sensor. El Pin B debe variar su voltaje conforme mueves la varilla. Si el voltaje está fijo en 5V o 0V, el sensor interno se rompió por un bache."
+      },
+      {
+        "vehiculo": "NISSAN FRONTIER / NP300 (20-24) MOTOR QR25",
+        "modulo": "ECM 3 CONECTORES (NUEVA GENERACIÓN)",
+        "pines": {
+          "PIN_20": "Rojo (Alimentación ECM)",
+          "PIN_105": "Blanco (Señal de Sensor de Cigüeñal CKP)",
+          "PIN_106": "Verde (Señal de Sensor de Árbol CMP)"
+        },
+        "tip_pro": "Si la troca tarda en arrancar o se jalonea, checa la sincronía entre el Pin 105 y 106 con osciloscopio. Estas cadenas se estiran muy rápido y la ECU se pierde aunque no marque código de falla todavía."
+        },
+      {
+        "vehiculo": "TESLA MODEL 3 / MODEL Y - SISTEMA DE BAJA TENSIÓN",
+        "modulo": "VCFRONT (CONTROLADOR FRONTAL)",
+        "pines": {
+          "PIN_LV": "Cable Azul (Alimentación 16V Li-ion)",
+          "CAN_H": "Verde (Red de Carrocería)",
+          "CAN_L": "Blanco (Red de Carrocería)"
+        },
+        "tip_pro": "¡Ojo! Los Tesla nuevos ya no usan batería de 12V de plomo, usan de Litio de 16V. No intentes pasarle corriente con un arrancador normal de 12V porque podrías dañar el módulo VCFRONT. Si el carro está muerto, usa una pila de 12V solo para abrir los seguros desde el parachoques."
+      },
+      {
+        "vehiculo": "PEUGEOT 208 / 301 / PARTNER - MÓDULO BSI",
+        "modulo": "BSI (CAJA DE CONTROL INTELIGENTE)",
+        "pines": {
+          "CON_AZUL_PIN_1": "Rojo (Alimentación Principal)",
+          "CON_GRIS_PIN_12": "Amarillo (Red VAN/CAN)",
+          "CON_NEGRO_PIN_5": "Verde (Control de Limpiaparabrisas)"
+        },
+        "tip_pro": "Si el carro hace cosas raras (se prenden las luces solas o no da marcha), antes de cambiar la BSI, revisa que no haya filtración de agua por el parabrisas. El agua cae directo en los conectores y causa cortos que parecen fallas de programación."
+      },
+      {
+        "vehiculo": "FORD MUSTANG MACH-E / F-150 LIGHTNING",
+        "modulo": "BCCM (MÓDULO DE CONTROL DE CARGA)",
+        "pines": {
+          "PIN_AC_1": "Negro (Entrada de Carga)",
+          "PIN_DC_1": "Naranja Grueso (Salida a Batería HV)",
+          "PIN_COMM": "Azul (Comunicación con el Cargador)"
+        },
+        "tip_pro": "Si el carro no carga en estaciones públicas, revisa el Pin_COMM. Si el cable está sulfatado, el cargador y el carro no se 'ponen de acuerdo' y el relevador de alta potencia no cierra por seguridad."
+      },
+      {
+        "vehiculo": "MÓDULO DE DIRECCIÓN ASISTIDA (EPS) - TOYOTA PRIUS / COROLLA HYBRID",
+        "modulo": "CREMALLERA ELÉCTRICA",
+        "pines": {
+          "PIN_1": "Blanco Grueso (B+)",
+          "PIN_2": "Negro Grueso (GND)",
+          "PIN_15": "Amarillo (Señal de Sensor de Torque)"
+        },
+        "tip_pro": "Si la dirección se siente más suave hacia un lado que hacia el otro, el sensor de torque (Pin 15) está descalibrado. Necesitas un escáner para hacer el 'Zero Point Calibration', no es falla mecánica de la cremallera."
+        },
+      {
+        "vehiculo": "TRANSMISIÓN VOLVO I-SHIFT (CAMIÓN PESADO FH/FM)",
+        "modulo": "ACTUADOR DE CAMBIOS NEUMÁTICO-ELECTRÓNICO",
+        "pines": {
+          "PIN_A1": "Rojo (Alimentación 24V)",
+          "PIN_B5": "Negro (Tierra)",
+          "CAN_H": "Amarillo (Bus de Datos)",
+          "CAN_L": "Verde (Bus de Datos)"
+        },
+        "tip_pro": "Si la caja se bloquea en una marcha, revisa la presión de aire del camión. Si hay aire pero no cambia, checa el cableado CAN (Amarillo/Verde); si la señal se pierde, la caja no sabe qué orden dio la palanca."
+      },
+      {
+        "vehiculo": "SISTEMA SHIFT-BY-WIRE (BOTONES) - HONDA / ACURA / JEEP",
+        "modulo": "SELECTOR DE MARCHAS ELECTRÓNICO",
+        "pines": {
+          "PIN_1": "Blanco (Corriente)",
+          "PIN_5": "Rosa (Señal de Park)",
+          "PIN_8": "Azul (Señal de Drive)"
+        },
+        "tip_pro": "Si presionas 'D' y no hace nada, checa el Pin 1. Estos selectores fallan mucho por derrames de café o refresco. Si hay voltaje pero no cambia, limpia el circuito interno con limpiador de contactos seco."
+      },
+      {
+        "vehiculo": "SENSOR DE PUNTO CIEGO / RADAR LATERAL - HONDA (LANEWATCH)",
+        "modulo": "CÁMARA EN ESPEJO LATERAL DERECHO",
+        "pines": {
+          "PIN_1": "Rojo (Corriente 8V)",
+          "PIN_2": "Negro (GND)",
+          "PIN_3": "Amarillo (Video +)",
+          "PIN_4": "Blanco (Video -)"
+        },
+        "tip_pro": "Si la pantalla se pone azul al poner la direccional, revisa el Pin 3. El cable de video se troza dentro de la bisagra del espejo de tanto doblarlo al estacionarse."
+      },
+      {
+        "vehiculo": "CHEVROLET CAVALIER / TRACKER (NUEVA GEN) - MOTOR 1.0T / 1.3T",
+        "modulo": "CONTROL DE TURBO ELECTRÓNICO",
+        "pines": {
+          "PIN_1": "Rojo/Azul (B+)",
+          "PIN_2": "Negro (GND)",
+          "PIN_3": "Blanco/Verde (Señal PWM de Posición)"
+        },
+        "tip_pro": "Si el carro se siente 'burro' y no tiene potencia, checa el Pin 3. El actuador eléctrico del turbo se queda pegado por el calor. Dale un poco de aflojatodo a la varilla antes de condenar el turbo."
+      },
+      {
+        "vehiculo": "MG 5 (2021-2024) 1.5L",
+        "modulo": "ECM BOSCH (MARCA CHINA)",
+        "pines": {"PIN_1": "Rojo (B+)", "PIN_20": "Azul (CKP)", "PIN_35": "Verde (CAN H)"},
+        "tip_pro": "Si no hay comunicación, checa el fusible F12 en el vano motor; protege la línea CAN."
+      },
+      {
+        "vehiculo": "JAC FRISON T6 / T8 DIESEL",
+        "modulo": "DELPHI DCM",
+        "pines": {"A_01": "Rojo/Negro", "B_15": "Amarillo (FRP)", "C_10": "Blanco (IMV)"},
+        "tip_pro": "La válvula IMV se ensucia mucho con diesel corriente. Límpiala si hay jaloneo."
+      },
+      {
+        "vehiculo": "SUZUKI SWIFT (18-23) 1.2L / 1.0L TURBO",
+        "modulo": "ECM DENSO",
+        "pines": {"PIN_1": "Blanco (B+)", "PIN_45": "Lila (MAP)", "PIN_2": "Negro (GND)"},
+        "tip_pro": "Si marca falla de turbo, revisa la manguera pequeña del actuador; se sale fácil."
+      },
+      {
+        "vehiculo": "RENAULT KWID (19-24) 1.0L",
+        "modulo": "CONTINENTAL EMS",
+        "pines": {"PIN_5": "Rojo", "PIN_12": "Verde (Bomba)", "PIN_30": "Gris (TPS)"},
+        "tip_pro": "Si se apaga en semáforos, limpia el cuerpo de aceleración y calibra con switch (5 min)."
+      },
+      {
+        "vehiculo": "HYUNDAI ACCENT / KIA RIO (18-23) 1.6L",
+        "modulo": "KEFICO (CONECTOR GRIS)",
+        "pines": {"PIN_2": "Rojo/Blanco", "PIN_80": "Azul (Bobina 1)", "PIN_15": "Naranja (CAN)"},
+        "tip_pro": "Falla común de bobinas; si cambias una, cambia las 4 para evitar retorno de pico de voltaje."
+      },
+      {
+        "vehiculo": "CATERPILLAR C7 / C9 (MAQUINARIA PESADA)",
+        "modulo": "ADEM A4",
+        "pines": {"PIN_01": "Rojo (24V)", "PIN_02": "Negro (GND)", "PIN_22": "Amarillo (Data Link)"},
+        "tip_pro": "Si no hay aceleración, checa el sensor de posición del pedal; el arnés suele rozar con el chasis."
+      },
+      {
+        "vehiculo": "JOHN DEERE SERIE 6J / 7J (TRACTOR)",
+        "modulo": "ECU PHOENIX",
+        "pines": {"PIN_1": "Rojo", "PIN_50": "Verde (CAN)", "PIN_25": "Amarillo (Sensor Riel)"},
+        "tip_pro": "Si marca código de agua en diesel, drena el filtro inferior antes de borrar con escáner."
+      },
+      {
+        "vehiculo": "BMW MOTOR B48 (2.0T) 320i / 330i",
+        "modulo": "DME MEVD",
+        "pines": {"PIN_1": "Rojo", "PIN_4": "Marrón", "PIN_55": "Azul (Turbo Wastegate)"},
+        "tip_pro": "No desconectes la batería con el switch abierto o podrías desprogramar el módulo de luces."
+      },
+      {
+        "vehiculo": "MAZDA 2 (16-24) 1.5L",
+        "modulo": "PCM (DENSO)",
+        "pines": {"PIN_1A": "Negro/Rojo", "PIN_2B": "Azul", "PIN_20": "Verde (MAF)"},
+        "tip_pro": "Si el ralentí es inestable, limpia el sensor MAF con líquido especial, es muy sensible."
+      },
+      {
+        "vehiculo": "NISSAN KICKS (17-23) 1.6L",
+        "modulo": "ECM (CONECTORES NEGROS)",
+        "pines": {"PIN_110": "Rojo", "PIN_1": "Negro", "PIN_45": "Blanco (CMP)"},
+        "tip_pro": "Si el sensor de reversa no pita, revisa el conector de la IPDM debajo del faro izquierdo."
+      }
+   }
+}
