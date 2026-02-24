@@ -1,0 +1,2570 @@
+[
+  {
+    "brand": "Nissan",
+    "model": "Tsuru",
+    "year": "1991-2017",
+    "engine": "GA16DE 1.6L DOHC",
+    "ecu": "Hitachi ECCS",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "O2B1S1",
+      "MAP",
+      "IAT",
+      "IAC",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "INJ1",
+      "INJ2",
+      "VOLT"
+    ],
+    "pinout": [
+      {
+        "n": 1,
+        "name": "IGN SW",
+        "v": "12V"
+      },
+      {
+        "n": 3,
+        "name": "GND",
+        "v": "0V"
+      },
+      {
+        "n": 8,
+        "name": "CKP+",
+        "v": "AC senoidal"
+      },
+      {
+        "n": 9,
+        "name": "CKP-",
+        "v": "AC senoidal"
+      },
+      {
+        "n": 5,
+        "name": "TPS",
+        "v": "0.5-4.5V"
+      },
+      {
+        "n": 21,
+        "name": "VREF",
+        "v": "5.00V"
+      },
+      {
+        "n": 22,
+        "name": "SIG GND",
+        "v": "0V"
+      },
+      {
+        "n": 10,
+        "name": "INJ1",
+        "v": "12V PWM"
+      },
+      {
+        "n": 11,
+        "name": "INJ2",
+        "v": "12V PWM"
+      },
+      {
+        "n": 12,
+        "name": "INJ3",
+        "v": "12V PWM"
+      },
+      {
+        "n": 13,
+        "name": "INJ4",
+        "v": "12V PWM"
+      },
+      {
+        "n": 17,
+        "name": "O2 B1S1",
+        "v": "0.1-0.9V"
+      },
+      {
+        "n": 50,
+        "name": "B+",
+        "v": "12V"
+      },
+      {
+        "n": 52,
+        "name": "IAC-A",
+        "v": "PWM 30-55Hz"
+      },
+      {
+        "n": 53,
+        "name": "IAC-B",
+        "v": "PWM 30-55Hz"
+      },
+      {
+        "n": 30,
+        "name": "ECT",
+        "v": "NTC 177Ω@100°C"
+      }
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Sentra B14",
+    "year": "1996-2006",
+    "engine": "GA16DE 1.6L",
+    "ecu": "Hitachi/Siemens",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "IMMO",
+      "NATS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "O2B1S1",
+      "O2B1S2",
+      "MAF",
+      "IAT",
+      "IAC",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "BOB1",
+      "BOB2",
+      "BOB3",
+      "BOB4"
+    ],
+    "pinout": [
+      {
+        "n": 1,
+        "name": "B+",
+        "v": "12V"
+      },
+      {
+        "n": 3,
+        "name": "GND",
+        "v": "0V"
+      },
+      {
+        "n": 8,
+        "name": "CKP+",
+        "v": "AC"
+      },
+      {
+        "n": 5,
+        "name": "TPS",
+        "v": "0.5-4.5V"
+      },
+      {
+        "n": 21,
+        "name": "VREF",
+        "v": "5.00V"
+      },
+      {
+        "n": 10,
+        "name": "INJ1",
+        "v": "PWM"
+      },
+      {
+        "n": 24,
+        "name": "MAF",
+        "v": "0-5V"
+      },
+      {
+        "n": 17,
+        "name": "O2 B1",
+        "v": "0.1-0.9V"
+      },
+      {
+        "n": 44,
+        "name": "APP1",
+        "v": "0.5-4.5V"
+      },
+      {
+        "n": 45,
+        "name": "APP2",
+        "v": "0.3-2.2V"
+      },
+      {
+        "n": 46,
+        "name": "CAN-H",
+        "v": "2.5-3.5V"
+      },
+      {
+        "n": 47,
+        "name": "CAN-L",
+        "v": "1.5-2.5V"
+      }
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Sentra B15",
+    "year": "2001-2006",
+    "engine": "QG18DE 1.8L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "IMMO",
+      "NATS",
+      "ABS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "O2B1S1",
+      "O2B1S2",
+      "MAF",
+      "IAT",
+      "IAC",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Altima L30",
+    "year": "1998-2001",
+    "engine": "KA24DE 2.4L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "O2B1S1",
+      "O2B1S2",
+      "MAF",
+      "IAT",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "FUEL",
+      "INJ1",
+      "INJ2"
+    ],
+    "pinout": [
+      {
+        "n": 1,
+        "name": "B+",
+        "v": "12V"
+      },
+      {
+        "n": 3,
+        "name": "GND",
+        "v": "0V"
+      },
+      {
+        "n": 5,
+        "name": "TPS",
+        "v": "0.5-4.5V"
+      },
+      {
+        "n": 21,
+        "name": "VREF",
+        "v": "5.00V"
+      },
+      {
+        "n": 10,
+        "name": "INJ1",
+        "v": "PWM"
+      }
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Altima L31",
+    "year": "2002-2006",
+    "engine": "QR25DE 2.5L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "NATS",
+      "ABS",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "O2B1S1",
+      "O2B1S2",
+      "MAF",
+      "IAT",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Altima L32",
+    "year": "2007-2012",
+    "engine": "QR25DE 2.5L / VQ35DE 3.5L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "NATS",
+      "ABS",
+      "SRS",
+      "TCM",
+      "IPDM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "O2B1S1",
+      "O2B1S2",
+      "MAF",
+      "IAT",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOOST"
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Murano Z50",
+    "year": "2003-2008",
+    "engine": "VQ35DE 3.5L V6",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "CVT",
+      "NATS",
+      "SRS",
+      "ABS",
+      "IPDM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "O2B1S1",
+      "O2B1S2",
+      "MAF",
+      "IAT",
+      "CKP",
+      "CMP",
+      "BOB1",
+      "BOB2",
+      "BOB3"
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Frontier D22",
+    "year": "1998-2008",
+    "engine": "KA24 2.4L / VG33 3.3L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "4WD"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "O2B1S1",
+      "MAF",
+      "IAT",
+      "IAC",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "FUEL"
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Frontier D40",
+    "year": "2005-2015",
+    "engine": "VQ40DE 4.0L V6 / YD25DDTi 2.5L Diesel",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "TCM",
+      "4WD",
+      "ABS",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "X-Trail T30",
+    "year": "2001-2007",
+    "engine": "QR20DE 2.0L / QR25DE 2.5L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "NATS",
+      "ABS",
+      "SRS",
+      "4WD"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "O2B1S1",
+      "MAF",
+      "IAT",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "X-Trail T31",
+    "year": "2007-2014",
+    "engine": "MR20DE 2.0L / QR25DE 2.5L",
+    "ecu": "Hitachi MEC",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "NATS",
+      "ABS",
+      "SRS",
+      "CVT",
+      "IPDM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "O2B1S1",
+      "O2B1S2",
+      "MAF",
+      "IAT",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Versa N16",
+    "year": "2012-2019",
+    "engine": "HR16DE 1.6L",
+    "ecu": "Hitachi MEC",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "CVT",
+      "NATS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "O2B1S1",
+      "O2B1S2",
+      "MAF",
+      "IAT",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "March K13",
+    "year": "2011-2019",
+    "engine": "HR12DE 1.2L / HR16DE 1.6L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "CVT"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "O2B1S1",
+      "MAF",
+      "IAT",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Tiida C11",
+    "year": "2006-2012",
+    "engine": "HR16DE 1.6L / MR18DE 1.8L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "CVT",
+      "NATS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "O2B1S1",
+      "O2B1S2",
+      "MAF",
+      "IAT",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Pathfinder R51",
+    "year": "2005-2012",
+    "engine": "VQ40DE 4.0L V6",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "TCM",
+      "4WD",
+      "ABS",
+      "SRS",
+      "IPDM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "O2B1S1",
+      "O2B1S2",
+      "MAF",
+      "IAT",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOB1",
+      "BOB2",
+      "BOB3"
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Maxima A33",
+    "year": "2000-2003",
+    "engine": "VQ30DE 3.0L V6",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "NATS",
+      "ABS",
+      "SRS",
+      "TCM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "O2B1S1",
+      "O2B1S2",
+      "MAF",
+      "IAT",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Jetta A3",
+    "year": "1993-1998",
+    "engine": "2.0L ABA / 1.8L ADZ",
+    "ecu": "Bosch Motronic M2.9",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "IMMO2",
+      "ABS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "MAP",
+      "IAT",
+      "O2B1S1",
+      "IAC",
+      "CKP",
+      "STFT",
+      "LTFT"
+    ]
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Jetta A4",
+    "year": "1999-2006",
+    "engine": "2.0L AEG / 1.8T APH",
+    "ecu": "Bosch ME7.5",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "IMMO3",
+      "ABS",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "IAT",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOOST"
+    ],
+    "pinout": [
+      {
+        "n": 1,
+        "name": "B+",
+        "v": "12V"
+      },
+      {
+        "n": 2,
+        "name": "GND",
+        "v": "0V"
+      },
+      {
+        "n": 10,
+        "name": "INJ1",
+        "v": "PWM"
+      },
+      {
+        "n": 25,
+        "name": "MAF",
+        "v": "0-5V"
+      },
+      {
+        "n": 37,
+        "name": "TPS",
+        "v": "0.5-4.5V"
+      },
+      {
+        "n": 44,
+        "name": "APP1",
+        "v": "0.5-4.5V"
+      },
+      {
+        "n": 45,
+        "name": "APP2",
+        "v": "0.3-2.2V"
+      },
+      {
+        "n": 75,
+        "name": "CAN-H",
+        "v": "2.5-3.5V"
+      },
+      {
+        "n": 76,
+        "name": "CAN-L",
+        "v": "1.5-2.5V"
+      }
+    ]
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Jetta A5",
+    "year": "2006-2010",
+    "engine": "2.5L BGP / 2.0L TDI BRM",
+    "ecu": "Bosch MED9",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "TCM",
+      "BCM",
+      "IMMO4",
+      "ABS",
+      "SRS",
+      "Gateway"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Jetta A6 MK6",
+    "year": "2010-2018",
+    "engine": "2.5L CBTA / 1.4T CAXA / 2.0T CCZA",
+    "ecu": "Bosch MED17",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "TCM",
+      "BCM",
+      "IMMO5",
+      "ABS",
+      "SRS",
+      "Gateway",
+      "MFA"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOOST"
+    ]
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Golf MK4",
+    "year": "1999-2006",
+    "engine": "2.0L AEG / 1.8T APH / 1.6L AVU",
+    "ecu": "Bosch ME7",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "IMMO3",
+      "ABS",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOOST"
+    ]
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Passat B5",
+    "year": "1998-2005",
+    "engine": "1.8T AEB / 2.8L ATQ V6",
+    "ecu": "Bosch ME7",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "TCM",
+      "BCM",
+      "IMMO3",
+      "ABS",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOOST"
+    ]
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Polo 9N",
+    "year": "2002-2009",
+    "engine": "1.6L BSE / 1.4L BKY",
+    "ecu": "Bosch MED9",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Cavalier",
+    "year": "1995-2004",
+    "engine": "2.2L L61",
+    "ecu": "Delco E78",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "BCM",
+      "ABS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "O2B1S1",
+      "MAP",
+      "IAT",
+      "IAC",
+      "STFT",
+      "LTFT",
+      "CKP"
+    ],
+    "pinout": [
+      {
+        "n": 1,
+        "name": "B+",
+        "v": "12V"
+      },
+      {
+        "n": 3,
+        "name": "GND",
+        "v": "0V"
+      },
+      {
+        "n": 5,
+        "name": "TPS",
+        "v": "0.5-4.5V"
+      },
+      {
+        "n": 21,
+        "name": "MAP",
+        "v": "0.5-4.5V"
+      }
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Optra",
+    "year": "2004-2010",
+    "engine": "1.6L F16D3 / 1.8L Z18XE",
+    "ecu": "Bosch ME7",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "TCM",
+      "BCM",
+      "ABS",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "STFT",
+      "LTFT",
+      "CKP"
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Aveo",
+    "year": "2005-2017",
+    "engine": "1.4L B14NEL / 1.6L F16D3",
+    "ecu": "Delphi",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "SRS",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAP",
+      "IAT",
+      "O2B1S1",
+      "IAC",
+      "CKP"
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Suburban GMT800",
+    "year": "1999-2006",
+    "engine": "5.3L LM7 Vortec / 6.0L LQ4",
+    "ecu": "GM PCM E38",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "BCM",
+      "EBCM",
+      "TCM",
+      "SRS",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "IAC",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOB1",
+      "BOB2",
+      "BOB3",
+      "BOB4"
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Silverado GMT800",
+    "year": "1999-2006",
+    "engine": "4.8L LR4 / 5.3L LM7 / 6.0L LQ4",
+    "ecu": "GM PCM",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "BCM",
+      "EBCM",
+      "TCM",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOB1",
+      "BOB2",
+      "BOB3",
+      "BOB4"
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Malibu",
+    "year": "2004-2012",
+    "engine": "2.2L L61 / 3.5L LX9 V6",
+    "ecu": "GM PCM",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "TCM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Trailblazer",
+    "year": "2002-2009",
+    "engine": "4.2L L6 LL8 / 5.3L LS4 V8",
+    "ecu": "GM PCM",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "BCM",
+      "EBCM",
+      "TCM",
+      "SRS",
+      "TCCM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Spark MH",
+    "year": "2010-2015",
+    "engine": "1.2L LMU DOHC",
+    "ecu": "Delphi MT35",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAP",
+      "O2B1S1",
+      "IAC",
+      "CKP"
+    ]
+  },
+  {
+    "brand": "Ford",
+    "model": "Fiesta MK5",
+    "year": "2002-2008",
+    "engine": "1.6L Duratec Rocam",
+    "ecu": "Visteon EEC-VI",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "MAF",
+      "O2B1S1",
+      "IAC",
+      "CKP",
+      "STFT",
+      "LTFT"
+    ]
+  },
+  {
+    "brand": "Ford",
+    "model": "Fiesta MK7",
+    "year": "2009-2018",
+    "engine": "1.6L Sigma / 1.0L EcoBoost Fox",
+    "ecu": "Bosch ME17",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "TCM",
+      "BCM",
+      "SRS",
+      "IMMO",
+      "PATS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "STFT",
+      "LTFT",
+      "BOOST",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Ford",
+    "model": "Focus MK2",
+    "year": "2005-2011",
+    "engine": "2.0L Duratec HE / 2.0L TDCi",
+    "ecu": "Bosch ME9",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "ABS",
+      "SRS",
+      "BCM",
+      "PATS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "KNOCK",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Ford",
+    "model": "Focus MK3",
+    "year": "2012-2018",
+    "engine": "2.0L GDi / 1.6L EcoBoost",
+    "ecu": "Bosch MED17",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "TCM",
+      "PATS",
+      "GWM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOOST"
+    ]
+  },
+  {
+    "brand": "Ford",
+    "model": "Fusion MK1",
+    "year": "2006-2012",
+    "engine": "2.3L Duratec / 2.5L Duratec / 3.0L Duratec V6",
+    "ecu": "Bosch ME9",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "TCM",
+      "PATS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Ford",
+    "model": "F-150 MK11",
+    "year": "2004-2008",
+    "engine": "4.2L V6 / 4.6L Triton / 5.4L Triton V8",
+    "ecu": "Ford EEC-V PCM",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "PATS",
+      "4x4"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "FUEL"
+    ]
+  },
+  {
+    "brand": "Ford",
+    "model": "Ranger MK3",
+    "year": "2007-2012",
+    "engine": "2.3L Duratec / 3.0L V6 / 2.5L TDCi",
+    "ecu": "Ford EEC-V",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "BCM",
+      "ABS",
+      "4x4"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "MAF",
+      "O2B1S1",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "FUEL"
+    ]
+  },
+  {
+    "brand": "Ford",
+    "model": "Escape MK1",
+    "year": "2001-2007",
+    "engine": "2.3L Duratec / 3.0L Duratec V6",
+    "ecu": "Bosch ME7",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "PATS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Toyota",
+    "model": "Corolla E110",
+    "year": "1998-2002",
+    "engine": "1ZZ-FE 1.8L DOHC",
+    "ecu": "Toyota EFI",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "MAP",
+      "IAT",
+      "O2B1S1",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "IAC"
+    ]
+  },
+  {
+    "brand": "Toyota",
+    "model": "Corolla E120",
+    "year": "2002-2008",
+    "engine": "1ZZ-FE 1.8L / 2ZZ-GE 1.8L",
+    "ecu": "Toyota ETCS",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Toyota",
+    "model": "Corolla E140",
+    "year": "2008-2014",
+    "engine": "2ZR-FE 1.8L Dual VVT-i",
+    "ecu": "Toyota EDC",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "IMMO",
+      "EPS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Toyota",
+    "model": "Camry XV30",
+    "year": "2002-2006",
+    "engine": "2AZ-FE 2.4L / 1MZ-FE 3.0L V6",
+    "ecu": "Toyota EFI",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "SRS",
+      "IMMO",
+      "TCM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Toyota",
+    "model": "Camry XV40",
+    "year": "2006-2011",
+    "engine": "2AZ-FE 2.4L / 2GR-FE 3.5L V6",
+    "ecu": "Toyota ETCS",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "IMMO",
+      "TCM",
+      "EPS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Toyota",
+    "model": "RAV4 MK3",
+    "year": "2006-2012",
+    "engine": "2AZ-FE 2.4L / 2GR-FE 3.5L",
+    "ecu": "Toyota ETCS",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "4WD",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Toyota",
+    "model": "Hilux GGN",
+    "year": "2005-2015",
+    "engine": "1GR-FE 4.0L V6 / 2TR-FE 2.7L",
+    "ecu": "Toyota EFI",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "4WD",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Toyota",
+    "model": "Prius MK2",
+    "year": "2004-2009",
+    "engine": "1NZ-FXE 1.5L HSD Híbrido",
+    "ecu": "Toyota HV ECU",
+    "fuel": "híbrido",
+    "modules": [
+      "ECM",
+      "HV-ECU",
+      "BCM",
+      "ABS",
+      "SRS",
+      "IMMO",
+      "MG-ECU"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "CKP",
+      "BATTEMP",
+      "VOLT"
+    ]
+  },
+  {
+    "brand": "Toyota",
+    "model": "Fortuner MK1",
+    "year": "2005-2015",
+    "engine": "1GR-FE 4.0L V6 / 2KD-FTV 2.5L Diesel",
+    "ecu": "Toyota EFI",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "TCM",
+      "ABS",
+      "SRS",
+      "4WD"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Honda",
+    "model": "Civic EG",
+    "year": "1992-1995",
+    "engine": "D15B2 / D16Z6 VTEC",
+    "ecu": "Honda ECU P06/P28",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "MAP",
+      "IAT",
+      "O2B1S1",
+      "IAC",
+      "CKP"
+    ],
+    "pinout": [
+      {
+        "n": 1,
+        "name": "IGP",
+        "v": "12V"
+      },
+      {
+        "n": 2,
+        "name": "GND",
+        "v": "0V"
+      },
+      {
+        "n": 5,
+        "name": "MAP",
+        "v": "0.5-4.5V"
+      },
+      {
+        "n": 10,
+        "name": "TPS",
+        "v": "0.5-4.5V"
+      },
+      {
+        "n": 15,
+        "name": "O2",
+        "v": "0.1-0.9V"
+      }
+    ]
+  },
+  {
+    "brand": "Honda",
+    "model": "Civic EK",
+    "year": "1996-2000",
+    "engine": "D16Y7 / D16Y8 / B16A2 VTEC",
+    "ecu": "Honda ECU P2T",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "MAP",
+      "O2B1S1",
+      "O2B1S2",
+      "IAC",
+      "STFT",
+      "LTFT"
+    ]
+  },
+  {
+    "brand": "Honda",
+    "model": "Civic FA",
+    "year": "2006-2011",
+    "engine": "R18A1 1.8L SOHC i-VTEC",
+    "ecu": "Honda PGM-FI",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Honda",
+    "model": "Accord CG",
+    "year": "1998-2002",
+    "engine": "F23A / J30A V6",
+    "ecu": "Honda PGM-FI",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "IMMO",
+      "SRS",
+      "TCM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "MAP",
+      "O2B1S1",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Honda",
+    "model": "CR-V RD4",
+    "year": "2002-2006",
+    "engine": "K24A1 2.4L DOHC i-VTEC",
+    "ecu": "Honda PGM-FI",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "4WD",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP"
+    ]
+  },
+  {
+    "brand": "Honda",
+    "model": "CR-V RE",
+    "year": "2007-2011",
+    "engine": "K24Z4 2.4L / R20A 2.0L",
+    "ecu": "Honda PGM-FI",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "AWD",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Mazda",
+    "model": "3 BK",
+    "year": "2004-2009",
+    "engine": "LF 2.0L / L3 2.3L DOHC",
+    "ecu": "Mazda/Siemens",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "IMMO",
+      "TCM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Mazda",
+    "model": "3 BL",
+    "year": "2010-2013",
+    "engine": "LF 2.0L / L3-VE 2.3L MZR",
+    "ecu": "Mazda MED17",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "IMMO",
+      "TCM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Mazda",
+    "model": "6 GG",
+    "year": "2003-2008",
+    "engine": "LF 2.0L / L3 2.3L / MZR-CD 2.0 Diesel",
+    "ecu": "Mazda",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "IMMO",
+      "TCM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Mazda",
+    "model": "CX-5 KE",
+    "year": "2012-2017",
+    "engine": "PE 2.0L SKYACTIV / PY 2.5L SKYACTIV",
+    "ecu": "Mazda",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "AWD",
+      "IMMO",
+      "TCM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Dodge",
+    "model": "Neon",
+    "year": "2000-2005",
+    "engine": "2.0L SOHC EDZ",
+    "ecu": "Chrysler JTEC",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "SKIM",
+      "TCM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "MAP",
+      "IAT",
+      "O2B1S1",
+      "IAC",
+      "CKP",
+      "STFT",
+      "LTFT"
+    ]
+  },
+  {
+    "brand": "Dodge",
+    "model": "RAM 1500",
+    "year": "2002-2008",
+    "engine": "3.7L V6 / 4.7L V8 / 5.7L HEMI",
+    "ecu": "Chrysler NGC",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "TCM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "SKIM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAP",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "FUEL"
+    ]
+  },
+  {
+    "brand": "Dodge",
+    "model": "Journey MK",
+    "year": "2009-2019",
+    "engine": "2.4L ED3 / 3.5L EGG V6",
+    "ecu": "Chrysler NGC4",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "TCM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "SKIM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Dodge",
+    "model": "Avenger",
+    "year": "2008-2014",
+    "engine": "2.4L ED3 / 3.5L EGG V6",
+    "ecu": "Chrysler NGC4",
+    "fuel": "gasolina",
+    "modules": [
+      "PCM",
+      "TCM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "SKIM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 3 E46",
+    "year": "1998-2006",
+    "engine": "M43 1.9L / M54 2.5L / M52 2.8L",
+    "ecu": "Siemens MS43",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "DSC",
+      "SRS",
+      "EWS3",
+      "ZKE",
+      "LCM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "IAT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ],
+    "pinout": [
+      {
+        "n": 1,
+        "name": "B+",
+        "v": "12V"
+      },
+      {
+        "n": 2,
+        "name": "GND",
+        "v": "0V"
+      },
+      {
+        "n": 15,
+        "name": "CAN-H",
+        "v": "2.5V"
+      },
+      {
+        "n": 16,
+        "name": "CAN-L",
+        "v": "1.5V"
+      },
+      {
+        "n": 40,
+        "name": "APP1",
+        "v": "0.5-4.5V"
+      },
+      {
+        "n": 41,
+        "name": "APP2",
+        "v": "0.3-2.2V"
+      }
+    ]
+  },
+  {
+    "brand": "BMW",
+    "model": "Serie 5 E60",
+    "year": "2003-2010",
+    "engine": "N52B25 2.5L / N53B30 3.0L / N54B30 TT",
+    "ecu": "Siemens MSV80",
+    "fuel": "gasolina",
+    "modules": [
+      "DME",
+      "DSC",
+      "SRS",
+      "EWS4",
+      "CAS",
+      "ZBE",
+      "KOMBI",
+      "SMG"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOOST"
+    ]
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Accent LC",
+    "year": "2000-2006",
+    "engine": "G4EH 1.3L / G4FK 1.5L",
+    "ecu": "Bosch M7.9",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "MAP",
+      "IAT",
+      "O2B1S1",
+      "IAC",
+      "STFT",
+      "LTFT",
+      "CKP"
+    ]
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Accent RB",
+    "year": "2012-2017",
+    "engine": "G4FA 1.4L / G4FC 1.6L GDI",
+    "ecu": "Bosch MED17",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "TCM",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Elantra MD",
+    "year": "2011-2016",
+    "engine": "G4FG 1.6L / G4NA 2.0L",
+    "ecu": "Bosch MED17",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "TCM",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Hyundai",
+    "model": "Tucson JM",
+    "year": "2004-2010",
+    "engine": "G4GC 2.0L / G6BA 2.7L V6",
+    "ecu": "Bosch ME7",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "4WD",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Kia",
+    "model": "Sportage SL",
+    "year": "2010-2015",
+    "engine": "2.0L G4KD / 2.0D D4HA",
+    "ecu": "Bosch MED17",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "TCM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "BOOST"
+    ]
+  },
+  {
+    "brand": "Kia",
+    "model": "Rio DC",
+    "year": "2001-2005",
+    "engine": "A3E 1.3L / B3E 1.5L",
+    "ecu": "Siemens Fenix 5",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "MAP",
+      "IAT",
+      "O2B1S1",
+      "IAC",
+      "CKP",
+      "STFT",
+      "LTFT"
+    ]
+  },
+  {
+    "brand": "Kia",
+    "model": "Sorento BL",
+    "year": "2003-2009",
+    "engine": "3.5L G6CU V6 / 2.5L D4CB CRDi",
+    "ecu": "Bosch ME7",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "TCM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "4WD"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK"
+    ]
+  },
+  {
+    "brand": "Seat",
+    "model": "Ibiza MK3",
+    "year": "2002-2008",
+    "engine": "1.4L AXP / 1.6L AKL / 1.8T AUM",
+    "ecu": "Bosch ME7",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "IMMO3",
+      "ABS",
+      "SRS"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOOST"
+    ]
+  },
+  {
+    "brand": "Audi",
+    "model": "A4 B6",
+    "year": "2001-2005",
+    "engine": "1.8T AVJ / 2.0L ALT / 3.0L AVK V6",
+    "ecu": "Bosch ME7",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "TCM",
+      "BCM",
+      "IMMO3",
+      "ABS",
+      "SRS",
+      "Gateway"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "O2B1S2",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOOST"
+    ]
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Lancer CS",
+    "year": "2003-2007",
+    "engine": "4G18 1.8L / 4G63 2.0L Turbo",
+    "ecu": "Mitsubishi MPI",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "IMMO",
+      "TCM"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOOST"
+    ]
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Eclipse 3G",
+    "year": "2000-2005",
+    "engine": "4G64 2.4L / 4G63T 2.0L Turbo",
+    "ecu": "Mitsubishi MPI",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "IMMO"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "APP1",
+      "APP2",
+      "MAF",
+      "O2B1S1",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP",
+      "KNOCK",
+      "BOOST"
+    ]
+  },
+  {
+    "brand": "Mitsubishi",
+    "model": "Montero Sport K94",
+    "year": "1997-2004",
+    "engine": "6G72 3.0L V6 / 6G74 3.5L V6",
+    "ecu": "Mitsubishi MPI",
+    "fuel": "gasolina",
+    "modules": [
+      "ECM",
+      "BCM",
+      "ABS",
+      "SRS",
+      "4WD"
+    ],
+    "sensors": [
+      "RPM",
+      "ECT",
+      "TPS",
+      "MAP",
+      "IAT",
+      "O2B1S1",
+      "O2B1S2",
+      "IAC",
+      "STFT",
+      "LTFT",
+      "CKP",
+      "CMP"
+    ]
+  }
+]
