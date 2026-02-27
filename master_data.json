@@ -1439,7 +1439,967 @@
   {"code": "B0020", "componente": "Bolsa de Aire Lateral Izquierda", "falla": "Circuito abierto", "causa": "Cables trozados en la bisagra de la puerta o impacto lateral detectado."},
   {"code": "B1000", "componente": "Módulo de Control SRS", "falla": "Fallo interno", "causa": "Módulo bloqueado por choque previo (crash data) o corto interno."},
   {"code": "B1212", "componente": "Pretensor de Cinturón", "falla": "Resistencia alta", "causa": "Cinturón detonado o conector con falso contacto."}
- }
-        }   
+ },
+    [
+  {
+    "brand": "CUMMINS",
+    "model": "ISX15 / QSX15 (CM2250)",
+    "year": "2010-2026",
+    "engine": "15L Turbo Diesel",
+    "ecu": "Cummins CM2250",
+    "fuel": "Diesel",
+    "modules": ["ECM", "Aftertreatment", "VGT Control"],
+    "sensors": ["RPM", "ECT", "FUEL", "BOOST", "EGR", "DPF"],
+    "pinout": [
+      {"n": 1, "name": "B+ Battery (Unswitched)", "v": "12.6V / 24V"},
+      {"n": 3, "name": "ECM Ground", "v": "0.0V"},
+      {"n": 24, "name": "Common Rail Pressure", "v": "0.5 - 4.5V"},
+      {"n": 46, "name": "J1939 CAN High", "v": "2.5-3.5V"},
+      {"n": 47, "name": "J1939 CAN Low", "v": "1.5-2.5V"}
+    ]
+  },
+  {
+    "brand": "KENWORTH",
+    "model": "T660 / T680 / T800",
+    "year": "2012-2025",
+    "engine": "PACCAR MX-13",
+    "ecu": "Delphi / Paccar",
+    "fuel": "Diesel",
+    "modules": ["ECM", "VICU", "ABS-Bendix", "EAS3"],
+    "sensors": ["RPM", "ECT", "OIL_PRESS", "FUEL_RAIL", "NOx_Sens"],
+    "pinout": [
+      {"n": 10, "name": "Ignition Supply", "v": "12V / 24V"},
+      {"n": 62, "name": "Fuel Control Valve", "v": "PWM"},
+      {"n": 78, "name": "Exhaust Brake Solenoid", "v": "24V Output"}
+    ]
+  },
+  {
+    "brand": "CATERPILLAR",
+    "model": "C15 ACERT",
+    "year": "2004-2010 (Legacy Support)",
+    "engine": "15.2L I6",
+    "ecu": "ADEM A4",
+    "fuel": "Diesel",
+    "modules": ["ECM", "Transmission Control"],
+    "sensors": ["RPM", "ECT", "BOOST", "OIL_PRESS", "IAT"],
+    "pinout": [
+      {"n": "J1-1", "name": "Battery +", "v": "12V/24V"},
+      {"n": "J2-22", "name": "Injection Actuation Press", "v": "0.5-4.5V"},
+      {"n": "J2-48", "name": "Boost Sensor Signal", "v": "0.5-4.8V"}
+    ]
+  },
+  {
+    "brand": "DETROIT DIESEL",
+    "model": "DD15 / DD13",
+    "year": "2008-2026",
+    "engine": "DD15 BlueTec",
+    "ecu": "MCM / ACM",
+    "fuel": "Diesel",
+    "modules": ["MCM", "ACM2", "CPC4"],
+    "sensors": ["RPM", "ECT", "DEF_LEVEL", "SCR_TEMP", "FUEL"],
+    "pinout": [
+      {"n": "M1", "name": "Main Battery Power", "v": "12V/24V"},
+      {"n": "M21", "name": "EGR Valve Control", "v": "PWM Signal"},
+      {"n": "M44", "name": "Engine Brake Low/Hi", "v": "Switch Ground"}
+},
+      [
+  {
+    "category": "DIESEL_DIAGNOSTICS",
+    "protocol": "SAE J1939",
+    "common_faults": [
+      {
+        "spn": 100, "fmi": 1, 
+        "description": "Presión de Aceite del Motor - Muy Baja",
+        "action": "Paro de motor inmediato. Revisar nivel y sensor de presión.",
+        "voltage_ref": "0.5V a ralentí"
+      },
+      {
+        "spn": 102, "fmi": 3, 
+        "description": "Presión del Múltiple de Admisión (Boost) - Voltaje Alto",
+        "action": "Revisar arnés del sensor MAP o fuga en el turbo.",
+        "voltage_ref": "4.5V - 4.8V"
+      },
+      {
+        "spn": 639, "fmi": 9, 
+        "description": "Error de Comunicación en el Enlace de Datos J1939",
+        "action": "Revisar resistencia de terminación (60 ohms) y cables CAN High/Low.",
+        "voltage_ref": "CAN H: 2.6V / CAN L: 2.4V"
+      },
+      {
+        "spn": 3216, "fmi": 20, 
+        "description": "Sensor de NOx de Entrada - Datos Erráticos",
+        "action": "Limpiar sensor o revisar sistema de post-tratamiento (SCR).",
+        "voltage_ref": "Digital J1939"
+      }
+    ],
+    "heavy_duty_specs": [
+      {
+        "system": "FUEL_SYSTEM_COMMON_RAIL",
+        "brands": ["CUMMINS ISX", "PACCAR MX13"],
+        "rail_pressure_max": "35,000 PSI",
+        "injector_voltage": "70V - 100V (Pico de activación)",
+        "return_flow_spec": "Max 100ml en 30 seg a ralentí"
+      },
+      {
+        "system": "AFTERTREATMENT_DEF",
+        "brands": ["DETROIT DD15", "VOLVO D13"],
+        "def_concentration": "32.5% Urea",
+        "pump_pressure": "5 bar (72.5 PSI)",
+        "dosing_valve_test": "Duty Cycle 10% - 90%"
+      },
+      
+      [
+  {
+    "brand": "CATERPILLAR",
+    "engine_series": ["C7", "C9", "C12", "C13", "C15"],
+    "ecu_type": "ADEM A3 / A4 / A5",
+    "critical_data": {
+      "injection_system": "HEUI / MEUI",
+      "actuation_pressure": "600 - 3500 PSI (HEUI)",
+      "sensor_supply": "5.0V +/- 0.2V",
+      "timing_calibration": "J2-Pin 22 & 23"
+    },
+    "pinout_master": [
+      {"pin": "J1-48", "desc": "Unswitched +Battery", "v": "12V/24V"},
+      {"pin": "J1-52", "desc": "Ignition Keyswitch", "v": "12V/24V"},
+      {"pin": "J2-14", "desc": "IAP Sensor (Injection Actuation)", "v": "0.5V - 4.5V"},
+      {"pin": "J2-35", "desc": "Turbo Outlet Pressure", "v": "0.5V - 4.8V"}
+    ],
+    "special_functions": ["Calibración de Inyectores (Trim Codes)", "Prueba de Corte de Cilindros"]
+  },
+  {
+    "brand": "DETROIT DIESEL",
+    "engine_series": ["Series 60", "DD13", "DD15", "DD16"],
+    "ecu_type": "DDEC VI / DDEC 10 / MCM",
+    "critical_data": {
+      "network": "J1939 (CAN 1, CAN 2, CAN 3)",
+      "oil_pressure_spec": "12 PSI (Idle) / 50 PSI (Rated)",
+      "coolant_temp_derate": "214°F (101°C)"
+    },
+    "pinout_master": [
+      {"pin": "M1-1", "desc": "Main Power MCM", "v": "12.6V"},
+      {"pin": "M1-15", "desc": "Engine Brake Common", "v": "Low Side Control"},
+      {"pin": "M2-10", "desc": "Camshaft Position Sensor", "v": "Magnetic Pickup"},
+      {"pin": "M2-21", "desc": "EGR Temperature Sensor", "v": "0.2V - 4.9V"}
+    ],
+    "common_issues": ["Falla de Arnés de Inyectores (Aceite en conectores)", "Sensores Delta P obstruidos"]
+  },
+        [
+  {
+    "category": "TRANSMISIONES_PESADAS",
+    "systems": [
+      {
+        "brand": "EATON FULLER",
+        "model": "UltraShift / Advantage",
+        "ecu": "TEC (Transmission Electronic Control)",
+        "pinout_critical": [
+          {"pin": 1, "desc": "B+ Battery Power", "v": "12V/24V"},
+          {"pin": 26, "desc": "Ignition Signal", "v": "12V"},
+          {"pin": 3, "desc": "J1939 High", "v": "2.5V-3.5V"},
+          {"pin": 4, "desc": "J1939 Low", "v": "1.5V-2.5V"}
+        ],
+        "diagnostics": "Si el visor marca 'F', revisar voltajes en TEC y resistencia de 60 ohms en el enlace de datos."
+      },
+      {
+        "brand": "ALLISON",
+        "model": "3000 / 4000 Series",
+        "ecu": "Generation 4 / 5 TCM",
+        "pinout_critical": [
+          {"pin": "J1-1", "desc": "Ground Source", "v": "0.0V"},
+          {"pin": "J1-16", "desc": "Vehicle Speed Sensor +", "v": "AC Pulsante"},
+          {"pin": "J2-2", "desc": "Main Power B+", "v": "12.6V"}
+  },
+  {
+    "category": "TORQUES_Y_ARMADO_DIESEL",
+    "specs": [
+      {
+        "engine": "CUMMINS ISX15",
+        "head_bolts": [
+          {"step": 1, "value": "150 lb-ft", "desc": "Apriete inicial"},
+          {"step": 2, "value": "300 lb-ft", "desc": "Segundo paso"},
+          {"step": 3, "value": "90° grados", "desc": "Giro angular final"}
+        ],
+        "firing_order": "1-5-3-6-2-4",
+        "valve_lash": "Admisión: 0.014\" / Escape: 0.027\""
+      },
+      {
+        "engine": "DETROIT DD15",
+        "head_bolts": [
+          {"step": 1, "value": "200 Nm", "desc": "Apriete inicial"},
+          {"step": 2, "value": "90° grados", "desc": "Primer giro"},
+          {"step": 3, "value": "90° grados", "desc": "Segundo giro final"}
+        ],
+        "camshaft_timing": "Usar herramienta de bloqueo en volante y engranajes de distribución."
+      },
+      {
+        "engine": "CAT C15 ACERT",
+        "head_bolts": [
+          {"step": 1, "value": "120 lb-ft", "desc": "Paso 1"},
+          {"step": 2, "value": "330 lb-ft", "desc": "Paso 2"},
+          {"step": 3, "value": "330 lb-ft (Repetir)", "desc": "Verificación final"}
+        ],
+        "firing_order": "1-5-3-6-2-4"
+      },
+      
+[
+  {
+    "category": "FRENOS_Y_SEGURIDAD_DIESEL",
+    "systems": [
+      {
+        "brand": "WABCO / BENDIX",
+        "system": "ABS / ATC / ESP",
+        "ecu": "EC-60 / EC-80",
+        "pinout_critical": [
+          {"pin": 1, "desc": "Power Ignition", "v": "12V/24V"},
+          {"pin": 12, "desc": "Sensor Wheel FR (Speed)", "v": "AC Pulsante"},
+          {"pin": 18, "desc": "Diagonal Solenoid Valve", "v": "12V Pulse"}
+        ],
+        "common_faults": "Resistencia de sensores de rueda debe ser entre 1100-1900 ohms. Si marca abierto, revisar cableado en el eje."
+  },
+  {
+    "category": "POST_TRATAMIENTO_SCR_DEF",
+    "specs": [
+      {
+        "system": "CUMMINS AFTERTREATMENT",
+        "components": ["Doser Unit", "Supply Pump", "SCR Catalyst"],
+        "def_dosing_press": "130 PSI (Normal operation)",
+        "sensors": [
+          {"name": "Inlet NOx Sensor", "desc": "Mide salida de motor", "type": "Smart Sensor J1939"},
+          {"name": "Outlet NOx Sensor", "desc": "Mide eficiencia catalizador", "type": "Smart Sensor J1939"}
+        ],
+        "diagnostics": "Si el sensor de NOx marca 0ppm constante, el sensor está envenenado o no tiene alimentación de 24V en el conector de 4 pines."
+      },
+      {
+        "system": "DETROIT ONE-BOX",
+        "components": ["MCM", "ACM", "DEF Pump"],
+        "critical_check": "Revisar cristalización de urea en el inyector de DEF. Limpiar solo con agua destilada caliente."
+      },
+  {
+    "category": "EQUIPO_PESADO_CONSTRUCCION",
+    "systems": [
+      {
+        "brand": "CATERPILLAR EXCAVATOR",
+        "models": ["320D", "336D", "345D"],
+        "controller": "Machine ECM (ADEM A4)",
+        "pinout_critical": [
+          {"pin": 1, "desc": "Ground (Main)", "v": "0.0V"},
+          {"pin": 2, "desc": "B+ Battery 24V", "v": "24.5V - 28V"},
+          {"pin": 44, "desc": "Hydraulic Pressure Sensor", "v": "0.5V - 4.5V"},
+          {"pin": 70, "desc": "Engine Speed Dial", "v": "0.2V - 4.8V"}
+        ],
+        "hydraulic_spec": "Presión de alivio principal: 35,000 kPa (5076 PSI). Si cae, revisar solenoide de bomba (NFC)."
+      },
+      {
+        "brand": "KOMATSU",
+        "models": ["PC200", "PC300", "PC400"],
+        "controller": "Pump/Engine Controller",
+        "pinout_critical": [
+          {"pin": "CN1-1", "desc": "Battery Input", "v": "24V"},
+          {"pin": "CN2-5", "desc": "Fuel Control Dial", "v": "Potenciómetro 5V"},
+          {"pin": "CN3-12", "desc": "CAN High (Internal)", "v": "2.5V"}
+  },
+  {
+    "category": "MAQUINARIA_AGRICOLA",
+    "specs": [
+      {
+        "brand": "JOHN DEERE",
+        "engine": "PowerTech 6.8L / 9.0L",
+        "ecu": "Level 14 / 16 / 23",
+        "pinout_critical": [
+          {"pin": "X1-1", "desc": "Unswitched Power", "v": "12V/24V"},
+          {"pin": "X1-15", "desc": "CAN High J1939", "v": "2.5V"},
+          {"pin": "X2-20", "desc": "Rail Pressure Sensor", "v": "0.5V - 4.5V"}
+        ],
+        "diagnostics": "En motores John Deere, el código 1569-31 indica derate por temperatura o nivel de urea. Revisar flujo de refrigerante."
+},
+  [
+  {
+    "category": "GENERACION_Y_MOTORES_ESTACIONARIOS",
+    "systems": [
+      {
+        "brand": "DEEP SEA ELECTRONICS",
+        "model": "DSE 7320 / 8610",
+        "controller": "Auto Start Control Module",
+        "pinout_critical": [
+          {"pin": 1, "desc": "DC Plant Battery +", "v": "12V/24V"},
+          {"pin": 2, "desc": "DC Plant Battery -", "v": "0.0V"},
+          {"pin": 8, "desc": "Fuel Solenoid Output", "v": "B+ Output"},
+          {"pin": 15, "desc": "CAN High (Engine ECU)", "v": "2.5V"}
+        ],
+        "diagnostics": "Si el DSE marca 'CAN ECU Data Fail', revisar continuidad de par trenzado J1939 y resistencia de 120 ohms en el extremo del controlador."
+      },
+      {
+        "brand": "PERKINS / CAT GENERATOR",
+        "engine_series": ["1100 Series", "2000 Series", "4000 Series"],
+        "ecu": "ECM ADEM A4 / Electronic Governor",
+        "pinout_critical": [
+          {"pin": "J1-1", "desc": "Battery Input +", "v": "24V DC"},
+          {"pin": "J2-12", "desc": "Magnetic Pickup (MPU)", "v": "AC Voltage (Frequency)"},
+          {"pin": "J2-40", "desc": "Actuator Output", "v": "PWM Control"}
+        ],
+        "firing_order": "1-5-3-6-2-4 (I6) / 1-8-4-3-6-5-7-2 (V8)"
+      }
+    ]
+  },
+  {
+    "category": "MOTORES_MARINOS_INDUSTRIALES",
+    "specs": [
+      {
+        "brand": "VOLVO PENTA",
+        "engine": "D4 / D6 / D13 Marine",
+        "controller": "EVC (Electronic Vessel Control)",
+        "pinout_critical": [
+          {"pin": 1, "desc": "Power Supply B+", "v": "12V/24V"},
+          {"pin": 5, "desc": "Multilink CAN High", "v": "2.5V"},
+          {"pin": 12, "desc": "Throttle Lever Signal", "v": "0.5V - 4.5V"}
+        ],
+        "diagnostics": "En sistemas marinos, revisar corrosión por salitre en conectores del mazo de cables. Usar grasa dieléctrica en cada mantenimiento."
+        },
+      
+[
+  {
+    "category": "SISTEMAS_DE_TURBO_VGT",
+    "systems": [
+      {
+        "brand": "HOLSET / CUMMINS VGT",
+        "model": "HE400VG / HE500VG",
+        "actuator": "Smart Electric Actuator (J1939)",
+        "pinout_critical": [
+          {"pin": 1, "desc": "B+ Battery Power", "v": "12V / 24V"},
+          {"pin": 2, "desc": "Ground (Main)", "v": "0.0V"},
+          {"pin": 3, "desc": "CAN High (Dedicated)", "v": "2.5V"},
+          {"pin": 4, "desc": "CAN Low (Dedicated)", "v": "1.5V"}
+        ],
+        "diagnostics": "Si el actuador no comunica, revisar el fusible de 30A del VGT. Si hay comunicación pero no mueve, desmontar y verificar que la geometría del turbo no esté 'pegada' por carbón."
+      }
+    ]
+  },
+  {
+    "category": "FRENO_DE_MOTOR_JACOBS",
+    "specs": [
+      {
+        "engine": "CUMMINS ISX / DETROIT S60",
+        "system": "Compression Release Brake",
+        "pinout_critical": [
+          {"pin": "ECM-J2-15", "desc": "Low Brake Solenoid", "v": "12V PWM / Ground"},
+          {"pin": "ECM-J2-18", "desc": "High Brake Solenoid", "v": "12V PWM / Ground"}
+        ],
+        "firing_logic": "El freno de motor solo activa si: 1. Pedal de embrague arriba, 2. Pedal de acelerador en 0%, 3. Velocidad > 10 km/h.",
+        "adjustment": "Calibrar crucetas de freno según manual: 0.015\" a 0.033\" según modelo de motor."
+      }
+    ]
+  },
+  {
+    "category": "RED_DE_DATOS_DIESEL_AVANZADA",
+    "diagnostics": {
+      "resistencia_terminacion": "60 Ohms (Dos resistencias de 120 Ohms en paralelo)",
+      "voltajes_can": [
+        {"bus": "CAN High", "v": "2.6V - 3.5V (Dominante)"},
+        {"bus": "CAN Low", "v": "1.5V - 2.4V (Recesivo)"}
+      ],
+      "propart_tip": "Si el camión no arranca y el tablero parece 'árbol de navidad', mide resistencia en el pin 6 y 14 del DLC. Si marca 120 Ohms, una resistencia se desconectó. Si marca 0 Ohms, el bus está en corto."
     }
-}
+  }
+          ],
+      [
+  {
+    "category": "NISSAN_MASTER_GASOLINE",
+    "common_specs": {
+      "system_nats": "Nissan Anti-Theft System (Versiones 2.0 a 5.0)",
+      "idle_learn": "Procedimiento manual: 3-5-7-10 segundos (Llave/Pedal)",
+      "can_bus": "Pins 6 (H) y 14 (L) en DLC - 60 Ohms"
+    },
+    "models": [
+      {
+        "name": "NISSAN URVAN / FRONTIER (QR25DE)",
+        "year": "2008-2026",
+        "ecu": "Hitachi / MEC",
+        "pinout_critical": [
+          {"pin": 111, "desc": "B+ Battery Power", "v": "12.6V"},
+          {"pin": 109, "desc": "Ignition Switch ON", "v": "12.0V"},
+          {"pin": 1, "desc": "Ground ECM", "v": "0.0V"},
+          {"pin": 94, "desc": "APP Sensor 1 (Pedal)", "v": "0.5V - 4.5V"},
+          {"pin": 98, "desc": "APP Sensor 2 (Pedal)", "v": "0.3V - 2.2V"}
+        ],
+        "common_issues": "Falla de encendido por sensor de cigüeñal (CKP) con fuga de aceite. Medir 5V de referencia en el conector."
+      },
+      {
+        "name": "NISSAN SENTRA / TIIDA (MR18/MR20)",
+        "year": "2007-2020",
+        "ecu": "Hitachi",
+        "pinout_critical": [
+          {"pin": 2, "desc": "CAN High (Communication)", "v": "2.5V - 3.5V"},
+          {"pin": 3, "desc": "CAN Low (Communication)", "v": "1.5V - 2.5V"},
+          {"pin": 34, "desc": "Throttle Motor + (Cuerpo)", "v": "PWM Signal"},
+          {"pin": 35, "desc": "Throttle Motor - (Cuerpo)", "v": "PWM Signal"}
+        ],
+        "tip": "Si el carro no acelera y marca P1229, revisar los 5V de referencia que comparte el sensor de presión de A/C con el pedal."
+      }
+    ]
+  }
+],
+      [
+  {
+    "category": "VW_GROUP_MASTER",
+    "common_specs": {
+      "immo_system": "Immo 3 (A4) / Immo 4 (A5) / MQB (Recientes)",
+      "diagnostic_tool": "VAG-COM / ODIS / Propart V7",
+      "throttle_basic": "Canal 060 o 098 (Adaptación de cuerpo)"
+    },
+    "models": [
+      {
+        "name": "JETTA A4 / CLASICO (2.0L)",
+        "year": "1999-2015",
+        "ecu": "Bosch Motronic ME 7.5",
+        "pinout_critical": [
+          {"pin": 3, "desc": "Ground (Main)", "v": "0.0V"},
+          {"pin": 62, "desc": "B+ Battery Constant", "v": "12.6V"},
+          {"pin": 121, "desc": "Ignition Switch (15)", "v": "12.0V"},
+          {"pin": 65, "desc": "Knock Sensor 1", "v": "Signal AC"},
+          {"pin": 75, "desc": "EPC Light Control", "v": "Ground Control"}
+        ],
+        "firing_order": "1-3-4-2",
+        "firing_torque": "30 Nm + 90° (Tornillos de cabeza)"
+      },
+      {
+        "name": "JETTA A6 / VENTO (2.5L / 1.6L)",
+        "year": "2011-2020",
+        "ecu": "Bosch ME 17.5.x / Magneti Marelli",
+        "pinout_critical": [
+          {"pin": 1, "desc": "Main Ground", "v": "0.0V"},
+          {"pin": 92, "desc": "MAF / MAP Signal", "v": "0.5V - 4.5V"},
+          {"pin": 44, "desc": "CAN High (Comfort)", "v": "2.5V"},
+          {"pin": 45, "desc": "CAN Low (Comfort)", "v": "1.5V"}
+        ],
+        "tip": "En Vento, el sensor de temperatura (ECT) falla mucho y hace que el ventilador no apague. Medir resistencia NTC."
+      }
+    ]
+  }
+          ],
+      [
+  {
+    "category": "GM_CHEVROLET_MASTER",
+    "common_specs": {
+      "security_system": "Passlock / PassKey III / Global A",
+      "throttle_relearn": "Procedimiento con scanner o ciclo de manejo 10 min",
+      "can_bus": "Pins 6 y 14 (High/Low) - Protocolo GMLAN"
+    },
+    "models": [
+      {
+        "name": "CHEVROLET AVEO / SPARK / BEAT (1.2L / 1.6L)",
+        "year": "2008-2026",
+        "ecu": "Delphi MT80 / MT22.1",
+        "pinout_critical": [
+          {"pin": "J1-1", "desc": "Battery B+ Source", "v": "12.6V"},
+          {"pin": "J1-3", "desc": "Ignition Signal (15)", "v": "12V"},
+          {"pin": "J1-2", "desc": "Chassis Ground", "v": "0.0V"},
+          {"pin": "J2-15", "desc": "MAP Sensor Signal", "v": "0.5V - 4.8V"},
+          {"pin": "J2-44", "desc": "CKP Signal (Inductive)", "v": "AC Voltage"}
+        ],
+        "common_issues": "Falla de bobina de encendido (Misfire) que quema el driver de la ECU. Medir resistencia de bobina: 0.5 - 1.2 ohms."
+      },
+      {
+        "name": "CHEVROLET SILVERADO / TAHOE (5.3L V8 VORTEC)",
+        "year": "2007-2020",
+        "ecu": "GM E38 / E92",
+        "pinout_critical": [
+          {"pin": 20, "desc": "Ignition Voltage", "v": "12.0V"},
+          {"pin": 73, "desc": "Ground (Main)", "v": "0.0V"},
+          {"pin": 2, "desc": "CAN High (GMLAN)", "v": "2.5V-3.5V"},
+          {"pin": 25, "desc": "Fuel Pump Relay Control", "v": "Ground Control"}
+        ],
+        "tip": "Si la camioneta se apaga y marca 'Service Stabilitrak', revisar tierras del motor atrás de la cabeza izquierda. Es falla clásica de GM."
+      }
+    ]
+  },
+        [
+  {
+    "category": "GM_CHEVROLET_MASTER",
+    "common_specs": {
+      "security_system": "Passlock / PassKey III / Global A",
+      "throttle_relearn": "Procedimiento con scanner o ciclo de manejo 10 min",
+      "can_bus": "Pins 6 y 14 (High/Low) - Protocolo GMLAN"
+    },
+    "models": [
+      {
+        "name": "CHEVROLET AVEO / SPARK / BEAT (1.2L / 1.6L)",
+        "year": "2008-2026",
+        "ecu": "Delphi MT80 / MT22.1",
+        "pinout_critical": [
+          {"pin": "J1-1", "desc": "Battery B+ Source", "v": "12.6V"},
+          {"pin": "J1-3", "desc": "Ignition Signal (15)", "v": "12V"},
+          {"pin": "J1-2", "desc": "Chassis Ground", "v": "0.0V"},
+          {"pin": "J2-15", "desc": "MAP Sensor Signal", "v": "0.5V - 4.8V"},
+          {"pin": "J2-44", "desc": "CKP Signal (Inductive)", "v": "AC Voltage"}
+        ],
+        "common_issues": "Falla de bobina de encendido (Misfire) que quema el driver de la ECU. Medir resistencia de bobina: 0.5 - 1.2 ohms."
+      },
+      {
+        "name": "CHEVROLET SILVERADO / TAHOE (5.3L V8 VORTEC)",
+        "year": "2007-2020",
+        "ecu": "GM E38 / E92",
+        "pinout_critical": [
+          {"pin": 20, "desc": "Ignition Voltage", "v": "12.0V"},
+          {"pin": 73, "desc": "Ground (Main)", "v": "0.0V"},
+          {"pin": 2, "desc": "CAN High (GMLAN)", "v": "2.5V-3.5V"},
+          {"pin": 25, "desc": "Fuel Pump Relay Control", "v": "Ground Control"}
+        ],
+        "tip": "Si la camioneta se apaga y marca 'Service Stabilitrak', revisar tierras del motor atrás de la cabeza izquierda. Es falla clásica de GM."
+      }
+    ]
+  },
+  {
+    "category": "FORD_MOTOR_COMPANY_MASTER",
+    "common_specs": {
+      "security_system": "PATS (Passive Anti-Theft System)",
+      "diagnostic_protocol": "CAN HS / CAN MS (Pines 6/14 y 3/11)",
+      "kam_reset": "Borrado de memoria adaptativa (Keep Alive Memory)"
+    },
+    "models": [
+      {
+        "name": "FORD F-150 / LOBO (5.0L COYOTE / 3.5L ECOBOOST)",
+        "year": "2011-2026",
+        "ecu": "PCM Bosch / Continental",
+        "pinout_critical": [
+          {"pin": 1, "desc": "B+ Battery Constant", "v": "12.6V"},
+          {"pin": 45, "desc": "MAFT (Mass Air Flow Temp)", "v": "0.5V - 4.5V"},
+          {"pin": 12, "desc": "VBP (VVT Solenoid Intake)", "v": "PWM 12V"},
+          {"pin": 34, "desc": "CAN High (HS-CAN)", "v": "2.5V"}
+        ],
+        "tip": "En motores EcoBoost, si hay falta de potencia y humo, revisar la válvula de alivio del turbo (Wastegate) y el sensor de presión de riel de alta."
+      },
+      {
+        "name": "FORD FIESTA / FOCUS (1.6L / 2.0L)",
+        "year": "2011-2018",
+        "ecu": "PCM / TCM (PowerShift)",
+        "pinout_critical": [
+          {"pin": 10, "desc": "TCM Power Supply", "v": "12.6V"},
+          {"pin": 14, "desc": "CAN-L (Communication)", "v": "2.4V"},
+          {"pin": 22, "desc": "Clutch Actuator A", "v": "PWM High Current"}
+        ],
+        "common_issues": "Falla del módulo TCM. Si no comunica, revisar el cable de tierra que va abajo de la base de la batería."
+      }
+    ]
+  }
+],
+        [
+  {
+    "category": "TOYOTA_MASTER_SERVICE",
+    "common_specs": {
+      "security_system": "Smart Key / Immobilizer L-Line",
+      "special_sensor": "A/F Sensor (Relación Aire-Combustible) - No es un O2 normal",
+      "diagnostic_protocol": "CAN HS / Toyota K-Line (Pin 7)"
+    },
+    "models": [
+      {
+        "name": "TOYOTA HILUX / TACOMA (2.7L / 4.0L)",
+        "year": "2005-2026",
+        "ecu": "Denso / Toyota EFI",
+        "pinout_critical": [
+          {"pin": "A1", "desc": "B+ Battery Power", "v": "12.6V"},
+          {"pin": "A2", "desc": "Ignition Switch IGSW", "v": "12.0V"},
+          {"pin": "B34", "desc": "A/F Sensor 1 (+) Signal", "v": "3.30V (Referencia Fija)"},
+          {"pin": "B35", "desc": "A/F Sensor 1 (-) Signal", "v": "3.00V (Referencia Fija)"}
+        ],
+        "tip": "En Toyota, el sensor de Aire/Combustible NO oscila como el de O2. Si mides 3.3V y 3.0V constantes, el sensor está BUENO. Si oscila, el sensor está dañado o es el equivocado."
+      }
+    ]
+  },
+  {
+    "category": "HONDA_MASTER_SERVICE",
+    "common_specs": {
+      "security_system": "HIM (Honda Immobilizer Module)",
+      "vtec_system": "Control de válvulas variable por presión de aceite",
+      "can_bus": "Pins 6 y 14 (Standard)"
+    },
+    "models": [
+      {
+        "name": "HONDA CIVIC / CR-V (1.8L / 2.4L / 1.5T)",
+        "year": "2006-2026",
+        "ecu": "Keihin / Bosch",
+        "pinout_critical": [
+          {"pin": "A1", "desc": "Main Ground (PG1)", "v": "0.0V"},
+          {"pin": "A24", "desc": "VTEC Solenoid Valve", "v": "12V Output"},
+          {"pin": "B12", "desc": "VTEC Pressure Switch", "v": "0V - 12V Pulse"},
+          {"pin": "B2", "desc": "CAN-H (Communication)", "v": "2.5V"}
+        ],
+        "tip": "Si el Honda no pasa de 3,000 RPM y tiene check engine, casi siempre es el cedazo (filtro) del solenoide VTEC tapado de mugre. Limpiar antes de cambiar el solenoide."
+      }
+    ]
+  },
+  {
+    "category": "HYUNDAI_KIA_MASTER",
+    "common_specs": {
+      "engine_family": "Theta II / Gamma / Kappa",
+      "common_issues": "Falla de sensor de ángulo de dirección (SAS) - Se apaga la dirección asistida"
+    },
+    "models": [
+      {
+        "name": "HYUNDAI ACCENT / KIA RIO (1.4L / 1.6L)",
+        "year": "2012-2026",
+        "ecu": "Kefico / Bosch ME 17.9.x",
+        "pinout_critical": [
+          {"pin": 1, "desc": "Coil 1 Control", "v": "PWM Pulse"},
+          {"pin": 2, "desc": "Coil 2 Control", "v": "PWM Pulse"},
+          {"pin": 50, "desc": "MAP Sensor Signal", "v": "0.5V - 4.5V"},
+          {"pin": 94, "desc": "B+ Battery Input", "v": "12.6V"}
+        ],
+        "tip": "En estos coreanos, si el carro tarda en arrancar, checa el sensor de cigüeñal (CKP). Se calienta internamente y deja de mandar señal, pero no siempre marca código de falla."
+      }
+    ]
+  }
+],
+        [
+  {
+    "category": "CHINESE_CARS_NEW_GEN",
+    "common_specs": {
+      "diagnostic_protocol": "CAN HS (High Speed) / DoIP (Protocolo sobre IP)",
+      "security_system": "PEPS (Passive Entry Passive Start)",
+      "ecu_types": "Bosch China / UAES / Delphi"
+    },
+    "models": [
+      {
+        "name": "MG 5 / MG GT (1.5L / 1.5T)",
+        "year": "2020-2026",
+        "ecu": "Bosch ME 17.x",
+        "pinout_critical": [
+          {"pin": 1, "desc": "Main Power B+", "v": "12.6V"},
+          {"pin": 2, "desc": "ECM Ground", "v": "0.0V"},
+          {"pin": 55, "desc": "Turbo Boost Sensor", "v": "0.5V - 4.5V"},
+          {"pin": 94, "desc": "CAN High (Body)", "v": "2.5V"}
+        ],
+        "tip": "En MG, si el tablero marca falla de frenos y dirección, revisa el voltaje de la batería. Estos carros son hipersensibles; si baja de 12.2V, la red CAN se vuelve loca."
+      },
+      {
+        "name": "JAC FRISON T6 / T8 (2.0L Turbo Diesel/Gas)",
+        "year": "2019-2026",
+        "ecu": "Delphi / Bosch",
+        "pinout_critical": [
+          {"pin": "J1-10", "desc": "Ignition 12V", "v": "12V"},
+          {"pin": "J2-12", "desc": "Rail Pressure (Diesel)", "v": "0.5V - 4.5V"},
+          {"pin": "J1-45", "desc": "Electronic Throttle +", "v": "PWM"}
+        ],
+        "tip": "En JAC Diesel, el código de 'Agua en combustible' a veces es falso por humedad en el conector del filtro. Limpiar con limpia-contactos y aplicar grasa dieléctrica."
+      }
+    ]
+  },
+  {
+    "category": "EURO_LUXURY_MASTER (BMW, MERCEDES, AUDI)",
+    "common_specs": {
+      "network": "FlexRay / MOST (Fibra Óptica) / CAN FD",
+      "voltage": "Sistemas de 12V y 48V (Mild Hybrid)"
+    },
+    "models": [
+      {
+        "name": "BMW SERIE 3 (E90 / F30 / G20)",
+        "year": "2006-2026",
+        "ecu": "Bosch DME / DDE",
+        "pinout_critical": [
+          {"pin": 1, "desc": "VVT Motor Power (Valvetronic)", "v": "12V High Amp"},
+          {"pin": 25, "desc": "BSD Line (Alternador/Aceite)", "v": "Digital Signal"},
+          {"pin": 40, "desc": "CAS/FEM Signal (Start)", "v": "12V Wake-up"}
+        ],
+        "tip": "Si un BMW no carga y el alternador es nuevo, revisa la línea BSD (pin 25). Es un bus de datos unifilar; si el sensor de nivel de aceite está en corto, tumba la carga del alternador."
+      },
+      {
+        "name": "MERCEDES-BENZ C-CLASS (W204 / W205)",
+        "year": "2008-2024",
+        "ecu": "Bosch ME / Continental SIM271",
+        "pinout_critical": [
+          {"pin": "M1", "desc": "Chassis Ground", "v": "0.0V"},
+          {"pin": "M15", "desc": "Direct Injection High Press", "v": "PWM 70V"},
+          {"pin": "M2", "desc": "CAN High (Chassis)", "v": "2.5V"}
+        ],
+        "tip": "Falla común en Mercedes: Aceite en el arnés que llega a la ECU desde los imanes de los árboles de levas. Poner extensiones 'bloqueadoras' de aceite."
+      }
+    ]
+  },
+       [
+  {
+    "category": "MOPAR_MASTER_CHRYSLER_DODGE_RAM",
+    "common_specs": {
+      "security_system": "SKIM / WIN Module (Wireless Ignition)",
+      "diagnostic_gateway": "SGW (Secure Gateway Module) - 2018 para arriba requiere bypass",
+      "ecu_types": "NGC3 / NGC4 / GPEC2 / GPEC3"
+    },
+    "models": [
+      {
+        "name": "RAM 1500/2500 (5.7L HEMI / 3.6L PENTASTAR)",
+        "year": "2009-2026",
+        "ecu": "Chrysler NGC4 / GPEC2",
+        "pinout_critical": [
+          {"pin": "C1-1", "desc": "B+ Power Supply", "v": "12.6V"},
+          {"pin": "C1-2", "desc": "Ground (Main)", "v": "0.0V"},
+          {"pin": "C2-15", "desc": "ASD Relay Output (Alimentación Bobinas/Iny)", "v": "12V Output"},
+          {"pin": "C4-33", "desc": "CAN High (Diagnostic)", "v": "2.5V"}
+        ],
+        "tip": "Si la RAM no prende y no hay pulso de inyectores, revisa el relevador ASD (Auto Shut Down). Si la ECU no ve señal de CKP, corta el ASD por seguridad. ¡No es la bomba, es sincronía!"
+      }
+    ]
+  },
+  {
+    "category": "FRENCH_CONNECTION_RENAULT_PEUGEOT",
+    "common_specs": {
+      "security_system": "UCH (Unité Centrale d'Habitacle) / BSI (Peugeot)",
+      "network": "CAN Bus Multiplexado (Multiplexage)"
+    },
+    "models": [
+      {
+        "name": "RENAULT KWID / DUSTER / LOGAN (1.0L / 1.6L / 2.0L)",
+        "year": "2012-2026",
+        "ecu": "Valeo / Continental V42",
+        "pinout_critical": [
+          {"pin": "L1", "desc": "Ignition 12V (After Relay)", "v": "12V"},
+          {"pin": "M3", "desc": "Ground (ECM)", "v": "0.0V"},
+          {"pin": "A3", "desc": "CAN High (Multiplex)", "v": "2.5V"},
+          {"pin": "C2", "desc": "Throttle Signal 1", "v": "0.5V - 4.5V"}
+        ],
+        "tip": "En Renault, si el testigo de la 'escalerita' (falla eléctrica) prende, casi siempre es suciedad en el conector del pedal de acelerador o del cuerpo. Limpiar antes de diagnosticar ECU."
+      },
+      {
+        "name": "PEUGEOT 208 / 301 / PARTNER (1.6L VTi / 1.6L HDI Diesel)",
+        "year": "2013-2026",
+        "ecu": "Bosch ME 17.4 / Delphi DCM",
+        "pinout_critical": [
+          {"pin": 1, "desc": "B+ Battery Power", "v": "12.6V"},
+          {"pin": 12, "desc": "LIN Bus (Alternador/BSI)", "v": "Digital 9V-11V"},
+          {"pin": 48, "desc": "Fuel Rail Pressure (HDI)", "v": "0.5V - 4.5V"}
+        ],
+        "tip": "En Peugeot, si el motor no da marcha y el claxon no suena, la falla está en el módulo BSM (la caja de fusibles del motor). Es el fallo #1 de los franceses en México."
+      }
+    ]
+  },
+         [
+  {
+    "category": "MOPAR_CHRYSLER_DODGE_JEEP_RAM",
+    "common_specs": {
+      "security": "SKIM / WIN Module / RF Hub",
+      "network": "CAN C (500kbps) / CAN B (83.3kbps)",
+      "gateway": "SGW (2018+) - Requiere Bypass para escritura"
+    },
+    "models": [
+      {
+        "name": "JEEP GRAND CHEROKEE / DODGE DURANGO (3.6L / 5.7L)",
+        "year": "2011-2026",
+        "ecu": "Chrysler GPEC2 / GPEC3",
+        "pinout_critical": [
+          {"pin": "C1-1", "desc": "B+ Battery Power", "v": "12.6V"},
+          {"pin": "C1-3", "desc": "Ground (Main)", "v": "0.0V"},
+          {"pin": "C2-15", "desc": "ASD Relay Output", "v": "12.0V"},
+          {"pin": "C1-33", "desc": "CAN High (Diagnostic)", "v": "2.5V"}
+        ],
+        "tip": "Si el vehículo no da marcha y el tablero parpadea, revisa el TIPM (caja de fusibles inteligente). El relevador de la bomba de gasolina suele fallar internamente; se puede puntear externamente como solución rápida."
+      }
+    ]
+  },
+  {
+    "category": "UNIVERSAL_OBD2_DIAGNOSTIC_HARDWARE",
+    "pinout_dlc": [
+      {"pin": 4, "desc": "Chassis Ground", "v": "0.0V"},
+      {"pin": 5, "desc": "Signal Ground", "v": "0.0V"},
+      {"pin": 6, "desc": "CAN High (ISO 15765-4)", "v": "2.5V - 3.5V"},
+      {"pin": 14, "desc": "CAN Low (ISO 15765-4)", "v": "1.5V - 2.5V"},
+      {"pin": 7, "desc": "K-Line (ISO 9141-2)", "v": "12V (Pulsante)"},
+      {"pin": 16, "desc": "Battery Power (B+)", "v": "12.6V"}
+    ],
+    "propart_tip": "Prueba de Oro: Antes de conectar el escáner, mide el Pin 16 contra el Pin 4. Si no hay 12V, el escáner no prenderá. Si el Pin 6 y 14 miden 60 ohms (con batería desconectada), la red CAN está sana."
+  }
+          ],
+         [
+  {
+    "category": "IMMOBILIZER_PROGRAMMING_MASTER",
+    "systems": [
+      {
+        "brand": "FORD PATS (Passive Anti-Theft System)",
+        "versions": ["PATS 1", "PATS 2", "PATS 3 (CAN)"],
+        "critical_pin": "Pin 13 (DLC) - Programación FEPS",
+        "voltage_ref": "18V (Solo durante escritura de Flash)",
+        "diagnostics": "Si el testigo del candadito parpadea rápido, el código 15 (P1260) indica que la llave no es reconocida. Si parpadea lento con ignición OFF, el sistema está armado y sano."
+      },
+      {
+        "brand": "NISSAN NATS (5.0 / 6.0 / BCM)",
+        "security_code": "PIN CODE 4 dígitos (Cálculo por etiqueta de BCM)",
+        "antenna_pinout": [
+          {"pin": 1, "desc": "B+ Battery", "v": "12V"},
+          {"pin": 2, "desc": "Ground", "v": "0.0V"},
+          {"pin": 4, "desc": "Data Line (To ECM)", "v": "Digital Signal"}
+        ],
+        "tip": "En Nissan, si el carro da marcha pero no prende y el testigo de seguridad se queda prendido FIJO, la antena del inmovilizador (en el switch) no está leyendo el chip."
+      },
+      {
+        "brand": "VW IMMO 3 / 4 (PLATAFORMA A4/A5)",
+        "component_protection": "CS (Component Security) 7 Bytes",
+        "pin_code": "SKC (Secret Key Code) 4 o 5 dígitos",
+        "diagnostics": "En el tablero (Cuadro de instrumentos), si aparece 'SAFE' o el carro arranca 2 segundos y se apaga, el inmovilizador bloqueó la entrega de combustible."
+      }
+    ]
+  },
+  {
+    "category": "ECU_SWAP_AND_VINCULATION",
+    "procedures": [
+      {
+        "name": "VINCULACIÓN PCM-BCM (CHRYSLER/DODGE)",
+        "step": "Transferencia de VIN (Número de Serie)",
+        "tool_req": "Propart V7 + Pin Code",
+        "tip": "Si cambias la computadora de una RAM, debes escribir el VIN de la camioneta en la ECU usada, de lo contrario el SKIM la bloqueará a los 3 intentos."
+      },
+      {
+        "name": "REEMPLAZO DE BSI (PEUGEOT/RENAULT)",
+        "step": "Telecodificado Automático/Manual",
+        "tip": "La BSI guarda el kilometraje más alto. Si pones una usada con más km que el carro, ¡el tablero se actualizará al kilometraje más alto y no hay vuelta atrás!"
+      }
+    ]
+  }
+        ],
+         [
+  {
+    "category": "HYBRID_AND_EV_MASTER_SERVICE",
+    "safety_protocol": "Guantes Dieléctricos Clase 0 (1000V) - Verificar ausencia de tensión antes de tocar cables naranjas.",
+    "systems": [
+      {
+        "brand": "TOYOTA HYBRID (PRIUS / CAMRY / RAV4)",
+        "system": "THS II (Toyota Hybrid System)",
+        "battery_pack": "NiMH / Li-ion (201.6V - 244.8V Nominal)",
+        "pinout_critical": [
+          {"pin": "HV-1", "desc": "Main Relay Positive (SMR+)", "v": "201V+"},
+          {"pin": "HV-2", "desc": "Main Relay Negative (SMR-)", "v": "0.0V"},
+          {"pin": "AUX-12V", "desc": "Batería de Accesorios", "v": "12.6V (Si baja, el sistema Ready no entra)"}
+        ],
+        "tip": "Si el Prius marca 'Check Hybrid System' y el ventilador de la batería suena fuerte, revisa el filtro de aire de la rejilla del asiento trasero. Si se tapa de pelusa, la batería se sobrecalienta y el carro se protege."
+      },
+      {
+        "brand": "TESLA / BYD / EV UNITS",
+        "system": "High Voltage Powertrain",
+        "diagnostic": "Protocolo DoIP (Diagnostics over IP) / CAN FD",
+        "pinout_dlc": [
+          {"pin": 1, "desc": "Chassis Ground", "v": "0V"},
+          {"pin": 4, "desc": "Ethernet RX+", "v": "Digital"},
+          {"pin": 16, "desc": "Low Voltage Power", "v": "13.5V (DC-DC Output)"}
+        ],
+        "tip": "En eléctricos puros, si el carro no carga, revisa el 'Interlock Loop'. Es un cable delgadito que recorre todos los componentes de alta tensión; si un conector está flojo, el lazo se abre y el carro queda muerto por seguridad."
+      }
+    ]
+  },
+  {
+    "category": "ADVANCED_HV_DIAGNOSTICS",
+    "procedures": [
+      {
+        "name": "EQUILIBRIO DE CELDAS (REACONDICIONAMIENTO)",
+        "tolerance": "Delta V < 0.30V entre el bloque más alto y el más bajo.",
+        "action": "Si la diferencia es >0.50V, el carro encenderá el código P0A80. Requiere reemplazo de celdas individuales o balanceo profundo."
+      },
+      {
+        "name": "MODO INSPECCIÓN (MANTENIMIENTO)",
+        "procedure": "En Toyota: 2 pisotones al acelerador en P, 2 en N, 2 en P (con ignición ON). El motor térmico se quedará encendido fijo para pruebas de emisiones o carga."
+      }
+    ]
+  }
+        ],
+         [
+  {
+    "category": "ECU_INTERNAL_ARCHITECTURE_AND_REPAIR",
+    "main_components": [
+      {
+        "name": "REGULADOR_DE_VOLTAJE (Main Power IC)",
+        "function": "Convierte 12V de batería en 5V estables para el microprocesador y sensores.",
+        "test_point": "Capacitores cerámicos grandes cerca del conector.",
+        "failure_symptom": "La ECU no comunica (Muerta). Si hay 12V de entrada pero no hay 5V de salida, el regulador está quemado."
+      },
+      {
+        "name": "DRIVERS_DE_POTENCIA (MOSFET/Transistores)",
+        "function": "Controlan Bobinas (Ignition) e Inyectores mediante pulsos de tierra (PWM).",
+        "test_point": "Pines de salida hacia el motor.",
+        "failure_symptom": "Misfire constante en un cilindro. Si el transistor está en corto, el inyector se queda abierto (Humo blanco/Huele a gas). Si está abierto, no hay pulso."
+      },
+      {
+        "name": "TRANSCEPTOR_CAN (CAN Transceiver)",
+        "function": "Traduce los datos digitales del microprocesador a voltajes diferenciales para la red del carro.",
+        "test_point": "Pines 6 y 14 del DLC contra el chip de 8 patas cerca de los filtros CAN.",
+        "failure_symptom": "No hay comunicación (No Link). Errores de red 'U' en otros módulos."
+      }
+    ]
+  },
+  {
+    "category": "HARDWARE_REPAIR_TIPS_PROPART",
+    "procedures": [
+      {
+        "name": "PRUEBA_DE_BANCO (BANCH_TEST)",
+        "setup": "Alimentar B+, IGN y GND. Conectar escáner al pin de K-Line o CAN H/L.",
+        "goal": "Verificar comunicación fuera del vehículo. Si comunica en el banco pero no en el carro, el problema es el arnés del vehículo."
+      },
+      {
+        "name": "BORRADO_DE_DATOS_DE_COLISION (SRS_AIRBAG_RESET)",
+        "method": "Lectura de Memoria EEPROM (SPI/I2C).",
+        "tip": "Para borrar el 'Crash Data', se debe virginizar el archivo binario de la EEPROM. Propart V7 permite leer el archivo para enviarlo a soporte técnico y regresarlo limpio."
+      }
+    ]
+  },
+  {
+    "category": "ECU_PROTECTION_DIODES",
+    "info": "Diodos Zener de protección contra polaridad inversa.",
+    "tip": "Si pasaron corriente mal y la ECU ya no prende, busca el diodo grande cerca de la entrada de corriente. Suele ponerse en corto para salvar el resto de la placa. Quítalo y si la ECU prende, solo cámbialo por uno nuevo."
+  }
+],
+         
+         [
+  {
+    "category": "MOTORCYCLE_AND_RECREATIONAL_MASTER",
+    "common_specs": {
+      "diagnostic_connectors": "OBD2 (Euro 5) / Redondo 10-pin (BMW) / 6-pin (Harley)",
+      "network": "CAN Bus HS / K-Line (Modelos viejos)",
+      "security": "FOB Proximity / Transponder en llave"
+    },
+    "models": [
+      {
+        "name": "BMW MOTORRAD (R1200 / R1250 GS / S1000RR)",
+        "year": "2013-2026",
+        "ecu": "Bosch BMS-X / BMS-MP",
+        "pinout_critical": [
+          {"pin": 1, "desc": "B+ Battery Power", "v": "12.6V"},
+          {"pin": 2, "desc": "Ground (Main)", "v": "0.0V"},
+          {"pin": 35, "desc": "CAN High (Diagnostic)", "v": "2.5V"},
+          {"pin": 36, "desc": "CAN Low (Diagnostic)", "v": "1.5V"}
+        ],
+        "tip": "Si la moto no arranca y marca 'EWS' en el tablero, es falla de antena inmovilizadora. En las BMW nuevas, el sensor de presión de llantas (RDC) también puede tumbar la red CAN si entra en corto."
+      },
+      {
+        "name": "HARLEY-DAVIDSON (TOURING / SOFTAIL / M8)",
+        "year": "2014-2026",
+        "ecu": "Delphi / Bosch",
+        "pinout_critical": [
+          {"pin": 1, "desc": "Battery +", "v": "12V"},
+          {"pin": 6, "desc": "CAN High (J1939 Based)", "v": "2.5V"},
+          {"pin": 4, "desc": "System Ground", "v": "0V"}
+        ],
+        "tip": "Para leer códigos sin escáner en Harley: Mantén presionado el botón 'Reset' del odómetro, abre el switch a 'IGN' y suelta el botón. El tablero entrará en modo diagnóstico (DIAG)."
+      },
+      {
+        "name": "BRP CAN-AM (MAVERICK X3 / COMMANDER)",
+        "year": "2017-2026",
+        "ecu": "Bosch ME17.8.5",
+        "pinout_critical": [
+          {"pin": "A1", "desc": "Unswitched Power", "v": "12.6V"},
+          {"pin": "B12", "desc": "Turbo Boost Sensor", "v": "0.5V - 4.5V"},
+          {"pin": "A34", "desc": "Electronic Throttle Power", "v": "12V PWM"}
+        ],
+        "tip": "En los RZR y Can-Am, el sensor de la banda (CVT Temp) es vital. Si la banda se calienta, la ECU limita las RPM a modo 'Limp Mode'. Limpiar sensores de velocidad de poleas si el cambio es brusco."
+      }
+    ]
+  },
+  {
+    "category": "SPECIAL_MOTO_FUNCTIONS",
+    "procedures": [
+      {
+        "name": "RESET_SERVICE_LIGHT (BMW/KTM)",
+        "action": "Borrado de aviso de mantenimiento por fecha o kilometraje.",
+        "tip": "Muchos dueños de motos Premium solo van al taller para apagar la llavecita del tablero. Es un servicio de 5 minutos que se cobra bien."
+      },
+      {
+        "name": "ABS_BLEEDING (PURGADO_FRENOS)",
+        "action": "Activación de bomba de ABS para sacar aire del sistema hidráulico.",
+        "tip": "En motos con ABS, si cambias el líquido de frenos manualmente, queda aire atrapado en el módulo. Necesitas el Propart V7 para abrir las válvulas y purgar al 100%."
+      }
+    ]
+  }
+          ],
+         
