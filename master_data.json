@@ -2405,6 +2405,180 @@
     ]
   }
           ],
+         [
+  {
+    "code": "P0087",
+    "componente": "Riel de Combustible",
+    "falla": "Presión demasiado baja",
+    "causa": "Filtro tapado, bomba de alta presión (HPFP) dañada o fuga en inyectores."
+  },
+  {
+    "code": "P0101",
+    "componente": "Sensor MAF",
+    "falla": "Rango o desempeño del circuito",
+    "causa": "Sensor sucio, fuga de vacío después del sensor o filtro de aire obstruido."
+  },
+  {
+    "code": "P0300",
+    "componente": "Cilindros Múltiples",
+    "falla": "Fuego perdido (Misfire) detectado",
+    "causa": "Bujías viejas, bobinas en corto o baja compresión en el motor."
+  },
+  {
+    "code": "P0335",
+    "componente": "Sensor CKP (Cigüeñal)",
+    "falla": "Mal funcionamiento del circuito",
+    "causa": "Sensor dañado, cableado quemado por el escape o conector suelto."
+  },
+  {
+    "code": "P0562",
+    "componente": "Voltaje del Sistema",
+    "falla": "Voltaje demasiado bajo",
+    "causa": "Alternador que no carga, batería muerta o terminales sulfatadas."
+  },
+  {
+    "code": "U0100",
+    "componente": "Comunicación CAN Bus",
+    "falla": "Pérdida de comunicación con ECM",
+    "causa": "Fallo en el cableado de la red, fusible de la computadora fundido o módulo dañado."
+  },
+  {
+    "code": "B3055",
+    "componente": "Inmovilizador",
+    "falla": "Llave transponder no detectada",
+    "causa": "Chip de la llave dañado, antena de la chapa floja o interferencia electrónica."
+  },
+  {
+    "code": "C0035",
+    "componente": "Sensor de Rueda (ABS)",
+    "falla": "Fallo de circuito sensor izquierdo",
+    "causa": "Cable del sensor trozado por la suspensión o maza de rueda con juego."
+  }
+         ],
+         ,
+  {
+    "code": "P0135",
+    "componente": "Sensor O2 (Banco 1)",
+    "falla": "Calentador dañado",
+    "causa": "Fusible del calentador quemado o resistencia interna del sensor de oxígeno fundida."
+  },
+  {
+    "code": "P0420",
+    "componente": "Catalizador",
+    "falla": "Eficiencia por debajo del umbral",
+    "causa": "Catalizador obstruido, agotado o sensor de oxígeno trasero mandando señal errónea."
+  },
+        ,
+  {
+    "code": "P0171",
+    "componente": "Sistema de Combustible",
+    "falla": "Mezcla demasiado pobre (Banco 1)",
+    "causa": "Entradas de aire no medidas (fugas de vacío), inyectores sucios o sensor MAF defectuoso."
+  },
+  {
+    "code": "P0442",
+    "componente": "Sistema EVAP",
+    "falla": "Fuga pequeña detectada",
+    "causa": "Tapón de gasolina mal cerrado, mangueras del cánister agrietadas o válvula de purga con fuga."
+  },
+  {
+    "code": "P0700",
+    "componente": "Control de Transmisión",
+    "falla": "Fallo en el sistema de control",
+    "causa": "Problema interno en la caja de cambios o falla en el módulo TCM; pide revisar códigos de transmisión."
+  },
+  {
+    "code": "P0113",
+    "componente": "Sensor IAT",
+    "falla": "Circuito de temperatura de aire alto",
+    "causa": "Sensor de temperatura de entrada de aire desconectado o con cableado en corto."
+        },
+         ,
+  {
+    "code": "P2101",
+    "componente": "Motor de Acelerador (TAC)",
+    "falla": "Rango/Desempeño del circuito",
+    "causa": "Engranajes internos del cuerpo de aceleración rotos o motor pegado."
+  },
+  {
+    "code": "P2135",
+    "componente": "Sensores TPS 1 y 2",
+    "falla": "Correlación de voltaje",
+    "causa": "Diferencia de señal entre los dos sensores internos; el pedal y la mariposa no coinciden."
+  },
+  {
+    "code": "P2110",
+    "componente": "Sistema de Control del Actuador",
+    "falla": "Limitación forzada de RPM",
+    "causa": "La computadora limita la velocidad para evitar que el motor se acelere solo por falla de seguridad."
+        },
+         [
+  {
+    "code": "P0171",
+    "componente": "Sistema de Combustible",
+    "falla": "Mezcla demasiado pobre (Banco 1)",
+    "causa": "Entradas de aire no medidas (fugas de vacío), inyectores sucios o bomba de gasolina débil."
+  },
+  {
+    "code": "P0442",
+    "componente": "Sistema EVAP",
+    "falla": "Fuga pequeña detectada",
+    "causa": "Tapón de gasolina mal cerrado, mangueras del cánister agrietadas o válvula de purga fallando."
+  },
+  {
+    "code": "P0700",
+    "componente": "Control de Transmisión",
+    "falla": "Fallo en el sistema de control",
+    "causa": "Problema interno en la caja de cambios o falla en el módulo TCM; requiere escaneo de transmisión."
+  },
+  {
+    "code": "P0113",
+    "componente": "Sensor IAT",
+    "falla": "Circuito de temperatura de aire alto",
+    "causa": "Sensor de temperatura de entrada de aire desconectado o con cableado en corto."
+  },
+  {
+    "code": "P0300",
+    "componente": "Cilindros Múltiples",
+    "falla": "Misfire (fuego perdido) detectado",
+    "causa": "Bujías gastadas, bobinas en mal estado o inyectores tapados."
+  },
+  {
+    "code": "P0087",
+    "componente": "Riel de Combustible",
+    "falla": "Presión demasiado baja",
+    "causa": "Filtro de gasolina obstruido o bomba de alta presión (HPFP) fallando."
+  },
+  {
+    "code": "P0121",
+    "componente": "Sensor TPS (Cuerpo Aceleración)",
+    "falla": "Rango o desempeño del circuito",
+    "causa": "Cuerpo de aceleración sucio o pistas internas del sensor desgastadas."
+  },
+  {
+    "code": "C0035",
+    "componente": "Sensor ABS (Rueda Del. Izq.)",
+    "falla": "Fallo de circuito",
+    "causa": "Cable del sensor trozado por movimiento de la suspensión o sensor sucio."
+  },
+  {
+    "code": "B1000",
+    "componente": "Módulo de Airbag (SRS)",
+    "falla": "Fallo interno del módulo",
+    "causa": "Módulo bloqueado por impacto previo o fallo de hardware interno."
+  },
+  {
+    "code": "U0100",
+    "componente": "Red de Datos CAN Bus",
+    "falla": "Comunicación perdida con ECM/PCM",
+    "causa": "Fusible de la computadora fundido o cables de la red de datos en corto."
+  }
+        ]}]
+
+      }
+    }
+  }
+          
 
 
 
