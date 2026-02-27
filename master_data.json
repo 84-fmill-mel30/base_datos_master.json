@@ -1144,12 +1144,56 @@
         "modulo": "ADEM A4",
         "pines": {"PIN_01": "Rojo (24V)", "PIN_02": "Negro (GND)", "PIN_22": "Amarillo (Data Link)"},
         "tip_pro": "Si no hay aceleración, checa el sensor de posición del pedal; el arnés suele rozar con el chasis."
+        [
+  {
+    "componente": "Inyector Piezoeléctrico 1",
+    "sistema": "Inyección",
+    "pinout_ecu": "C-01 / C-02",
+    "valor_referencia": "180k Ohms / Pulso 80V",
+    "descripcion": "Inyector de alta velocidad para sistemas common rail."
+  },
+  {
+    "componente": "Válvula EGR",
+    "sistema": "Emisiones",
+    "pinout_ecu": "B-45",
+    "valor_referencia": "Duty Cycle 10% - 90%",
+    "descripcion": "Recirculación de gases de escape."
+  },
+  {
+    "componente": "Bujías de Precalentamiento",
+    "sistema": "Arranque",
+    "pinout_ecu": "Relé R4",
+    "valor_referencia": "0.8 - 1.2 Ohms",
+    "descripcion": "Calentadores para arranque en frío."
+  }
+          ]
       },
       {
         "vehiculo": "JOHN DEERE SERIE 6J / 7J (TRACTOR)",
         "modulo": "ECU PHOENIX",
         "pines": {"PIN_1": "Rojo", "PIN_50": "Verde (CAN)", "PIN_25": "Amarillo (Sensor Riel)"},
         "tip_pro": "Si marca código de agua en diesel, drena el filtro inferior antes de borrar con escáner."
+        [
+  {
+    "componente": "Sensor de Presión de Riel (FRP)",
+    "sistema": "Combustible",
+    "pinout_ecu": "A-23",
+    "valor_referencia": "0.5V (KOEO) / 1.3V (Ralentí)",
+    "descripcion": "Mide la presión en la flauta de inyectores."
+  },
+  {
+    "componente": "Válvula Reguladora (SCV)",
+    "sistema": "Bomba de Alta",
+    "pinout_ecu": "B-12",
+    "valor_referencia": "1.5 - 3.5 Ohms",
+    "descripcion": "Controla el flujo de entrada a la bomba."
+  },
+  {
+    "componente": "Sensor de Flujo de Aire (MAF)",
+    "sistema": "Admisión",
+    "pinout_ecu": "A-05",
+    "valor_referencia": "2.0V - 4.5V (Aceleración)",
+    "descripcion": "Mide la masa de aire entrante."
       },
       {
         "vehiculo": "BMW MOTOR B48 (2.0T) 320i / 330i",
@@ -1168,6 +1212,234 @@
         "modulo": "ECM (CONECTORES NEGROS)",
         "pines": {"PIN_110": "Rojo", "PIN_1": "Negro", "PIN_45": "Blanco (CMP)"},
         "tip_pro": "Si el sensor de reversa no pita, revisa el conector de la IPDM debajo del faro izquierdo."
-      }
-   }
+
+        [
+  {
+    "componente": "Línea CAN High",
+    "sistema": "Comunicación",
+    "pinout_ecu": "A-60",
+    "valor_referencia": "2.6V - 3.5V",
+    "descripcion": "Bus de datos de alta velocidad."
+  },
+  {
+    "componente": "Línea CAN Low",
+    "sistema": "Comunicación",
+    "pinout_ecu": "A-61",
+    "valor_referencia": "1.5V - 2.4V",
+    "descripcion": "Bus de datos de baja velocidad."
+  },
+  {
+    "componente": "Voltaje de Referencia (VREF)",
+    "sistema": "Alimentación",
+    "pinout_ecu": "C-10",
+    "valor_referencia": "5.0V Constantes",
+    "descripcion": "Alimentación para sensores de 3 cables."
+  }
+        ],
+{
+  "short_name": "PROPARTS",
+  "name": "ProParts Diagnostic Professional",
+  "icons": [
+    {
+      "src": "logo-proparts.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+      },
+[
+  {"code": "P0087", "componente": "Riel de Combustible", "falla": "Presión demasiado baja", "causa": "Filtro tapado o bomba de alta dañada."},
+  {"code": "P0088", "componente": "Riel de Combustible", "falla": "Presión demasiado alta", "causa": "Válvula reguladora (SCV) pegada."},
+  {"code": "P0089", "componente": "Regulador de Presión", "falla": "Rendimiento del regulador", "causa": "Resorte interno del regulador vencido."},
+  {"code": "P0093", "componente": "Sistema de Combustible", "falla": "Fuga detectada (Grande)", "causa": "Línea rota o inyector abierto."},
+  {"code": "P0191", "componente": "Sensor FRP", "falla": "Rango/Rendimiento", "causa": "Señal ruidosa o falso contacto en conector."},
+  {"code": "P0193", "componente": "Sensor FRP", "falla": "Entrada alta (High Input)", "causa": "Cable de señal corto a 5V o sensor abierto."},
+  {"code": "P0201", "componente": "Inyector Cilindro 1", "falla": "Circuito abierto", "causa": "Bobina del inyector quemada o cable trozado."},
+  {"code": "P0251", "componente": "Bomba de Inyección", "falla": "Control de medición A", "causa": "Fallo en la señal PWM de la bomba."},
+  {"code": "P0263", "componente": "Cilindro 1", "falla": "Contribución/Balance", "causa": "Inyector con entrega baja (sucio)."},
+  {"code": "P0300", "componente": "Motor", "falla": "Misfire aleatorio", "causa": "Aire en el sistema o compresión baja."}
+],
+[
+  {"code": "P0299", "componente": "Turbo/Supercargador", "falla": "Baja presión (Underboost)", "causa": "Manguera de intercooler rota o actuador pegado."},
+  {"code": "P0234", "componente": "Turbo/Supercargador", "falla": "Sobrepresión (Overboost)", "causa": "Geometría variable trabada o válvula wastegate."},
+  {"code": "P0401", "componente": "Sistema EGR", "falla": "Flujo insuficiente", "causa": "Válvula EGR carbonizada o sensor MAP sucio."},
+  {"code": "P0402", "componente": "Sistema EGR", "falla": "Flujo excesivo", "causa": "Válvula EGR se queda abierta."},
+  {"code": "P0403", "componente": "Circuito EGR", "falla": "Mal funcionamiento", "causa": "Solenoide de EGR en corto circuito."},
+  {"code": "P0471", "componente": "Sensor Presión Escape", "falla": "Rango/Rendimiento", "causa": "Tubo del sensor de escape tapado con hollín."},
+  {"code": "P2002", "componente": "Filtro DPF (Partículas)", "falla": "Eficiencia baja", "causa": "Filtro saturado de ceniza (requiere regeneración)."},
+  {"code": "P2452", "componente": "Sensor Presión DPF", "falla": "Fallo de circuito", "causa": "Mangueras del sensor de presión diferencial rotas."},
+  {"code": "P2264", "componente": "Sensor Agua en Diesel", "falla": "Fallo de circuito", "causa": "Agua en el decantador del filtro de combustible."},
+  {"code": "P2563", "componente": "Sensor Posición Turbo", "falla": "Señal fuera de rango", "causa": "Sensor de la geometría variable dañado."}
+          ],
+[
+  {"code": "P0101", "componente": "Sensor MAF", "falla": "Rango/Rendimiento", "causa": "Sensor sucio o fuga en la manguera de admisión."},
+  {"code": "P0113", "componente": "Sensor IAT (Aire)", "falla": "Entrada alta", "causa": "Sensor desconectado o cable de señal roto."},
+  {"code": "P0117", "componente": "Sensor ECT (Anticongelante)", "falla": "Entrada baja", "causa": "Termostato pegado o sensor en corto circuito."},
+  {"code": "P0118", "componente": "Sensor ECT (Anticongelante)", "falla": "Entrada alta", "causa": "Circuito abierto en el arnés del sensor."},
+  {"code": "P0122", "componente": "Sensor TPS (Acelerador)", "falla": "Entrada baja", "causa": "Sensor de mariposa desgastado o mal calibrado."},
+  {"code": "P0123", "componente": "Sensor TPS (Acelerador)", "falla": "Entrada alta", "causa": "Corto a positivo en el cable de señal."},
+  {"code": "P0130", "componente": "Sensor de Oxígeno (B1 S1)", "falla": "Mal funcionamiento", "causa": "Resistencia del calentador dañada."},
+  {"code": "P0135", "componente": "Sensor de Oxígeno (Calentador)", "falla": "Fallo de circuito", "causa": "Fusible fundido o sensor quemado."},
+  {"code": "P0168", "componente": "Temperatura de Combustible", "falla": "Demasiado alta", "causa": "Bomba de combustible trabajando forzada."},
+  {"code": "P0190", "componente": "Sensor Presión Riel", "falla": "Fallo de circuito", "causa": "Pérdida de alimentación de 5V desde la ECU."}
+          ],
+[
+  {"code": "P0335", "componente": "Sensor CKP (Cigüeñal)", "falla": "Fallo de circuito", "causa": "Sensor con rebaba metálica o cable dañado."},
+  {"code": "P0336", "componente": "Sensor CKP (Cigüeñal)", "falla": "Rango/Rendimiento", "causa": "Diente de la rueda fónica roto o flojo."},
+  {"code": "P0340", "componente": "Sensor CMP (Árbol)", "falla": "Mal funcionamiento", "causa": "Tiempo del motor brincado o sensor dañado."},
+  {"code": "P0341", "componente": "Sensor CMP (Árbol)", "falla": "Fuera de rango", "causa": "Interferencia eléctrica por cables de bujías/bobinas."},
+  {"code": "P0380", "componente": "Bujías Incandescentes", "falla": "Circuito A", "causa": "Relé de precalentamiento fallido o bujía abierta."},
+  {"code": "P0381", "componente": "Luz de Precalentamiento", "falla": "Mal funcionamiento", "causa": "Indicador del tablero fundido o corto en tablero."},
+  {"code": "P0382", "componente": "Bujías Incandescentes", "falla": "Circuito B", "causa": "Corto circuito en el riel de alimentación de bujías."},
+  {"code": "P0404", "componente": "Sistema EGR", "falla": "Rango/Rendimiento", "causa": "Depósitos de carbón impiden el cierre total."},
+  {"code": "P0470", "componente": "Sensor Presión Escape", "falla": "Fallo de circuito", "causa": "Obstrucción total en el sensor de escape."},
+  {"code": "P0500", "componente": "Sensor VSS (Velocidad)", "falla": "Mal funcionamiento", "causa": "Engrane del sensor en la caja roto o cables sucios."}
+        ],
+[
+  {"code": "P0601", "componente": "Módulo de Control (ECU)", "falla": "Error de suma de comprobación (Checksum)", "causa": "Memoria interna de la computadora dañada."},
+  {"code": "P0603", "componente": "Memoria KAM", "falla": "Error de memoria interna", "causa": "Batería desconectada por mucho tiempo o falla de alimentación."},
+  {"code": "P0606", "componente": "Procesador PCM/ECU", "falla": "Fallo del procesador", "causa": "Problema interno de hardware en la computadora."},
+  {"code": "P0607", "componente": "Módulo de Control", "falla": "Rendimiento del módulo", "causa": "Interferencia eléctrica externa o voltaje bajo."},
+  {"code": "P0620", "componente": "Alternador", "falla": "Circuito de control", "causa": "Fallo en el regulador de voltaje o cableado del alternador."},
+  {"code": "P0627", "componente": "Bomba de Combustible", "falla": "Circuito de control abierto", "causa": "Relé de la bomba dañado o cable trozado."},
+  {"code": "P0633", "componente": "Llave Inmovilizadora", "falla": "Llave no programada", "causa": "Fallo en el chip de la llave o antena del inmo."},
+  {"code": "P0638", "componente": "Actuador de Mariposa", "falla": "Rango/Rendimiento (B1)", "causa": "Cuerpo de aceleración sucio o engranes barridos."},
+  {"code": "P0641", "componente": "Voltaje de Referencia A", "falla": "Circuito abierto", "causa": "Corto circuito en algún sensor que comparte los 5V."},
+  {"code": "P0651", "componente": "Voltaje de Referencia B", "falla": "Circuito abierto", "causa": "Fallo en la línea de alimentación de 5V para sensores secundarios."}
+        ],
+[
+  {"code": "P0400", "componente": "Flujo EGR", "falla": "Mal funcionamiento", "causa": "Tubería de la EGR obstruida con hollín."},
+  {"code": "P0405", "componente": "Sensor EGR A", "falla": "Entrada baja", "causa": "Cable de señal del sensor EGR corto a tierra."},
+  {"code": "P0406", "componente": "Sensor EGR A", "falla": "Entrada alta", "causa": "Sensor EGR dañado o corto a positivo."},
+  {"code": "P0410", "componente": "Inyección Aire Secundario", "falla": "Mal funcionamiento", "causa": "Bomba de aire defectuosa o relé fallido."},
+  {"code": "P0420", "componente": "Sistema Catalizador (B1)", "falla": "Eficiencia baja", "causa": "Catalizador tapado o sensor de oxígeno dañado."},
+  {"code": "P0443", "componente": "Válvula Purga EVAP", "falla": "Mal funcionamiento", "causa": "Solenoide del cánister en corto o cables trozados."},
+  {"code": "P0455", "componente": "Sistema EVAP", "falla": "Fuga grande detectada", "causa": "Tapón de gasolina flojo o manguera de vacío rota."},
+  {"code": "P0472", "componente": "Sensor Presión Escape", "falla": "Entrada baja", "causa": "Tubo del sensor de escape roto o sensor dañado."},
+  {"code": "P0473", "componente": "Sensor Presión Escape", "falla": "Entrada alta", "causa": "Obstrucción severa en la línea de presión de escape."},
+  {"code": "P0480", "componente": "Ventilador 1", "falla": "Mal funcionamiento control", "causa": "Relé de motoventilador quemado o cableado abierto."}
+        ],
+[
+  {"code": "P0700", "componente": "Sistema de Transmisión", "falla": "Mal funcionamiento (MIL On)", "causa": "La computadora de la caja pide prender el check engine."},
+  {"code": "P0705", "componente": "Sensor de Rango (TR)", "falla": "Fallo de circuito", "causa": "La ECU no sabe en qué marcha está la palanca."},
+  {"code": "P0715", "componente": "Sensor de Velocidad Entrada", "falla": "Turbina (ISS) sin señal", "causa": "Sensor de velocidad de la caja desconectado o sucio."},
+  {"code": "P0720", "componente": "Sensor de Velocidad Salida", "falla": "OSS sin señal", "causa": "Fallo en el sensor que mide la velocidad final del vehículo."},
+  {"code": "P0730", "componente": "Relación de Marchas", "falla": "Incorrecta", "causa": "La caja se está patinando (falla mecánica o hidráulica)."},
+  {"code": "P0741", "componente": "Embrague del Convertidor (TCC)", "falla": "Desempeño/Atorado", "causa": "Solenoide del convertidor de par pegado."},
+  {"code": "P0748", "componente": "Solenoide de Presión A", "falla": "Fallo eléctrico", "causa": "Corto circuito en el cableado interno de la transmisión."},
+  {"code": "P0841", "componente": "Sensor Presión Fluido", "falla": "Rango/Rendimiento", "causa": "Nivel de aceite bajo o sensor de presión dañado."},
+  {"code": "P0901", "componente": "Actuador del Embrague", "falla": "Rango/Rendimiento", "causa": "Fallo en el motor del embrague (común en automáticos)."},
+  {"code": "P1122", "componente": "Sensor Pedal (APP)", "falla": "Voltaje bajo intermitente", "causa": "Falso contacto en el conector del pedal de aceleración."}
+        ],
+[
+  {"code": "P0741", "componente": "TCC (Embrague del convertidor)", "falla": "Desempeño o pegado", "causa": "Solenoide de aplicación dañado o aceite muy sucio."},
+  {"code": "P0750", "componente": "Solenoide de Cambio A", "falla": "Mal funcionamiento", "causa": "Bobina del solenoide abierta o corto en el arnés interno."},
+  {"code": "P1211", "componente": "Presión de Control de Inyección", "falla": "Presión fuera de rango", "causa": "Fallo en la válvula IPR o bomba de alta."},
+  {"code": "P1212", "componente": "Sensor ICP", "falla": "Voltaje no detectado en arranque", "causa": "Baja presión de aceite base o sensor ICP dañado."},
+  {"code": "P1320", "componente": "Señal de Ignición", "falla": "Interrupción de señal", "causa": "Interferencia eléctrica o módulo de encendido fallando."},
+  {"code": "P1670", "componente": "Comunicación EF", "falla": "No se detecta señal", "causa": "Falta de comunicación entre la ECU y el módulo de inyectores (IDM)."}
+        ],
+[
+  {"code": "P1211", "componente": "Control de Presión Inyección", "falla": "Presión fuera de rango", "causa": "Fallo en la válvula IPR o bomba de alta."},
+  {"code": "P1280", "componente": "Sensor ICP", "falla": "Señal fuera de rango bajo", "causa": "Sensor desconectado o cables en corto."},
+  {"code": "P1312", "componente": "Módulo de Control", "falla": "Detección de fallo de encendido", "causa": "Falla en el circuito de retroalimentación de ignición."},
+  {"code": "P1668", "componente": "Comunicación PCM/IDM", "falla": "Error de comunicación", "causa": "Arnés principal del motor dañado o falso contacto."}
+          ],
+[
+  {"code": "C0031", "componente": "Sensor Velocidad Rueda AI", "falla": "Fallo de señal", "causa": "Sensor sucio o cableado trozado."},
+  {"code": "C0034", "componente": "Sensor Velocidad Rueda AD", "falla": "Fallo de señal", "causa": "Sensor con rebaba metálica."},
+  {"code": "C0040", "componente": "Switch Pedal Freno", "falla": "Fallo de circuito", "causa": "Foco de freno fundido o switch pegado."},
+  {"code": "U0001", "componente": "Bus CAN High Speed", "falla": "No hay comunicación", "causa": "Corto en las líneas de comunicación CAN."},
+  {"code": "U0100", "componente": "Comunicación con ECM", "falla": "Perdida de datos", "causa": "Fallo de alimentación en la computadora del motor."},
+  {"code": "P1501", "componente": "Sensor Velocidad Vehículo", "falla": "Fuera de rango", "causa": "Interferencia eléctrica en la señal de velocidad."},
+  {"code": "P1536", "componente": "Circuito Freno de Estacionamiento", "falla": "Fallo de señal", "causa": "Switch de freno de mano dañado."},
+  {"code": "P1604", "componente": "Módulo de Control", "falla": "Error de autodiagnóstico", "causa": "Fallo interno en la EEPROM de la ECU."},
+  {"code": "P1705", "componente": "Sensor de Rango (TR)", "falla": "Fallo en KOEO", "causa": "La palanca no está en P o N durante el test."},
+  {"code": "P2269", "componente": "Sistema de Combustible", "falla": "Agua en el diesel detectada", "causa": "Filtro decantador lleno de agua."}
+          ],
+[
+  {"code": "U0101", "componente": "Comunicación TCM", "falla": "Pérdida de datos con la caja", "causa": "Fallo en el arnés de la transmisión o conector flojo."},
+  {"code": "U0121", "componente": "Comunicación ABS", "falla": "No hay señal del módulo", "causa": "Módulo de frenos sin alimentación o red CAN interrumpida."},
+  {"code": "U0401", "componente": "Datos inválidos ECM", "falla": "Error de software", "causa": "La computadora del motor manda datos corruptos por la red."},
+  {"code": "P2509", "componente": "ECM/PCM", "falla": "Alimentación intermitente", "causa": "Bornes de batería flojos o relé de potencia fallando."}
+          ],
+[
+  {"code": "P0705", "componente": "Sensor de Rango (TR)", "falla": "Fallo de circuito", "causa": "La ECU no detecta en qué posición está la palanca (P, R, N, D)."},
+  {"code": "P0715", "componente": "Sensor Velocidad Turbina", "falla": "Entrada sin señal", "causa": "Sensor de entrada de la caja desconectado o sucio."},
+  {"code": "P0720", "componente": "Sensor Velocidad Salida", "falla": "Fallo de circuito", "causa": "Fallo en el sensor que mide la velocidad final a las ruedas."},
+  {"code": "P0740", "componente": "Solenoide TCC", "falla": "Mal funcionamiento", "causa": "El embrague del convertidor de par no está aplicando correctamente."}
+],
+[
+  {"code": "P0562", "componente": "Voltaje del Sistema", "falla": "Voltaje Bajo", "causa": "Alternador cargando poco o batería ya en las últimas."},
+  {"code": "P0563", "componente": "Voltaje del Sistema", "falla": "Voltaje Alto", "causa": "Regulador del alternador pegado (Peligro para la ECU)."},
+  {"code": "P0607", "componente": "Módulo de Control", "falla": "Desempeño del procesador", "causa": "Ruido eléctrico extremo o corto interno en la computadora."},
+  {"code": "U0100", "componente": "Red CAN Bus", "falla": "Pérdida de comunicación con ECM", "causa": "Cables de red (trenzado) trozados o módulo sin corriente."}
+        ],
+[
+  {"code": "B1000", "componente": "Módulo de Control", "falla": "Fallo interno", "causa": "La computadora ya no sirve, requiere reemplazo."},
+  {"code": "B1213", "componente": "Inmovilizador", "falla": "Número de llaves insuficiente", "causa": "Falta programar una segunda llave para que el sistema acepte el ciclo."},
+  {"code": "P1570", "componente": "Unidad de Control de Motor", "falla": "Bloqueada por inmovilizador", "causa": "La llave no es la correcta o el chip se desprogramó."},
+  {"code": "P1610", "componente": "Inmovilizador Nissan/VW", "falla": "Modo de bloqueo activo", "causa": "Se intentó arrancar muchas veces con una llave mala. Hay que dejar el switch abierto 30 min."}
+        ],
+[
+  {"code": "C0561", "componente": "Módulo de Control de Chasis", "falla": "Datos inválidos", "causa": "Problema de comunicación con el sensor de ángulo de dirección."},
+  {"code": "P0500", "componente": "Sensor de Velocidad (VSS)", "falla": "Mal funcionamiento", "causa": "Engrane del sensor en la transmisión roto o cableado suicio."},
+  {"code": "U0121", "componente": "Comunicación con ABS", "falla": "Señal perdida", "causa": "Fallo en el fusible del módulo ABS o red CAN interrumpida."},
+  {"code": "P1705", "componente": "Sensor de Rango (TR)", "falla": "Fallo en el test KOEO", "causa": "La palanca no estaba en Park o Neutral al momento de escanear."}
+        ],
+[
+  {"code": "C1214", "componente": "Módulo de Control ABS", "falla": "Fallo interno de relé", "causa": "Soldaduras frías dentro del módulo o voltaje bajo."},
+  {"code": "B0001", "componente": "Bolsa de Aire (Airbag)", "falla": "Etapa 1 control de despliegue", "causa": "Conector flojo debajo del asiento o resorte reloj dañado."},
+  {"code": "U1000", "componente": "Red de Datos Clase 2", "falla": "Fallo de comunicación", "causa": "Un módulo no está contestando el saludo del escáner."},
+  {"code": "P2264", "componente": "Sensor de Agua en Combustible", "falla": "Circuito de señal", "causa": "Agua acumulada en el filtro o sensor quebrado."}
+          ],
+[
+  {"code": "U0100", "componente": "Módulo de Control Motor (ECM)", "falla": "Comunicación perdida", "causa": "Fallo en el arnés de la red CAN o fusible de la ECU fundido."},
+  {"code": "U0101", "componente": "Módulo de Transmisión (TCM)", "falla": "Comunicación perdida", "causa": "Conector de la caja flojo o lleno de aceite."},
+  {"code": "U0121", "componente": "Módulo de Frenos (ABS)", "falla": "Comunicación perdida", "causa": "Fallo de alimentación al módulo de frenos."},
+  {"code": "U0401", "componente": "ECM", "falla": "Datos inválidos recibidos", "causa": "Interferencia eléctrica en los cables del bus de datos."}
+        ],
+[
+  {"code": "P204F", "componente": "Sistema reductante (DEF)", "falla": "Desempeño del banco 1", "causa": "Cristalización de urea en el inyector de AdBlue."},
+  {"code": "P20E8", "componente": "Presión de Reductante", "falla": "Presión demasiado baja", "causa": "Bomba de DEF dañada o filtro tapado."},
+  {"code": "P20EE", "componente": "Catalizador SCR", "falla": "Eficiencia debajo del umbral", "causa": "Sensor de NOx dañado o urea de mala calidad."},
+  {"code": "P218F", "componente": "Sistema DEF", "falla": "Fuga detectada", "causa": "Manguera de urea rota o conector flojo."},
+  {"code": "P203B", "componente": "Sensor de Nivel DEF", "falla": "Rango/Desempeño", "causa": "Flotador del tanque de urea trabado."}
+        ],
+[
+  {"code": "P0087", "componente": "Riel de Combustible", "falla": "Baja presión", "causa": "Filtro tapado"},
+  {"code": "P0101", "componente": "Sensor MAF", "falla": "Rango/Rendimiento", "causa": "Suciedad"},
+  ... y así le sigues pegando los demás ...
+          ],
+  [
+  {"code": "C0545", "componente": "Sensor de Torque Dirección", "falla": "Fallo de señal", "causa": "Sensor interno del volante dañado o falta de calibración."},
+  {"code": "C0561", "componente": "Módulo de Chasis", "falla": "Datos inválidos", "causa": "Fallo de comunicación con el ABS por la red CAN."},
+  {"code": "P0635", "componente": "Dirección Asistida", "falla": "Fallo de circuito", "causa": "Fusible de potencia de la dirección fundido (el grandote)."},
+  {"code": "U0126", "componente": "Sensor de Ángulo Dirección", "falla": "Comunicación perdida", "causa": "Cables de red trozados al pasar por la columna."}
+          ],
+  [
+  {"code": "C0035", "componente": "Sensor Velocidad Rueda AI", "falla": "Fallo de circuito", "causa": "Cable del sensor trozado por el movimiento de la suspensión."},
+  {"code": "C0040", "componente": "Sensor Velocidad Rueda AD", "falla": "Señal ruidosa", "causa": "Maza de rueda con juego o sensor sucio."},
+  {"code": "C0110", "componente": "Motor de Bomba ABS", "falla": "Circuito abierto", "causa": "Motor de la unidad hidráulica ABS quemado o fusible fundido."},
+  {"code": "C0550", "componente": "Módulo de Control ABS", "falla": "Fallo interno", "causa": "La computadora del ABS necesita reemplazo o reprogramación."}
+        ],
+  [
+  {"code": "P0562", "componente": "Voltaje del Sistema", "falla": "Voltaje Bajo", "causa": "Alternador cargando poco, batería vieja o terminales sulfatadas."},
+  {"code": "P0563", "componente": "Voltaje del Sistema", "falla": "Voltaje Alto", "causa": "Regulador del alternador pegado (¡Cuidado, puede quemar la computadora!)."},
+  {"code": "P2503", "componente": "Sistema de Carga", "falla": "Voltaje bajo en funcionamiento", "causa": "Correa del alternador floja o patinando."},
+  {"code": "P2504", "componente": "Sistema de Carga", "falla": "Voltaje alto en funcionamiento", "causa": "Fallo de comunicación entre la ECU y el alternador inteligente."}
+        ],
+  [
+  {"code": "B0001", "componente": "Bolsa de Aire Conductor", "falla": "Etapa 1 control de despliegue", "causa": "Conector flojo debajo del asiento o resorte reloj (clockspring) dañado."},
+  {"code": "B0020", "componente": "Bolsa de Aire Lateral Izquierda", "falla": "Circuito abierto", "causa": "Cables trozados en la bisagra de la puerta o impacto lateral detectado."},
+  {"code": "B1000", "componente": "Módulo de Control SRS", "falla": "Fallo interno", "causa": "Módulo bloqueado por choque previo (crash data) o corto interno."},
+  {"code": "B1212", "componente": "Pretensor de Cinturón", "falla": "Resistencia alta", "causa": "Cinturón detonado o conector con falso contacto."}
+ }
+        }   
+    }
 }
