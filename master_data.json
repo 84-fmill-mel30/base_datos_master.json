@@ -2405,4 +2405,199 @@
     ]
   }
           ],
-         
+
+
+
+
+
+
+
+
+
+
+[
+  {
+    "propart_api": {
+      "status": "online",
+      "assets": 5247,
+      "last_update": "2026",
+      "tier": "Premium"
+    },
+    "data": [
+      {
+        "brand": "CUMMINS",
+        "model": "ISX15 / QSX15 (CM2250)",
+        "pines": { "1": "B+ Battery (24V)", "46": "CAN High", "47": "CAN Low", "24": "Rail Press" },
+        "tip_pro": "Si no comunica, checa el fusible de 30A en la caja de baterías."
+      },
+      {
+        "brand": "CATERPILLAR",
+        "model": "C15 ACERT ADEM A4",
+        "pines": { "J1-1": "B+ (24V)", "J2-22": "IAP Sensor", "J2-48": "Boost Sensor" },
+        "tip_pro": "Sistema HEUI: Presión debe estar entre 600-3500 PSI."
+      },
+      {
+        "brand": "DETROIT DIESEL",
+        "model": "DD15 / DD13 (MCM)",
+        "pines": { "M1": "Main Power", "M21": "EGR Control", "M44": "Engine Brake" },
+        "tip_pro": "Revisar cristalización de urea en el inyector de DEF. Limpiar con agua destilada."
+      },
+      {
+        "brand": "KENWORTH",
+        "model": "T660 / T680 (PACCAR MX13)",
+        "pines": { "10": "Ignition Supply", "62": "Fuel Control", "78": "Exhaust Brake" },
+        "tip_pro": "Si el motor se jalonea, checa el conector del riel de combustible."
+      },
+      
+        {
+        "vehiculo": "CHEVROLET S10 1989",
+        "modulo": "SWITCH IGNICION",
+        "pines": { "B+": "Rojo", "IGN": "Rosa", "ACC": "Café", "START": "Morado" },
+        "tip_pro": "Si el rosa no tiene corriente, la pastilla está quemada."
+      },
+      {
+        "vehiculo": "NISSAN D21 2002",
+        "modulo": "FUSILERA / ECU",
+        "pines": { "PIN_1": "Blanco (B+)", "PIN_2": "Rojo/Blanco (IGN)", "BOMBA": "Verde/Negro" },
+        "tip_pro": "Checa el fusible de 10A en cabina para la señal IGN."
+      },
+      {
+        "vehiculo": "VW GOLF A4 2.0 (2003)",
+        "modulo": "MOTRONIC 7.5",
+        "pines": { "121": "IGN (Verde/B)", "1": "B+ (Rojo/N)", "2": "GND (Marrón)" },
+        "tip_pro": "Relevador 409 activa bomba y ECU. Si falla, no hay chispa."
+      },
+      {
+        "vehiculo": "NISSAN URVAN / FRONTIER (QR25DE)",
+        "pines": { "111": "B+ Power", "109": "IGN ON", "1": "GND", "94": "APP 1", "98": "APP 2" },
+        "tip_pro": "Falla de CKP por fuga de aceite. Medir 5V de referencia."
+      },
+      {
+        "vehiculo": "VW JETTA / VENTO (1.6L / 2.5L)",
+        "ecu": "BOSCH ME 17.5.x",
+        "pines": { "1": "GND", "92": "MAF/MAP", "44": "CAN High", "45": "CAN Low" },
+        "tip_pro": "En Vento, el sensor ECT falla y deja los ventiladores prendidos."
+      },
+      {
+        "vehiculo": "FORD F-150 / RANGER (97-03)",
+        "modulo": "ECU 104 PINES",
+        "pines": { "24": "Corriente PCM", "25": "Tierra", "91": "5V Ref", "19": "CKP" },
+        "tip_pro": "Si no comunica, checa el fusible 21 del cofre (20A)."
+      },
+      {
+        "vehiculo": "FORD FIESTA / FOCUS (POWERSHIFT)",
+        "modulo": "TCM",
+        "pines": { "10": "Power Supply", "14": "CAN-L", "22": "Clutch Actuator" },
+        "tip_pro": "Falla de TCM: Revisa la tierra debajo de la base de la batería."
+        },
+      
+     {
+        "vehiculo": "CHEVROLET SILVERADO / TAHOE (5.3L V8)",
+        "ecu": "GM E38 / E92",
+        "pines": { "20": "IGN Voltage", "73": "GND", "2": "CAN High", "25": "Fuel Pump Control" },
+        "tip_pro": "Si marca 'Service Stabilitrak', limpia las tierras atrás de la cabeza izquierda."
+      },
+      {
+        "vehiculo": "CHEVROLET AVEO / SPARK (1.2L / 1.6L)",
+        "ecu": "DELPHI MT80",
+        "pines": { "J1-1": "B+", "J1-3": "IGN", "J2-15": "MAP", "J2-44": "CKP" },
+        "tip_pro": "La bobina en corto quema el driver de la ECU. Mide resistencia (0.5-1.2 ohms)."
+      },
+      {
+        "vehiculo": "RAM 1500/2500 (5.7L HEMI / 3.6L)",
+        "ecu": "GPEC2 / GPEC3",
+        "pines": { "C1-1": "B+", "C1-2": "GND", "C2-15": "ASD Relay", "C4-33": "CAN-H" },
+        "tip_pro": "Si no hay pulso, checa el relevador ASD; se corta si el CKP falla."
+      },
+      {
+        "vehiculo": "TOYOTA HILUX / TACOMA (2.7L / 4.0L)",
+        "pines": { "A1": "B+", "A2": "IGSW", "B34": "A/F Sen + (3.3V)", "B35": "A/F Sen - (3.0V)" },
+        "tip_pro": "El sensor A/F no oscila. Si ves 3.3V y 3.0V fijos, el sensor está al 100%."
+      },
+      {
+        "vehiculo": "HONDA CIVIC / CR-V (1.8L / 2.4L)",
+        "pines": { "A1": "GND", "A24": "VTEC Solenoid", "B12": "VTEC Press Switch" },
+        "tip_pro": "Si se gobierna a 3000 RPM, limpia el cedazo del solenoide VTEC."
+      },
+      {
+        "vehiculo": "HYUNDAI ACCENT / KIA RIO (1.6L)",
+        "ecu": "KEFICO / BOSCH",
+        "pines": { "1": "Coil 1", "2": "Coil 2", "50": "MAP", "94": "B+" },
+        "tip_pro": "Si tarda en arrancar en caliente, el CKP está avisando que ya va a morir."
+      },
+      {
+        "vehiculo": "CATERPILLAR EXCAVATOR (320D/336D)",
+        "modulo": "MACHINE ECM (ADEM A4)",
+        "pines": { "1": "GND", "2": "B+ (24V)", "44": "Hydraulic Press", "70": "Speed Dial" },
+        "tip_pro": "Si la máquina se ahoga, checa el sensor de presión hidráulica (Pin 44)."
+      },
+      {
+        "vehiculo": "JOHN DEERE (6J / 7J SERIES)",
+        "modulo": "ECU PHOENIX",
+        "pines": { "X1-1": "B+", "X1-15": "CAN-H", "X2-20": "Rail Pressure" },
+        "tip_pro": "Código 1569-31: Indica derate (protección). Checa nivel de urea o temperatura."
+      },
+      {
+        "vehiculo": "DEEP SEA (GENERADOR) DSE 7320",
+        "modulo": "AUTO START CONTROL",
+        "pines": { "1": "B+", "2": "GND", "8": "Fuel Solenoid", "15": "CAN-H" },
+        "tip_pro": "Si marca 'CAN ECU Data Fail', checa la resistencia de 120 ohms en el bus."
+      }
+    ],
+    "fault_codes": [
+      { "code": "P0087", "desc": "Baja presión de riel", "tip": "Filtro tapado o bomba de alta." },
+      { "code": "P0335", "desc": "Falla sensor CKP", "tip": "Rebaba metálica en sensor o cable dañado." },
+      { "code": "P1229", "desc": "Falla de Voltaje Sensores Nissan", "tip": "Sensor de A/C en corto tumba el pedal." },
+      { "spn": 100, "fmi": 1, "desc": "Baja Presión de Aceite", "tip": "Paro de motor inmediato. Revisar nivel." },
+      { "spn": 639, "fmi": 9, "desc": "Falla Red J1939", "tip": "Mide 60 ohms entre Pin 6 y 14 del DLC." },
+      { "code": "EPC VW", "desc": "Electronic Power Control", "tip": "Cuerpo de aceleración sucio o focos de freno fundidos." }
+     ]
+      },
+      {
+        "vehiculo": "MG 5 / MG GT (2021-2026)",
+        "ecu": "BOSCH ME 17.x (CHINA)",
+        "pines": { "1": "B+", "2": "GND", "94": "CAN-H", "55": "Turbo Boost" },
+        "tip_pro": "Si el tablero se vuelve loco, la batería está debajo de 12.2V. Son hipersensibles."
+      },
+      {
+        "vehiculo": "BMW SERIE 3 (E90/F30/G20)",
+        "ecu": "BOSCH DME",
+        "pines": { "1": "VVT Power", "25": "BSD Line", "40": "Wake-up" },
+        "tip_pro": "Si no carga, checa el Pin 25 (BSD). Un corto en el sensor de aceite tumba el alternador."
+      },
+      {
+        "vehiculo": "TOYOTA PRIUS (HSD)",
+        "modulo": "INVERSOR / BATERÍA HV",
+        "pines": { "HV-1": "SMR+", "HV-2": "SMR-", "AUX": "12.6V" },
+        "tip_pro": "Limpia el filtro de aire del asiento trasero. Si se tapa, el sistema híbrido se bloquea."
+      },
+      {
+        "vehiculo": "TESLA MODEL 3 / Y",
+        "modulo": "VCFRONT",
+        "pines": { "LV": "16V Power", "CAN_H": "Verde", "CAN_L": "Blanco" },
+        "tip_pro": "Usa red de 16V. No intentes 'jump-start' con 12V directos a los bornes de litio."
+      },
+      {
+        "id": "REPAIR_TIPS",
+        "topic": "REPARACIÓN DE ECUs",
+        "steps": [
+          {"step": "DIODO ZENER", "desc": "Protección de entrada. Si está en corto, la ECU no prende."},
+          {"step": "TRANSISTOR MOSFET", "desc": "Controla bobinas. Si el inyector se queda abierto, el MOSFET está en corto."},
+          {"step": "5V REF", "desc": "Si no hay 5V en sensores, el regulador de voltaje interno está quemado."}
+        ]
+      },
+      {
+        "vehiculo": "CAN-AM MAVERICK X3",
+        "ecu": "BOSCH ME17.8.5",
+        "pines": { "A1": "Power", "B12": "Turbo Boost", "A34": "Throttle" },
+        "tip_pro": "Limp Mode frecuente por sensor de temperatura de banda (CVT) sucio."
+      }
+    ],
+    "master_notes": "Propart Diagnostic V7 - Millan & Juls - Todos los sistemas operativos"
+  }
+        ]}]
+
+
+
+
+
