@@ -1,0 +1,125 @@
+{
+  "propart_database": {
+    "CHEVROLET": {
+      "CHEVY C2 (04-08)": {
+        "motor": "1.6L MPFI",
+        "modulo": "ECU Multec 56 Pines",
+        "diagrama": [
+          { "pin": "C4", "color": "Naranja", "funcion": "Alimentacion Bateria (+12V)", "notas": "Bateria constante" },
+          { "pin": "C16", "color": "Negro/Blanco", "funcion": "Alimentacion Ignicion (SW ON)", "notas": "Switch de encendido" },
+          { "pin": "A12", "color": "Marron", "funcion": "Tierra Fisica", "notas": "Masa motor" },
+          { "pin": "B10", "color": "Marron", "funcion": "Tierra Fisica", "notas": "Masa motor" },
+          { "pin": "B3", "color": "Verde", "funcion": "Señal Sensor CKP", "notas": "Posicion de cigueñal" },
+          { "pin": "D1", "color": "Azul", "funcion": "Control Bobina 1-4", "notas": "Pulso modulo DIS" },
+          { "pin": "D10", "color": "Rojo", "funcion": "Control Bobina 2-3", "notas": "Pulso modulo DIS" },
+          { "pin": "C11", "color": "Negro/Amarillo", "funcion": "Control Inyector 1", "notas": "Pulso negativo" },
+          { "pin": "B6", "color": "Gris/Rojo", "funcion": "Control Relevador Bomba", "notas": "Activa tierra" },
+          { "pin": "DLC-2", "color": "Morado", "funcion": "Linea de Datos (VPW)", "notas": "Protocolo J1850 GM" },
+          { "pin": "TAB-15", "color": "Azul/Rojo", "funcion": "Señal VSS", "notas": "Velocidad desde sensor caja" }
+        ]
+      }
+    },
+    "FORD": {
+      "FIESTA (11-16)": {
+        "motor": "1.6L Ti-VCT",
+        "modulo": "ECU Motor (PCM)",
+        "diagrama": [
+          { "pin": "9", "color": "Negro/Amarillo", "funcion": "Tierra Fisica / Potencia", "notas": "Masa directa a chasis" },
+          { "pin": "10", "color": "Negro/Amarillo", "funcion": "Tierra Fisica / Potencia", "notas": "Masa directa a chasis" },
+          { "pin": "31", "color": "Verde Claro/Rojo", "funcion": "Alimentacion KAM (+12V)", "notas": "Corriente viva para memoria" },
+          { "pin": "52", "color": "Marron/Amarillo", "funcion": "Señal Sensor CKP", "notas": "Posicion de cigueñal" },
+          { "pin": "42", "color": "Blanco/Verde", "funcion": "Señal Sensor CMP", "notas": "Posicion arbol de levas de escape" },
+          { "pin": "25", "color": "Azul Claro/Blanco", "funcion": "Control Bobina 1-4", "notas": "Pulso negativo para chispa" },
+          { "pin": "26", "color": "Verde/Violeta", "funcion": "Control Bobina 2-3", "notas": "Pulso negativo para chispa" }
+        ],
+        "fallas_comunes": [
+          { "codigo": "P090C", "defecto": "Voltaje bajo actuador embrague", "causa": "Modulo TCM dañado por humedad - Motores PowerShift trabados" },
+          { "codigo": "P2802", "defecto": "Entrada alta sensor rango TCM", "causa": "Falla interna de TCM - Bateria deficiente" }
+        ]
+      },
+      "LOBO F150 (04-08)": {
+        "motor": "5.4L 3V TRITON",
+        "modulo": "PCM (C175B, C175E)",
+        "diagrama": [
+          { "pin": "B-1", "color": "Negro/Blanco", "funcion": "Tierra Fisica / Potencia", "notas": "Masa principal a chasis (G101)" },
+          { "pin": "E-15", "color": "Verde/Rojo", "funcion": "Alimentacion KAM (+12V)", "notas": "Corriente viva de bateria para memoria" },
+          { "pin": "E-36", "color": "Rojo", "funcion": "Alimentacion Ignicion (SW ON)", "notas": "Corriente desde Relevador de PCM" },
+          { "pin": "E-34", "color": "Blanco/Marron", "funcion": "Señal Sensor CKP", "notas": "Posicion de cigueñal (Inductivo)" },
+          { "pin": "E-55", "color": "Verde Claro/Rojo", "funcion": "Control Solenoide VCT B1", "notas": "Actuador de tiempo variable (Falla comun)" },
+          { "pin": "DLC-6", "color": "Gris/Naranja", "funcion": "CAN High (HS-CAN)", "notas": "Red de datos de alta velocidad" }
+        ],
+        "fallas_comunes": [
+          { "codigo": "P0340", "defecto": "Falla circuito Sensor CMP", "causa": "Alternador metiendo ruido AC (Falla super comun)" },
+          { "codigo": "P0011", "defecto": "Tiempo sobre-avanzado VCT", "causa": "Presion de aceite baja - Engranes Phasers dañados" }
+        ]
+      }
+    },
+    "NISSAN": {
+      "ALTIMA L32 (07-12)": {
+        "motor": "QR25DE 2.5L",
+        "modulo": "ECU Motor",
+        "diagrama": [
+          { "pin": "111", "color": "Rojo", "funcion": "Alimentacion Bateria (+12V)", "notas": "Viene de modulo IPDM constante" },
+          { "pin": "119", "color": "Negro/Rojo", "funcion": "Alimentacion Ignicion (SW ON)", "notas": "Despierta PCM y red" },
+          { "pin": "115", "color": "Negro", "funcion": "Tierra Fisica", "notas": "Masa directa motor/chasis" },
+          { "pin": "14", "color": "Gris", "funcion": "Señal Sensor CKP", "notas": "Posicion cigueñal" },
+          { "pin": "60", "color": "Blanco", "funcion": "Control Bobina 1", "notas": "Pulso 5V (Bobina transistorizada)" }
+        ],
+        "fallas_comunes": [
+          { "codigo": "P0420", "defecto": "Eficiencia catalizador", "causa": "Polvo de ceramica dañando motor (Falla mortal tipica)" }
+        ]
+      },
+      "SENTRA B15 (01-06)": {
+        "motor": "QG18DE 1.8L",
+        "modulo": "ECU Motor 112 Pines",
+        "diagrama": [
+          { "pin": "67", "color": "Blanco/Rojo", "funcion": "Alimentacion Bateria", "notas": "Fusible ECCS" },
+          { "pin": "119", "color": "Negro/Rojo", "funcion": "Alimentacion Ignicion", "notas": "Corriente de Switch" },
+          { "pin": "101", "color": "Rojo/Amarillo", "funcion": "Control Inyector 1", "notas": "Pulso negativo ECU" },
+          { "pin": "111", "color": "Azul/Rojo", "funcion": "Control IAC", "notas": "Apertura AAC" }
+        ]
+      },
+      "TSURU B13 (01-17)": {
+        "motor": "GA16DNE 1.6L",
+        "modulo": "ECU Motor 64 Pines",
+        "diagrama": [
+          { "pin": "38", "color": "Blanco/Negro", "funcion": "Bateria (+12V)", "notas": "Viene del Relevador ECCS" },
+          { "pin": "36", "color": "Blanco/Verde", "funcion": "Ignicion (SW ON)", "notas": "Corriente de Switch" },
+          { "pin": "22", "color": "Amarillo/Verde", "funcion": "Señal CKP (180°)", "notas": "Señal optica del distribuidor" },
+          { "pin": "5", "color": "Azul Claro/Blanco", "funcion": "Control Bobina (IGN)", "notas": "Activa modulo de encendido" }
+        ]
+      },
+      "VERSA / MARCH (12-19)": {
+        "motor": "HR16DE 1.6L",
+        "modulo": "ECU Motor (Conector Gris)",
+        "diagrama": [
+          { "pin": "67", "color": "Rojo", "funcion": "Alimentacion Bateria", "notas": "Viene de IPDM (Fusible)" },
+          { "pin": "14", "color": "Verde", "funcion": "Señal Sensor CKP", "notas": "Efecto Hall 3 cables" },
+          { "pin": "11", "color": "Blanco", "funcion": "Control Bobina 1", "notas": "Pulso 5V" },
+          { "pin": "DLC-6", "color": "Azul", "funcion": "CAN High", "notas": "Red de alta velocidad" }
+        ]
+      }
+    },
+    "VW": {
+      "JETTA A4 (99-07)": {
+        "motor": "2.0L AEG/AVH",
+        "modulo": "ECU Bosch ME7 121 Pines",
+        "diagrama": [
+          { "pin": "1", "color": "Negro/Violeta", "funcion": "Alimentacion Ignicion (15)", "notas": "Fusible S232" },
+          { "pin": "3", "color": "Rojo/Verde", "funcion": "Alimentacion Relevador (30)", "notas": "Viene del Relevador J271" },
+          { "pin": "53", "color": "Gris/Blanco", "funcion": "Señal Sensor CKP (G28)", "notas": "Referencia RPM (Inductivo)" },
+          { "pin": "65", "color": "Azul/Amarillo", "funcion": "Control Relevador Bomba", "notas": "Tierra de control" }
+        ]
+      },
+      "POINTER (00-09)": {
+        "motor": "1.8L",
+        "modulo": "ECU Magneti Marelli 45 Pines",
+        "diagrama": [
+          { "pin": "23", "color": "Negro/Blanco", "funcion": "Alimentacion Ignicion", "notas": "Voltaje con switch" },
+          { "pin": "18", "color": "Gris/Amarillo", "funcion": "Control Bobina 1-4", "notas": "Pulso negativo" },
+          { "pin": "32", "color": "Blanco/Amarillo", "funcion": "Control Relevador Bomba", "notas": "Pulso negativo" }
+        ]
+      }
+    }
+  }
+          }
