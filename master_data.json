@@ -487,3 +487,317 @@
     "tip_oro": "Si el Pin 36 no tiene corriente, el relevador ECCS está pegado."
   }
 },
+{
+  "propart_database": [
+    {
+      "brand": "Nissan",
+      "model": "Tsuru",
+      "year": "1991-2017",
+      "engine": "GA16DE 1.6L DOHC",
+      "ecu": "Hitachi ECCS",
+      "fuel": "gasolina",
+      "modules": ["ECM", "BCM", "IMMO"],
+      "pinout": [
+        { "n": 1, "name": "IGN SW", "v": "12V" },
+        { "n": 3, "name": "GND", "v": "0V" },
+        { "n": 8, "name": "CKP+", "v": "AC senoidal" },
+        { "n": 5, "name": "TPS", "v": "0.5-4.5V" },
+        { "n": 21, "name": "VREF", "v": "5.00V" },
+        { "n": 10, "name": "INJ1", "v": "12V PWM" },
+        { "n": 30, "name": "ECT", "v": "NTC 177Ω@100°C" }
+      ],
+      "tip_oro": "Si no hay chispa, revisa el transistor de potencia externo; se vuela por bobinas de mala calidad."
+    },
+    {
+      "brand": "Nissan",
+      "model": "Kicks P15",
+      "year": "2017-2024",
+      "engine": "HR16DE 1.6L",
+      "ecu": "Hitachi MEC",
+      "fuel": "gasolina",
+      "modules": ["ECM", "BCM", "ABS", "SRS", "CVT", "IPDM", "EPS"],
+      "pinout": [
+        { "n": 1, "name": "B+", "v": "12V" },
+        { "n": 46, "name": "CAN-H", "v": "2.5-3.5V" },
+        { "n": 47, "name": "CAN-L", "v": "1.5-2.5V" },
+        { "n": 44, "name": "APP1 (Pedal)", "v": "0.5-4.5V" }
+      ],
+      "tip_oro": "Falla común de dirección asistida (EPS) por bajo voltaje en la batería. No es la cremallera, es la carga."
+    },
+    {
+      "brand": "Volkswagen",
+      "model": "Jetta A4",
+      "year": "1999-2006",
+      "engine": "2.0L AEG / 1.8T APH",
+      "ecu": "Bosch ME7.5",
+      "fuel": "gasolina",
+      "modules": ["ECM", "BCM", "IMMO3", "ABS", "SRS"],
+      "pinout": [
+        { "n": 1, "name": "B+", "v": "12V" },
+        { "n": 2, "name": "GND", "v": "0V" },
+        { "n": 75, "name": "CAN-H", "v": "2.5-3.5V" },
+        { "n": 25, "name": "MAF", "v": "0-5V" }
+      ],
+      "tip_oro": "Si marca falla de EPC, limpia el cuerpo de aceleración y haz el ajuste básico en el canal 060."
+    },
+    {
+      "brand": "Chevrolet",
+      "model": "Aveo",
+      "year": "2005-2017",
+      "engine": "1.6L F16D3",
+      "ecu": "Delphi",
+      "fuel": "gasolina",
+      "modules": ["ECM", "BCM", "SRS", "IMMO"],
+      "sensors": ["RPM", "ECT", "TPS", "MAP", "IAT", "O2", "IAC", "CKP"],
+      "tip_oro": "El sensor de cigüeñal (CKP) suele fallar por calor; el carro se apaga y prende hasta que se enfría."
+    },
+    {
+      "brand": "Isuzu",
+      "model": "NPR NQR",
+      "year": "2004-2020",
+      "engine": "4HK1 5.2L Diesel",
+      "ecu": "Denso / Bosch EDC17",
+      "fuel": "diesel",
+      "modules": ["ECM", "BCM", "ABS", "TCM"],
+      "pinout": [
+        { "n": 15, "name": "Sensor Presión Riel", "v": "0.5V - 4.5V" },
+        { "n": 20, "name": "CAN-H", "v": "2.5V" }
+      ],
+      "tip_oro": "Si pierde potencia, revisa el arnés sobre la transmisión; el roce con la lámina hace corto en la línea de 5V."
+    }
+  ]
+        },
+[
+  {
+    "brand": "Nissan",
+    "model": "Tsuru",
+    "year": "1991-2017",
+    "engine": "GA16DE 1.6L DOHC",
+    "ecu": "Hitachi ECCS",
+    "fuel": "gasolina",
+    "modules": ["ECM", "BCM", "IMMO"],
+    "sensors": ["RPM", "ECT", "TPS", "O2B1S1", "MAF", "IAT", "IAC", "STFT", "LTFT", "CKP", "CMP"],
+    "pinout": [
+      { "n": 36, "name": "IGN SW", "v": "12V" },
+      { "n": 106, "name": "GND (Potencia)", "v": "0V" },
+      { "n": 22, "name": "CKP (180°)", "v": "Digital 0-5V" },
+      { "n": 31, "name": "CMP (1°)", "v": "Digital 0-5V" },
+      { "n": 23, "name": "TPS (Señal)", "v": "0.5-4.5V" },
+      { "n": 21, "name": "VREF (Sensores)", "v": "5.00V" },
+      { "n": 50, "name": "SIG GND (Tierra Sensores)", "v": "0V" },
+      { "n": 1, "name": "INJ1", "v": "Pulso Negativo" },
+      { "n": 2, "name": "INJ2", "v": "Pulso Negativo" },
+      { "n": 3, "name": "INJ3", "v": "Pulso Negativo" },
+      { "n": 4, "name": "INJ4", "v": "Pulso Negativo" },
+      { "n": 16, "name": "MAF Signal", "v": "1.0-1.7V (Idle)" },
+      { "n": 19, "name": "O2 B1S1", "v": "0.1-0.9V" },
+      { "n": 38, "name": "B+", "v": "12V Constante" },
+      { "n": 11, "name": "Relay Bomba", "v": "Tierra Activación" },
+      { "n": 30, "name": "ECT", "v": "NTC 177Ω@100°C" }
+    ],
+    "tip_pro": "Si no hay pulsos de inyección, revisa la señal de 180° en el Pin 22. Sin esta señal, la ECU no sabe que el motor está girando y corta todo."
+  }
+  ],
+{
+    "brand": "Nissan",
+    "model": "Sentra B14",
+    "year": "1996-2006",
+    "engine": "GA16DE 1.6L",
+    "ecu": "Hitachi/Siemens",
+    "fuel": "gasolina",
+    "modules": ["ECM", "BCM", "IMMO", "NATS"],
+    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "O2B1S1", "O2B1S2", "MAF", "IAT", "IAC", "STFT", "LTFT", "CKP", "CMP"],
+    "pinout": [
+      { "n": 1, "name": "B+", "v": "12V" },
+      { "n": 3, "name": "GND", "v": "0V" },
+      { "n": 8, "name": "CKP (Posición)", "v": "Digital 0-5V" },
+      { "n": 9, "name": "CMP (Fase)", "v": "Digital 0-5V" },
+      { "n": 5, "name": "TPS (Señal)", "v": "0.5-4.5V" },
+      { "n": 21, "name": "VREF (Sensores)", "v": "5.00V" },
+      { "n": 10, "name": "INJ1", "v": "Pulso Negativo" },
+      { "n": 24, "name": "MAF Signal", "v": "0.5-4.0V" },
+      { "n": 17, "name": "O2 B1S1", "v": "0.1-0.9V" },
+      { "n": 46, "name": "CAN-H", "v": "2.5-3.5V" },
+      { "n": 47, "name": "CAN-L", "v": "1.5-2.5V" }
+    ],
+    "tip_pro": "En el B14, el sistema NATS suele bloquear el pulso de inyectores si la antena del inmovilizador detecta una llave no programada."
+  },
+  {
+    "brand": "Nissan",
+    "model": "Sentra B15",
+    "year": "2001-2006",
+    "engine": "QG18DE 1.8L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": ["ECM", "BCM", "IMMO", "NATS", "ABS"],
+    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "O2B1S1", "O2B1S2", "MAF", "IAT", "IAC", "STFT", "LTFT", "CKP", "CMP"],
+    "pinout": [
+      { "n": 67, "name": "B+ (ECCS)", "v": "12V" },
+      { "n": 106, "name": "GND (Potencia)", "v": "0V" },
+      { "n": 111, "name": "Control IAC", "v": "PWM" },
+      { "n": 101, "name": "INJ1", "v": "Pulso Negativo" }
+    ],
+    "tip_pro": "Falla crítica: Si la válvula IAC entra en corto, quema el driver de la ECU. Siempre revisa la resistencia de la IAC antes de poner una compu nueva."
+      },
+{
+    "brand": "Nissan",
+    "model": "Sentra B15",
+    "year": "2001-2006",
+    "engine": "QG18DE 1.8L",
+    "ecu": "Hitachi 112 Pines",
+    "fuel": "gasolina",
+    "modules": ["ECM", "BCM", "IMMO", "NATS", "ABS"],
+    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "O2B1S1", "O2B1S2", "MAF", "IAT", "IAC", "STFT", "LTFT", "CKP", "CMP"],
+    "pinout": [
+      { "n": 67, "name": "B+ ECCS", "v": "12V" },
+      { "n": 106, "name": "GND Potencia", "v": "0V" },
+      { "n": 101, "name": "INJ1", "v": "Pulso Negativo" },
+      { "n": 111, "name": "Control IAC", "v": "PWM" }
+    ],
+    "tip_pro": "Falla clásica: Si la IAC se pone en corto, quema el driver de la ECU. Siempre mide resistencia en la IAC antes de cambiar la computadora."
+  },
+  {
+    "brand": "Nissan",
+    "model": "Altima L30",
+    "year": "1998-2001",
+    "engine": "KA24DE 2.4L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": ["ECM", "BCM", "IMMO"],
+    "sensors": ["RPM", "ECT", "TPS", "O2B1S1", "O2B1S2", "MAF", "IAT", "STFT", "LTFT", "CKP", "FUEL", "INJ1", "INJ2"],
+    "pinout": [
+      { "n": 1, "name": "B+", "v": "12V" },
+      { "n": 3, "name": "GND", "v": "0V" },
+      { "n": 5, "name": "TPS (Señal)", "v": "0.5-4.5V" },
+      { "n": 21, "name": "VREF", "v": "5.00V" },
+      { "n": 10, "name": "INJ1", "v": "Pulso Negativo" }
+    ]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Altima L31",
+    "year": "2002-2006",
+    "engine": "QR25DE 2.5L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": ["ECM", "BCM", "NATS", "ABS", "SRS"],
+    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "O2B1S1", "O2B1S2", "MAF", "IAT", "STFT", "LTFT", "CKP", "CMP", "KNOCK"],
+    "tip_pro": "Si el carro pierde potencia y marca códigos de APP, revisa el conector del pedal; los pines suelen abrirse por el uso."
+  },
+  {
+    "brand": "Nissan",
+    "model": "Altima L32",
+    "year": "2007-2012",
+    "engine": "QR25DE 2.5L / VQ35DE 3.5L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": ["ECM", "BCM", "NATS", "ABS", "SRS", "TCM", "IPDM"],
+    [
+  {
+    "brand": "Nissan",
+    "model": "Altima L32",
+    "year": "2007-2012",
+    "engine": "QR25DE 2.5L / VQ35DE 3.5L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": ["ECM", "BCM", "NATS", "ABS", "SRS", "TCM", "IPDM"],
+    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "O2B1S1", "O2B1S2", "MAF", "IAT", "STFT", "LTFT", "CKP", "CMP", "KNOCK", "BOOST"],
+    "tip_pro": "Si el motor no acelera y hay códigos de red, revisa la IPDM; suele sulfatarse por la ubicación junto a la batería."
+  },
+  {
+    "brand": "Nissan",
+    "model": "Murano Z50",
+    "year": "2003-2008",
+    "engine": "VQ35DE 3.5L V6",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": ["ECM", "BCM", "CVT", "NATS", "SRS", "ABS", "IPDM"],
+    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "O2B1S1", "O2B1S2", "MAF", "IAT", "CKP", "CMP", "BOB1", "BOB2", "BOB3"]
+  },
+  {
+    "brand": "Nissan",
+    "model": "Frontier D22",
+    "year": "1998-2008",
+    "engine": "KA24 2.4L / VG33 3.3L",
+    "ecu": "Hitachi",
+    "fuel": "gasolina",
+    "modules": ["ECM", "BCM", "4WD"],
+    "sensors": ["RPM", "ECT", "TPS", "O2B1S1", "MAF", "IAT", "IAC", "STFT", "LTFT", "CKP", "FUEL"]
+  },
+  {
+    "brand": "Volkswagen",
+    "model": "Jetta A4",
+    "year": "1999-2006",
+    "engine": "2.0L AEG / 1.8T APH",
+    "ecu": "Bosch ME7.5",
+    "fuel": "gasolina",
+    "modules": ["ECM", "BCM", "IMMO3", "ABS", "SRS"],
+    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "MAF", "IAT", "O2B1S1", "O2B1S2", "STFT", "LTFT", "CKP", "CMP", "KNOCK", "BOOST"],
+    "pinout": [
+      { "n": 1, "name": "B+", "v": "12V" },
+      { "n": 2, "name": "GND", "v": "0V" },
+      { "n": 10, "name": "INJ1", "v": "PWM" },
+      { "n": 25, "name": "MAF", "v": "0-5V" },
+      { "n": 37, "name": "TPS", "v": "0.5-4.5V" },
+      { "n": 75, "name": "CAN-H", "v": "2.5-3.5V" }
+    ],
+    "tip_pro": "Si el carro se apaga al frenar o en ralentí, haz la adaptación del cuerpo de aceleración en el canal 060 con VAG-COM."
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Cavalier",
+    "year": "1995-2004",
+    "engine": "2.2L L61",
+    "ecu": "Delco E78",
+    "fuel": "gasolina",
+    "modules": ["PCM", "BCM", "ABS"],
+    "sensors": ["RPM", "ECT", "TPS", "O2B1S1", "MAP", "IAT", "IAC", "STFT", "LTFT", "CKP"],
+    "pinout": [
+      { "n": 1, "name": "B+", "v": "12V" },
+      { "n": 3, "name": "GND", "v": "0V" },
+      { "n": 5, "name": "TPS", "v": "0.5-4.5V" },
+      { "n": 21, "name": "MAP", "v": "0.5-4.5V" }
+    ]
+  },
+  {
+    "brand": "Chevrolet",
+    "model": "Aveo",
+    "year": "2005-2017",
+    "engine": "1.6L F16D3",
+    "ecu": "Delphi",
+    "fuel": "gasolina",
+    "modules": ["ECM", "BCM", "SRS", "IMMO"],
+    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "MAP", "IAT", "O2B1S1", "IAC", "CKP"],
+    "tip_pro": "Revisa siempre la banda de tiempo; en este motor si se rompe, dobla válvulas seguro."
+  },
+  {
+    "brand": "Ford",
+    "model": "Fiesta MK7",
+    "year": "2009-2018",
+    "engine": "1.6L Sigma",
+    "ecu": "Bosch ME17",
+    "fuel": "gasolina",
+    "modules": ["ECM", "TCM", "BCM", "SRS", "IMMO", "PATS"],
+    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "MAF", "O2B1S1", "STFT", "LTFT", "BOOST", "CKP", "CMP"],
+    "tip_pro": "Falla de PowerShift: Si pierde comunicación con TCM, limpia la tierra que está bajo la base de la batería."
+  }
+        ],
+ {
+  "propart_database": {
+    "Gasolina": {
+      "Chevrolet": [
+        { "modelo": "Aveo", "pinout": {...}, "tip": "..." },
+        { "modelo": "Silverado", "pinout": {...}, "tip": "..." }
+      ],
+      "Nissan": [
+        { "modelo": "NP300", "pinout": {...}, "tip": "..." },
+        { "modelo": "Tsuru", "pinout": {...}, "tip": "..." }
+      ]
+    },
+    "Diesel": {
+      "Cummins": [
+        { "modelo": "ISX", "pinout": {...}, "tip": "..." }
+      ]
+    }
+  }
+}
