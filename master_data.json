@@ -1,803 +1,122 @@
-{
-  "propart_api": {
-    "status": "online",
-    "last_update": "2026",
-    "assets": 5247,
-    "diagnostics": [
-      {
-        "vehiculo": "CHEVROLET S10 1989",
-        "modulo": "SWITCH IGNICION",
-        "pines": {
-          "B+": "Rojo (Entrada)",
-          "IGN": "Rosa (Tablero)",
-          "ACC": "Café (Accesorios)",
-          "START": "Morado (Marcha)",
-          "KEY_REM": "Verde Delgado (Aviso)"
-        },
-        "tip_pro": "Si el rosa no tiene corriente, la pastilla está quemada."
-      },
-      {
-        "vehiculo": "NISSAN D21 2002",
-        "modulo": "FUSILERA / ECU",
-        "pines": {
-          "PIN_1": "Blanco (B+)",
-          "PIN_2": "Rojo/Blanco (IGN)",
-          "PIN_5": "Rojo/Azul (Bomba)",
-          "BOMBA": "Verde/Negro (Fusilera)"
-        },
-        "tip_pro": "Checa el fusible de 10A en cabina para la señal IGN."
-      },
-      {
-        "vehiculo": "FORD F-150 / RANGER (97-03)",
-        "modulo": "GEM / ECU 104 PINES",
-        "pines": {
-          "PIN_24": "Blanco/Azul (Corriente PCM)",
-          "PIN_25": "Negro/Naranja (Tierra)",
-          "PIN_91": "Gris/Rojo (Referencia Sensores 5V)",
-          "PIN_19": "Azul/Rojo (Señal CKP)"
-        },
-        "tip_pro": "Si no hay comunicación, checa el fusible 21 del cofre (20A)."
-      },
-      {
-        "vehiculo": "CHRYSLER VOYAGER / RAM (96-00)",
-        "modulo": "PCM (CONECTORES GRIS/BLANCO)",
-        "pines": {
-          "A11": "Rojo/Blanco (Batería +30)",
-          "A12": "Negro/Blanco (Tierra)",
-          "A20": "Naranja (5V Sensores)",
-          "C3": "Gris/Negro (Señal de Bobina)"
-        },
-        "tip_pro": "Falla común: El relevador ASD se corta si el sensor de cigüeñal está en corto."
-      },
-      {
-        "vehiculo": "DODGE NEON / STRATUS (01-05)",
-        "modulo": "PCM 4 CONECTORES",
-        "pines": {
-          "C1_PIN_1": "Rojo/Verde (B+)",
-          "C1_PIN_11": "Negro/Tan (GND)",
-          "C2_PIN_32": "Café/Amarillo (Inyector 1)"
-        },
-        "tip_pro": "Checa el conector C1 (el verde) si tienes fallas de alimentación total."
-      },
-      {
-        "vehiculo": "TOYOTA HILUX / TACOMA (05-15) 2.7L",
-        "modulo": "ECU 4 CONECTORES (1TR-FE)",
-        "pines": {
-          "BATT": "Negro/Rojo (Corriente Constante)",
-          "+B": "Negro/Amarillo (Ignición vía Relé EFI)",
-          "VC": "Azul (5V Referencia)",
-          "NE+": "Negro (Señal CKP)",
-          "NE-": "Blanco (Tierra CKP)"
-        },
-        "tip_pro": "Si no hay pulso, checa el relé EFI en la caja del cofre, suele falsear."
-      },
-      {
-        "vehiculo": "HONDA CIVIC (01-05) 1.7L",
-        "modulo": "PCM (4 CONECTORES GRISES)",
-        "pines": {
-          "A15": "Amarillo/Negro (Ignición)",
-          "A2": "Negro (Tierra)",
-          "C18": "Verde/Amarillo (Bomba Gasolina)",
-          "B10": "Azul/Blanco (Señal VTEC)"
-        },
-        "tip_pro": "Mucho ojo con el sensor de cigüeñal detrás de la polea; si se llena de aceite de la bomba, se corta la señal."
-      },
-      {
-        "vehiculo": "MAZDA 3 (04-09) 2.0L / 2.3L",
-        "modulo": "PCM (CONECTOR DOBLE)",
-        "pines": {
-          "PIN_1": "Gris/Rojo (B+)",
-          "PIN_7": "Negro (GND)",
-          "PIN_23": "Blanco/Verde (Control Alternador)"
-        },
-        "tip_pro": "Este alternador es controlado por la ECU. Si no carga, checa el cable Blanco/Verde antes de bajar el alternador."
-      },
-      {
-        "vehiculo": "NISSAN NP300 DIESEL (08-15) YD25",
-        "modulo": "ECM 3 CONECTORES (DENSO)",
-        "pines": {
-          "PIN_1": "Rojo/Negro (Alimentación ECM)",
-          "PIN_101": "Amarillo/Verde (Inyector 1 +)",
-          "PIN_102": "Gris (Inyector 1 -)",
-          "PIN_41": "Blanco (Señal de Riel de Combustible - FRP)"
-        },
-        "tip_pro": "Si no arranca y hay código de FRP, checa que el conector del riel no esté derretido, es falla clásica."
-      },
-      {
-        "vehiculo": "MITSUBISHI L200 DIESEL (06-14) 2.5L",
-        "modulo": "ECM 4 CONECTORES (4D56)",
-        "pines": {
-          "C_112": "Azul/Rojo (Control Válvula SCV)",
-          "B_51": "Negro/Blanco (Tierra de Potencia)",
-          "A_1": "Rojo/Azul (Corriente de Ignición)"
-        },
-        "tip_pro": "La válvula SCV se pega y causa ralentí inestable. Si el código es P0089, dale una limpieza a la SCV antes de cambiarla."
-      },
-      {
-        "vehiculo": "ISUZU ELF 400/500 (DIESEL)",
-        "modulo": "ECM CONECTORES AZUL/GRIS (4HK1)",
-        "pines": {
-          "PIN_121": "Verde/Blanco (Señal CKP)",
-          "PIN_122": "Rojo/Amarillo (Señal CMP)",
-          "PIN_20": "Azul (Alimentación Sensores 5V)"
-        },
-        "tip_pro": "Si pierde potencia de la nada, checa el arnés que pasa por arriba de la transmisión, suele rozar con la lámina y ponerse a corto."
-      },
-      {
-        "vehiculo": "TOYOTA HILUX DIESEL (10-20) 2.5L / 3.0L",
-        "modulo": "ECM + DRIVER DE INYECTORES (EDU)",
-        "pines": {
-          "EDU_PIN_1": "Negro/Rojo (Señal de Activación)",
-          "ECM_PIN_20": "Amarillo (Comunicación con EDU)",
-          "BATT": "Blanco/Rojo (Corriente Directa)"
-        },
-        "tip_pro": "Si no hay pulsos, no solo busques en la ECU; estas trocas usan un módulo aparte (EDU) para los inyectores. Checa su tierra."
-      },
-      {
-        "vehiculo": "CHEVROLET SILVERADO / CHEYENNE (2014-2019) 5.3L",
-        "modulo": "ECM E83 (3 CONECTORES)",
-        "pines": {
-          "X1_PIN_1": "Rojo/Blanco (B+ Batería)",
-          "X1_PIN_3": "Negro/Gris (Tierra)",
-          "X2_PIN_50": "Verde/Azul (Señal Sensor Presión de Riel)",
-          "CAN_H": "Azul (Comunicación)",
-          "CAN_L": "Blanco (Comunicación)"
-        },
-        "tip_pro": "Estas camionetas sufren de tierras sucias en el poste G102 (cerca de la batería). Si hay códigos de comunicación 'U', limpia las tierras antes de diagnosticar la computadora."
-      },
-      {
-        "vehiculo": "FORD MUSTANG / F-150 (2015-2020) COYOTE 5.0L",
-        "modulo": "PCM 3 CONECTORES (BOSCH)",
-        "pines": {
-          "PIN_B1": "Amarillo/Rojo (Alimentación VPWR)",
-          "PIN_B10": "Negro/Blanco (Tierra PWR)",
-          "PIN_C45": "Azul/Verde (Señal MAF)",
-          "PIN_A12": "Gris/Naranja (Control de Cuerpo de Aceleración)"
-        },
-        "tip_pro": "Si el carro entra en 'Modo LIMP' (sin fuerza), checa el conector del cuerpo de aceleración; los pines suelen abrirse y falsear."
-      },
-      {
-        "vehiculo": "JEEP GRAND CHEROKEE / WRANGLER (2014-2018) PENTASTAR 3.6L",
-        "modulo": "PCM (CONECTORES NEGRO/ANARANJADO)",
-        "pines": {
-          "C1_PIN_1": "Rojo/Gris (Corriente Constante)",
-          "C1_PIN_2": "Negro/Verde (Tierra)",
-          "C2_PIN_10": "Café/Blanco (Señal Sensor de Árbol CMP 1)",
-          "C2_PIN_33": "Verde/Naranja (Pulso Inyector 3)"
-        },
-        "tip_pro": "Falla muy común de códigos de falla de encendido (Misfire). Checa que el arnés no esté rozando con la base del filtro de aceite."
-      },
-      {
-        "vehiculo": "MOTOR CUMMINS ISX (CM871) - FREIGHTLINER / KENWORTH",
-        "modulo": "ECM 2 CONECTORES (MOTOR Y CHASIS)",
-        "pines": {
-          "PIN_01": "Rojo (Alimentación Directa B+)",
-          "PIN_20": "Negro (Tierra de Potencia)",
-          "PIN_43": "Amarillo (Comunicación CAN High)",
-          "PIN_44": "Verde (Comunicación CAN Low)",
-          "PIN_11": "Naranja (Señal Sensor Presión Aceite)"
-        },
-        "tip_pro": "Si el motor no arranca y no hay comunicación con el escáner, checa el fusible de 30A en la caja de baterías, suele sulfatarse por el ácido."
-      },
-      {
-        "vehiculo": "FREIGHTLINER CASCADIA (M2) - SISTEMA SAM CAB",
-        "modulo": "MÓDULO DE DISTRIBUCIÓN DE ENERGÍA",
-        "pines": {
-          "B1_A": "Gris/Rojo (Señal de Ignición)",
-          "C2_F": "Blanco (Tierra Principal)"
-        },
-        "tip_pro": "Si fallan los accesorios, revisa el conector B1_A; suele flamearse por falso contacto."
-      }
-    ]
-  }
-        },
-{
-        "vehiculo": "FREIGHTLINER CASCADIA (M2) - SISTEMA SAM CAB",
-        "modulo": "MÓDULO DE DISTRIBUCIÓN DE ENERGÍA",
-        "pines": {
-          "B1_A": "Gris/Rojo (Señal de Ignición)",
-          "C2_F": "Blanco (Tierra Principal)",
-          "D3_G": "Amarillo/Negro (Control de Luces Frontales)"
-        },
-        "tip_pro": "Si fallan los limpiaparabrisas o las luces de la nada, el problema suele estar en los conectores de la SAM CAB que se aflojan con la vibración del motor."
-      },
-      {
-        "vehiculo": "INTERNATIONAL 4300 (DT466E / MAXXFORCE)",
-        "modulo": "ECM 3 CONECTORES (PLÁSTICO)",
-        "pines": {
-          "X1_01": "Rojo/Azul (B+)",
-          "X2_15": "Azul/Blanco (Señal Sensor IAT)",
-          "X3_10": "Verde (Control del Inyector 1)"
-        },
-        "tip_pro": "Este motor es muy sensible a la presión de aceite (ICP). Si no arranca, desconecta el sensor ICP; si arranca, el sensor o la válvula IPR están dañados."
-      },
-      {
-        "vehiculo": "HINO 300 / 500 SERIES (DIESEL)",
-        "modulo": "ECM 5 CONECTORES (DENSO)",
-        "pines": {
-          "PIN_A1": "Blanco/Rojo (B+)",
-          "PIN_A5": "Negro (GND)",
-          "PIN_E10": "Amarillo (Señal de Sensor de Posición de Pedal - TPS)"
-        },
-        "tip_pro": "Si el camión se queda en ralentí y no acelera, checa el arnés del pedal. El cable amarillo suele trozarse cerca de la base del pedal."
-      },
-      {
-        "vehiculo": "RAM 2500 / 3500 DIESEL (2010-2018) CUMMINS 6.7L",
-        "modulo": "PCM (CONECTOR 58 PINES)",
-        "pines": {
-          "PIN_1": "Rojo/Blanco (B+ Batería)",
-          "PIN_2": "Negro/Café (Tierra)",
-          "PIN_35": "Azul/Blanco (Señal Sensor Presión Riel)",
-          "PIN_14": "Amarillo/Naranja (Control Solenoide VGT Turbo)"
-        },
-        "tip_pro": "Si el turbo no carga, checa el Pin 14. Estos motores sufren de depósitos de carbón en el turbo variable, pero a veces es solo el cableado tostado por el calor."
-      },
-      {
-        "vehiculo": "FORD SUPER DUTY F-250/F-350 (2011-2019) POWERSTROKE 6.7L",
-        "modulo": "PCM (CONECTORES DE 3 BLOQUES)",
-        "pines": {
-          "C1_PIN_10": "Blanco/Rojo (Alimentación VPWR)",
-          "C2_PIN_55": "Gris/Azul (Señal EGT - Temperatura Escape)",
-          "C3_PIN_4": "Azul/Blanco (Control Inyector Urea/DEF)"
-        },
-        "tip_pro": "Si se bloquea a 80 km/h por sistema de escape, checa los sensores EGT. El sensor 12 o 13 suele fallar y corta el arranque después de ciertos kilómetros."
-      },
-      {
-        "vehiculo": "CHEVROLET AVEO / OPTRA (08-17) 1.6L",
-        "modulo": "ECU SIRIUS D42 (2 CONECTORES)",
-        "pines": {
-          "PIN_29": "Naranja (B+ Constante)",
-          "PIN_30": "Rosa (Ignición)",
-          "PIN_3": "Verde/Blanco (Control Relevador Bomba)",
-          "PIN_1": "Negro/Blanco (Tierra Principal)"
-        },
-        "tip_pro": "Falla clásica: El coche se apaga y no prende. Checa el Pin 30 (Rosa); si no hay voltaje, el relevador principal debajo del cofre está flameado."
-      },
-      {
-        "vehiculo": "NISSAN SENTRA B15 / ALMERA (01-06) 1.8L",
-        "modulo": "ECU 81 PINES",
-        "pines": {
-          "PIN_121": "Rojo (B+)",
-          "PIN_111": "Negro (GND)",
-          "PIN_101": "Azul/Rojo (Pulso Bobina 1)",
-          "PIN_1": "Verde/Blanco (Control Válvula IAC)"
-        },
-        "tip_pro": "¡Peligro! Si la válvula IAC se pone en corto, quema el driver dentro de la computadora. Siempre que cambies la IAC, revisa que la compu no huela a quemado."
-      },
-      {
-        "vehiculo": "MERCEDES BENZ SPRINTER (07-18) 2.1L / 3.0L DIESEL",
-        "modulo": "ECU BOSCH EDC16 / EDC17",
-        "pines": {
-          "PIN_01": "Rojo/Azul (B+)",
-          "PIN_02": "Marrón (Tierra)",
-          "CAN_H": "Amarillo/Negro (Comunicación)",
-          "PIN_15": "Azul/Blanco (Señal Sensor Presión Turbo)"
-        },
-        "tip_pro": "Si pierde potencia y entra en 'Limp Mode', revisa las mangueras del intercooler. Si están bien, checa el Pin 15; el sensor de presión suele fallar por carbonilla."
-      },
-      {
-        "vehiculo": "NISSAN URVAN (08-20) 2.5L QR25DE / YD25",
-        "modulo": "ECU 121 PINES",
-        "pines": {
-          "PIN_111": "Rojo/Negro (Ignición)",
-          "PIN_1": "Negro/Blanco (Tierra)",
-          "PIN_41": "Blanco/Rojo (Señal de Sensor de Fase CMP)",
-          "PIN_102": "Verde (Control de Relevador de Gasolina)"
-        },
-        "tip_pro": "En la Urvan gasolina, si no arranca, checa el relevador que está debajo del asiento del copiloto. Se calienta y se desuelda por dentro."
-      },
-      {
-        "vehiculo": "FORD TRANSIT (13-20) 2.2L DIESEL",
-        "modulo": "PCM (CONECTORES DE 3 BLOQUES)",
-        "pines": {
-          "PIN_A1": "Gris/Naranja (Corriente Directa)",
-          "PIN_B12": "Azul/Rojo (Control de Inyectores)",
-          "PIN_C5": "Amarillo (Señal de Sensor de Cigueñal)"
-        },
-        "tip_pro": "Si el motor vibra mucho o se apaga, checa el arnés que pasa cerca del filtro de aceite; con la vibración del diesel se corta el cable del CKP."
-      },
-      {
-        "vehiculo": "VW JETTA / GOLF TGI-TSI (13-19) 1.4L TURBO",
-        "modulo": "ECU BOSCH MED 17.5.21",
-        "pines": {
-          "PIN_1": "Rojo/Negro (B+)",
-          "PIN_4": "Marrón (GND)",
-          "PIN_60": "Blanco/Amarillo (Control Válvula Wastegate Turbo)",
-          "PIN_105": "Gris/Rojo (Sensor Presión de Riel G247)"
-        },
-        "tip_pro": "Si marca código de sobrepresión de turbo, checa la varilla del actuador eléctrico (Wastegate). A veces solo necesita ajuste o lubricación, no cambies todo el turbo."
-      },
-      {
-        "vehiculo": "HYUNDAI TUCSON / KIA SPORTAGE (16-22) 2.0L / 2.4L GDI",
-        "modulo": "ECU SIM2K-240/241",
-        "pines": {
-          "PIN_1": "Rojo (B+ Batería)",
-          "PIN_2": "Negro (Tierra)",
-          "PIN_78": "Azul/Negro (Inyector 1 High Side)",
-          "PIN_79": "Blanco/Verde (Inyector 1 Low Side)"
-        },
-        "tip_pro": "¡Cuidado! Los inyectores GDI trabajan con hasta 100V. No los pruebes con una lámpara de prueba común o quemarás la salida de la ECU."
-      },
-      {
-        "vehiculo": "FORD LOBO / RAPTOR (17-21) 3.5L ECOBOOST HIGH OUTPUT",
-        "modulo": "PCM (CONECTORES DE ALTA DENSIDAD)",
-        "pines": {
-          "C1_PIN_1": "Amarillo (Alimentación Directa)",
-          "C1_PIN_15": "Negro/Gris (GND)",
-          "C2_PIN_10": "Gris/Naranja (Sensor Presión Riel Combustible)",
-          "CAN_H": "Blanco/Azul (Red de Alta Velocidad)"
-        },
-        "tip_pro": "Si la camioneta tironea en alta, checa la presión del riel de alta. El sensor del pin 10 suele mentir antes de morir por completo."
-      },
-      {
-        "vehiculo": "CHEVROLET SUBURBAN / TAHOE (15-20) 6.2L V8",
-        "modulo": "ECM E80",
-        "pines": {
-          "X1_PIN_2": "Rojo/Blanco (B+)",
-          "X2_PIN_1": "Lila/Blanco (Control de Solenoide de Desactivación de Cilindros - AFM)",
-          "X3_PIN_40": "Azul/Gris (Señal de Sensor de Posición de Cigüeñal)"
-        },
-        "tip_pro": "El sistema AFM (desactivación de cilindros) falla mucho por falta de presión de aceite. Si tienes códigos de misfire, checa el conector del solenoide X2."
-      },
-      {
-        "vehiculo": "TOYOTA SIENNA / HIGHLANDER (11-18) 3.5L V6",
-        "modulo": "ECU 5 CONECTORES",
-        "pines": {
-          "PIN_A21": "Negro/Blanco (Ignición)",
-          "PIN_D1": "Amarillo (Pulso Bobina 1)",
-          "PIN_B10": "Verde (Señal Sensor de Detonación - Knock Sensor)"
-        },
-        "tip_pro": "Si marca código de Knock Sensor, revisa el arnés que pasa por debajo del múltiple de admisión; las ratas suelen anidar ahí y morder los cables."
-      },
-       {
-  "propart_api": {
-    "status": "online",
-    "last_update": "2026",
-    "assets": 5247,
-    "tier": "Premium",
-    "master_notes": "Propart Diagnostic V7 - Millan & Juls - Todos los sistemas operativos"
-  },
-  "diagnostics": [
-    {
-      "vehiculo": "CHEVROLET S10 1989",
-      "modulo": "SWITCH IGNICION",
-      "pines": { "B+": "Rojo", "IGN": "Rosa", "ACC": "Café", "START": "Morado" },
-      "tip_pro": "Si el rosa no tiene corriente, la pastilla está quemada."
-    },
-    {
-      "vehiculo": "NISSAN D21 2002",
-      "modulo": "FUSILERA / ECU",
-      "pines": { "PIN_1": "Blanco (B+)", "PIN_2": "Rojo/Blanco (IGN)", "BOMBA": "Verde/Negro" },
-      "tip_pro": "Checa el fusible de 10A en cabina para la señal IGN."
-    },
-    {
-      "vehiculo": "FORD F-150 / RANGER (97-03)",
-      "modulo": "GEM / ECU 104 PINES",
-      "pines": { "PIN_24": "Blanco/Azul", "PIN_25": "Negro/Naranja", "PIN_91": "5V Ref", "PIN_19": "CKP" },
-      "tip_pro": "Si no hay comunicación, checa el fusible 21 del cofre (20A)."
-    },
-    {
-      "vehiculo": "CHRYSLER VOYAGER / RAM (96-00)",
-      "modulo": "PCM",
-      "pines": { "A11": "Rojo/Blanco", "A12": "Negro/Blanco", "A20": "Naranja (5V)", "C3": "Señal Bobina" },
-      "tip_pro": "El relevador ASD se corta si el sensor de cigüeñal está en corto."
-    },
-    {
-      "vehiculo": "NISSAN NP300 DIESEL (YD25)",
-      "modulo": "ECM 3 CONECTORES (DENSO)",
-      "pines": { "PIN_1": "Rojo/Negro (ECM)", "PIN_41": "Blanco (FRP)", "PIN_101": "Inyector 1+" },
-      "tip_pro": "Si no arranca y hay código de FRP, checa conector del riel derretido."
-    },
-    {
-      "vehiculo": "FORD MUSTANG / F-150 (2015-2020) COYOTE 5.0L",
-      "modulo": "PCM BOSCH",
-      "pines": { "PIN_B1": "VPWR", "PIN_C45": "Señal MAF", "PIN_A12": "Control Cuerpo" },
-      "tip_pro": "Si entra en 'Modo LIMP', checa los pines del conector del cuerpo de aceleración."
-    },
-    {
-      "vehiculo": "INTERNATIONAL 4300 (DT466E)",
-      "modulo": "ECM 3 CONECTORES",
-      "pines": { "X1_01": "B+", "X2_15": "Señal IAT", "X3_10": "Control Inyector 1" },
-      "tip_pro": "Si no arranca, desconecta el sensor ICP; si arranca, el sensor o la válvula IPR fallan."
-    },
-    {
-      "vehiculo": "VW JETTA / GOLF 1.4L TURBO",
-      "modulo": "ECU BOSCH MED 17.5.21",
-      "pines": { "PIN_1": "B+", "PIN_60": "Wastegate Turbo", "PIN_105": "Presión Riel G247" },
-      "tip_pro": "Código de sobrepresión: Checa la varilla del actuador eléctrico (Wastegate)."
-    },
-    {
-      "vehiculo": "HYUNDAI TUCSON / KIA SPORTAGE GDI",
-      "modulo": "ECU SIM2K-240",
-      "pines": { "PIN_78": "Inyector 1 High", "PIN_79": "Inyector 1 Low" },
-      "tip_pro": "¡Cuidado! Inyectores GDI trabajan con 100V. No usar lámpara de prueba común."
-    },
-    {
-      "vehiculo": "BMW SERIE 3 (N52/N54)",
-      "modulo": "BOMBA AGUA ELECTRÓNICA",
-      "pines": { "PIN_1": "B+", "PIN_2": "Señal BSD (Datos)", "PIN_3": "GND" },
-      "tip_pro": "Si se calienta, checa el Pin 2. Es línea de datos; sin ella la bomba no gira."
-    },
-    {
-      "vehiculo": "TESLA MODEL 3 / Y",
-      "modulo": "VCFRONT",
-      "pines": { "PIN_LV": "16V Li-ion", "CAN_H": "Verde", "CAN_L": "Blanco" },
-      "tip_pro": "Usa batería de 16V. No intentar paso de corriente con 12V normales."
-    },
-    {
-      "vehiculo": "MOTOR CUMMINS ISX (CM2250)",
-      "pines": { "1": "B+ (24V)", "46": "CAN High", "47": "CAN Low", "24": "Rail Press" },
-      "tip_pro": "Si no comunica, checa el fusible de 30A en la caja de baterías."
-    }
-  ],
-  "fault_codes": [
-    { "code": "P0087", "componente": "Riel de Combustible", "falla": "Presión baja", "causa": "Filtro tapado o bomba dañada." },
-    { "code": "P0335", "componente": "Sensor CKP", "falla": "Fallo circuito", "causa": "Rebaba metálica o cable dañado." },
-    { "code": "U0100", "componente": "Red CAN Bus", "falla": "Pérdida comunicación", "causa": "Fusible ECM fundido o cables trozados." },
-    { "code": "P2135", "componente": "Sensores TPS 1 y 2", "falla": "Correlación", "causa": "Diferencia de señal entre pedal y mariposa." }
-  ],
-  "heavy_duty_specs": {
-    "CATERPILLAR": {
-      "modulo": "ADEM A4",
-      "pines": { "J1-1": "B+ (24V)", "J2-22": "IAP Sensor", "J2-48": "Boost Sensor" },
-      "tip": "Sistema HEUI: Presión operativa 600-3500 PSI."
-    }
-  },
-  "repair_tips": [
-    { "topic": "ECU MUERTA", "paso": "Checar Diodo Zener de entrada. Si está en corto, no habrá encendido." },
-    { "topic": "INYECTOR ABIERTO", "paso": "Revisar MOSFET de potencia en la placa; si está en corto, el inyector queda directo." },
-    { "topic": "VOLTAJE SENSORES", "paso": "Si no hay 5V de referencia, el regulador interno de la ECU está quemado." }
-  ]
-},
-{
-  "brand": "Nissan",
-  "model": "Tsuru",
-  "year": "1991-2017",
-  "engine": "GA16DE 1.6L DOHC",
-  "ecu": "Hitachi ECCS (64 Pines)",
-  "fuel": "gasolina",
-  "modules": ["ECM", "BCM", "IMMO"],
-  "sensors": ["RPM", "ECT", "TPS", "O2B1S1", "MAF", "IAT", "IAC", "CKP", "CMP"],
-  "pinout": [
-    { "n": 1, "name": "Control Inyector 1", "v": "Pulsos Negativos" },
-    { "n": 3, "name": "Control Inyector 2", "v": "Pulsos Negativos" },
-    { "n": 4, "name": "GND (Masa)", "v": "0V" },
-    { "n": 36, "name": "IGN SW (Switch)", "v": "12V" },
-    { "n": 38, "name": "B+ (Batería)", "v": "12V" },
-    { "n": 22, "name": "CKP (Señal 180°)", "v": "5V Pulsante (Digital)" },
-    { "n": 31, "name": "CMP (Señal 1°)", "v": "5V Pulsante (Digital)" },
-    { "n": 16, "name": "MAF Signal", "v": "1.0V - 1.7V (Ralentí)" },
-    { "n": 23, "name": "TPS Signal", "v": "0.5V - 4.5V" },
-    { "n": 11, "name": "Relay Bomba Gasolina", "v": "Tierra de activación" }
-  ],
-  "tip_pro": "Si el motor no arranca, revisa el Pin 22 y 31 con osciloscopio. Si falta una de las dos señales digitales (5V), el sensor óptico del distribuidor está dañado. No busques señal AC senoidal aquí, este sistema es digital."
-},
-{
-  "brand": "Nissan",
-  "model": "Tsuru B13",
-  "year": "2001-2017",
-  "engine": "GA16DNE 1.6L",
-  "ecu": "Hitachi 64 Pines",
-  "pinout": [
-    { "n": 38, "name": "B+ Batería", "v": "12.6V", "color": "Blanco/Negro" },
-    { "n": 22, "name": "CKP (180°)", "v": "5V Pulse", "color": "Amarillo/Verde" }
-  ],
-  "diagnostics": {
-    "common_fault": "Aceite en distribuidor ensucia sensor óptico",
-    "tip_oro": "Si el Pin 36 no tiene corriente, el relevador ECCS está pegado."
-  }
-},
-{
-  "propart_database": [
-    {
-      "brand": "Nissan",
-      "model": "Tsuru",
-      "year": "1991-2017",
-      "engine": "GA16DE 1.6L DOHC",
-      "ecu": "Hitachi ECCS",
-      "fuel": "gasolina",
-      "modules": ["ECM", "BCM", "IMMO"],
-      "pinout": [
-        { "n": 1, "name": "IGN SW", "v": "12V" },
-        { "n": 3, "name": "GND", "v": "0V" },
-        { "n": 8, "name": "CKP+", "v": "AC senoidal" },
-        { "n": 5, "name": "TPS", "v": "0.5-4.5V" },
-        { "n": 21, "name": "VREF", "v": "5.00V" },
-        { "n": 10, "name": "INJ1", "v": "12V PWM" },
-        { "n": 30, "name": "ECT", "v": "NTC 177Ω@100°C" }
-      ],
-      "tip_oro": "Si no hay chispa, revisa el transistor de potencia externo; se vuela por bobinas de mala calidad."
-    },
-    {
-      "brand": "Nissan",
-      "model": "Kicks P15",
-      "year": "2017-2024",
-      "engine": "HR16DE 1.6L",
-      "ecu": "Hitachi MEC",
-      "fuel": "gasolina",
-      "modules": ["ECM", "BCM", "ABS", "SRS", "CVT", "IPDM", "EPS"],
-      "pinout": [
-        { "n": 1, "name": "B+", "v": "12V" },
-        { "n": 46, "name": "CAN-H", "v": "2.5-3.5V" },
-        { "n": 47, "name": "CAN-L", "v": "1.5-2.5V" },
-        { "n": 44, "name": "APP1 (Pedal)", "v": "0.5-4.5V" }
-      ],
-      "tip_oro": "Falla común de dirección asistida (EPS) por bajo voltaje en la batería. No es la cremallera, es la carga."
-    },
-    {
-      "brand": "Volkswagen",
-      "model": "Jetta A4",
-      "year": "1999-2006",
-      "engine": "2.0L AEG / 1.8T APH",
-      "ecu": "Bosch ME7.5",
-      "fuel": "gasolina",
-      "modules": ["ECM", "BCM", "IMMO3", "ABS", "SRS"],
-      "pinout": [
-        { "n": 1, "name": "B+", "v": "12V" },
-        { "n": 2, "name": "GND", "v": "0V" },
-        { "n": 75, "name": "CAN-H", "v": "2.5-3.5V" },
-        { "n": 25, "name": "MAF", "v": "0-5V" }
-      ],
-      "tip_oro": "Si marca falla de EPC, limpia el cuerpo de aceleración y haz el ajuste básico en el canal 060."
-    },
-    {
-      "brand": "Chevrolet",
-      "model": "Aveo",
-      "year": "2005-2017",
-      "engine": "1.6L F16D3",
-      "ecu": "Delphi",
-      "fuel": "gasolina",
-      "modules": ["ECM", "BCM", "SRS", "IMMO"],
-      "sensors": ["RPM", "ECT", "TPS", "MAP", "IAT", "O2", "IAC", "CKP"],
-      "tip_oro": "El sensor de cigüeñal (CKP) suele fallar por calor; el carro se apaga y prende hasta que se enfría."
-    },
-    {
-      "brand": "Isuzu",
-      "model": "NPR NQR",
-      "year": "2004-2020",
-      "engine": "4HK1 5.2L Diesel",
-      "ecu": "Denso / Bosch EDC17",
-      "fuel": "diesel",
-      "modules": ["ECM", "BCM", "ABS", "TCM"],
-      "pinout": [
-        { "n": 15, "name": "Sensor Presión Riel", "v": "0.5V - 4.5V" },
-        { "n": 20, "name": "CAN-H", "v": "2.5V" }
-      ],
-      "tip_oro": "Si pierde potencia, revisa el arnés sobre la transmisión; el roce con la lámina hace corto en la línea de 5V."
-    }
-  ]
-        },
 [
   {
-    "brand": "Nissan",
-    "model": "Tsuru",
-    "year": "1991-2017",
-    "engine": "GA16DE 1.6L DOHC",
-    "ecu": "Hitachi ECCS",
-    "fuel": "gasolina",
-    "modules": ["ECM", "BCM", "IMMO"],
-    "sensors": ["RPM", "ECT", "TPS", "O2B1S1", "MAF", "IAT", "IAC", "STFT", "LTFT", "CKP", "CMP"],
-    "pinout": [
-      { "n": 36, "name": "IGN SW", "v": "12V" },
-      { "n": 106, "name": "GND (Potencia)", "v": "0V" },
-      { "n": 22, "name": "CKP (180°)", "v": "Digital 0-5V" },
-      { "n": 31, "name": "CMP (1°)", "v": "Digital 0-5V" },
-      { "n": 23, "name": "TPS (Señal)", "v": "0.5-4.5V" },
-      { "n": 21, "name": "VREF (Sensores)", "v": "5.00V" },
-      { "n": 50, "name": "SIG GND (Tierra Sensores)", "v": "0V" },
-      { "n": 1, "name": "INJ1", "v": "Pulso Negativo" },
-      { "n": 2, "name": "INJ2", "v": "Pulso Negativo" },
-      { "n": 3, "name": "INJ3", "v": "Pulso Negativo" },
-      { "n": 4, "name": "INJ4", "v": "Pulso Negativo" },
-      { "n": 16, "name": "MAF Signal", "v": "1.0-1.7V (Idle)" },
-      { "n": 19, "name": "O2 B1S1", "v": "0.1-0.9V" },
-      { "n": 38, "name": "B+", "v": "12V Constante" },
-      { "n": 11, "name": "Relay Bomba", "v": "Tierra Activación" },
-      { "n": 30, "name": "ECT", "v": "NTC 177Ω@100°C" }
-    ],
-    "tip_pro": "Si no hay pulsos de inyección, revisa la señal de 180° en el Pin 22. Sin esta señal, la ECU no sabe que el motor está girando y corta todo."
+    "marca": "CHEVROLET",
+    "modelo": "S10 1989",
+    "sistema": "SWITCH IGNICION",
+    "componente": "PASTILLA DE ENCENDIDO",
+    "pin": "ROSA (IGN), MORADO (START)",
+    "color": "Rosa, Morado, Café, Rojo",
+    "ruta_origen": "BATERIA DIRECTO",
+    "ruta_destino": "TABLERO Y MARCHA",
+    "prueba": "12V EN POSICION ON",
+    "tip_pro": "Si el rosa no tiene corriente, la pastilla está quemada."
+  },
+  {
+    "marca": "NISSAN",
+    "modelo": "D21 2002",
+    "sistema": "FUSILERA / ECU",
+    "componente": "ALIMENTACION PRINCIPAL",
+    "pin": "PIN 1, PIN 2, PIN 5",
+    "color": "Blanco, Rojo/Blanco",
+    "ruta_origen": "FUSIBLE 10A CABINA",
+    "ruta_destino": "ECU / BOMBA",
+    "prueba": "12V CON SWITCH",
+    "tip_pro": "Checa el fusible de 10A en cabina para la señal IGN."
+  },
+  {
+    "marca": "FORD",
+    "modelo": "F-150 / RANGER (97-03)",
+    "sistema": "GEM / ECU 104 PINES",
+    "componente": "PCM ALIMENTACION",
+    "pin": "PIN 24, PIN 25, PIN 91",
+    "color": "Blanco/Azul, Negro/Naranja",
+    "ruta_origen": "FUSIBLE 21 COFRE (20A)",
+    "ruta_destino": "PCM / SENSORES",
+    "prueba": "5V REF EN PIN 91",
+    "tip_pro": "Si no hay comunicación, checa el fusible 21 del cofre (20A)."
+  },
+  {
+    "marca": "CHRYSLER",
+    "modelo": "VOYAGER / RAM (96-00)",
+    "sistema": "PCM",
+    "componente": "CONTROL DE RELEVADOR ASD",
+    "pin": "A11, A12, A20, C3",
+    "color": "Rojo/Blanco, Negro/Blanco",
+    "ruta_origen": "RELEVADOR ASD",
+    "ruta_destino": "BOBINA / SENSORES",
+    "prueba": "TIERRA EN PIN A12",
+    "tip_pro": "Falla común: El relevador ASD se corta si el sensor de cigüeñal está en corto."
+  },
+  {
+    "marca": "ISUZU",
+    "modelo": "ELF 400/500 (DIESEL)",
+    "sistema": "ECM 4HK1",
+    "componente": "SINCRONIZACION CKP/CMP",
+    "pin": "121 (CKP), 122 (CMP)",
+    "color": "Verde/Blanco, Rojo/Amarillo",
+    "ruta_origen": "ARNES TRANSMISION",
+    "ruta_destino": "ECM CONECTOR GRIS",
+    "prueba": "SEÑAL DIGITAL 5V",
+    "tip_pro": "Si pierde potencia, checa el arnés sobre la transmisión; el roce con la lámina hace corto."
+  },
+  {
+    "marca": "CUMMINS",
+    "modelo": "ISX (CM871)",
+    "sistema": "ECM MOTOR",
+    "componente": "RED CAN BUS / ALIMENTACION",
+    "pin": "01 (B+), 20 (GND), 43/44 (CAN)",
+    "color": "Rojo, Negro, Amarillo, Verde",
+    "ruta_origen": "CAJA BATERIAS",
+    "ruta_destino": "ECM CHASIS",
+    "prueba": "60 OHMS ENTRE 43 Y 44",
+    "tip_pro": "Si no comunica, checa el fusible de 30A en la caja de baterías, suele sulfatarse."
+  },
+  {
+    "marca": "NISSAN",
+    "modelo": "TSURU B13",
+    "sistema": "HITACHI ECCS",
+    "componente": "SENSOR OPTICO DISTRIBUIDOR",
+    "pin": "22 (180), 31 (1)",
+    "color": "Amarillo/Verde",
+    "ruta_origen": "DISTRIBUIDOR",
+    "ruta_destino": "ECM PIN 22",
+    "prueba": "5V PULSANTE DIGITAL",
+    "tip_pro": "Si el Pin 22 no tiene señal, no hay pulsos de inyección. El aceite en el distribuidor ensucia el sensor."
+  },
+  {
+    "marca": "VW",
+    "modelo": "JETTA A4 2.0L",
+    "sistema": "BOSCH ME7.5",
+    "componente": "CUERPO ACELERACION EPC",
+    "pin": "CAN 75, MAF 25",
+    "color": "Diversos",
+    "ruta_origen": "FUSIBLE S43",
+    "ruta_destino": "CANAL 060 VAGCOM",
+    "prueba": "RESISTENCIA MOTOR TPS",
+    "tip_pro": "Si marca falla de EPC, limpia el cuerpo de aceleración y haz ajuste básico en canal 060."
+  },
+  {
+    "marca": "FREIGHTLINER",
+    "modelo": "CASCADIA M2",
+    "sistema": "SAM CAB",
+    "componente": "DISTRIBUCION ENERGIA",
+    "pin": "B1_A (IGN), C2_F (GND)",
+    "color": "Gris/Rojo",
+    "ruta_origen": "MODULO SAM CAB",
+    "ruta_destino": "ACCESORIOS CABINA",
+    "prueba": "CONTINUIDAD CONECTORES",
+    "tip_pro": "Si fallan limpiaparabrisas o luces, los conectores de la SAM CAB suelen aflojarse con la vibración."
+  },
+  {
+    "marca": "INTERNATIONAL",
+    "modelo": "4300 DT466E",
+    "sistema": "ECM MAXXFORCE",
+    "componente": "SENSOR ICP / VALVULA IPR",
+    "pin": "X2_15 (IAT), X3_10 (INJ1)",
+    "color": "Rojo/Azul",
+    "ruta_origen": "LINEA DE ACEITE ALTA",
+    "ruta_destino": "ECM PLASTICO",
+    "prueba": "DESCONECTAR ICP",
+    "tip_pro": "Si no arranca, desconecta el ICP; si arranca con valor sustituto, el sensor está dañado."
   }
-  ],
-{
-    "brand": "Nissan",
-    "model": "Sentra B14",
-    "year": "1996-2006",
-    "engine": "GA16DE 1.6L",
-    "ecu": "Hitachi/Siemens",
-    "fuel": "gasolina",
-    "modules": ["ECM", "BCM", "IMMO", "NATS"],
-    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "O2B1S1", "O2B1S2", "MAF", "IAT", "IAC", "STFT", "LTFT", "CKP", "CMP"],
-    "pinout": [
-      { "n": 1, "name": "B+", "v": "12V" },
-      { "n": 3, "name": "GND", "v": "0V" },
-      { "n": 8, "name": "CKP (Posición)", "v": "Digital 0-5V" },
-      { "n": 9, "name": "CMP (Fase)", "v": "Digital 0-5V" },
-      { "n": 5, "name": "TPS (Señal)", "v": "0.5-4.5V" },
-      { "n": 21, "name": "VREF (Sensores)", "v": "5.00V" },
-      { "n": 10, "name": "INJ1", "v": "Pulso Negativo" },
-      { "n": 24, "name": "MAF Signal", "v": "0.5-4.0V" },
-      { "n": 17, "name": "O2 B1S1", "v": "0.1-0.9V" },
-      { "n": 46, "name": "CAN-H", "v": "2.5-3.5V" },
-      { "n": 47, "name": "CAN-L", "v": "1.5-2.5V" }
-    ],
-    "tip_pro": "En el B14, el sistema NATS suele bloquear el pulso de inyectores si la antena del inmovilizador detecta una llave no programada."
-  },
-  {
-    "brand": "Nissan",
-    "model": "Sentra B15",
-    "year": "2001-2006",
-    "engine": "QG18DE 1.8L",
-    "ecu": "Hitachi",
-    "fuel": "gasolina",
-    "modules": ["ECM", "BCM", "IMMO", "NATS", "ABS"],
-    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "O2B1S1", "O2B1S2", "MAF", "IAT", "IAC", "STFT", "LTFT", "CKP", "CMP"],
-    "pinout": [
-      { "n": 67, "name": "B+ (ECCS)", "v": "12V" },
-      { "n": 106, "name": "GND (Potencia)", "v": "0V" },
-      { "n": 111, "name": "Control IAC", "v": "PWM" },
-      { "n": 101, "name": "INJ1", "v": "Pulso Negativo" }
-    ],
-    "tip_pro": "Falla crítica: Si la válvula IAC entra en corto, quema el driver de la ECU. Siempre revisa la resistencia de la IAC antes de poner una compu nueva."
-      },
-{
-    "brand": "Nissan",
-    "model": "Sentra B15",
-    "year": "2001-2006",
-    "engine": "QG18DE 1.8L",
-    "ecu": "Hitachi 112 Pines",
-    "fuel": "gasolina",
-    "modules": ["ECM", "BCM", "IMMO", "NATS", "ABS"],
-    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "O2B1S1", "O2B1S2", "MAF", "IAT", "IAC", "STFT", "LTFT", "CKP", "CMP"],
-    "pinout": [
-      { "n": 67, "name": "B+ ECCS", "v": "12V" },
-      { "n": 106, "name": "GND Potencia", "v": "0V" },
-      { "n": 101, "name": "INJ1", "v": "Pulso Negativo" },
-      { "n": 111, "name": "Control IAC", "v": "PWM" }
-    ],
-    "tip_pro": "Falla clásica: Si la IAC se pone en corto, quema el driver de la ECU. Siempre mide resistencia en la IAC antes de cambiar la computadora."
-  },
-  {
-    "brand": "Nissan",
-    "model": "Altima L30",
-    "year": "1998-2001",
-    "engine": "KA24DE 2.4L",
-    "ecu": "Hitachi",
-    "fuel": "gasolina",
-    "modules": ["ECM", "BCM", "IMMO"],
-    "sensors": ["RPM", "ECT", "TPS", "O2B1S1", "O2B1S2", "MAF", "IAT", "STFT", "LTFT", "CKP", "FUEL", "INJ1", "INJ2"],
-    "pinout": [
-      { "n": 1, "name": "B+", "v": "12V" },
-      { "n": 3, "name": "GND", "v": "0V" },
-      { "n": 5, "name": "TPS (Señal)", "v": "0.5-4.5V" },
-      { "n": 21, "name": "VREF", "v": "5.00V" },
-      { "n": 10, "name": "INJ1", "v": "Pulso Negativo" }
-    ]
-  },
-  {
-    "brand": "Nissan",
-    "model": "Altima L31",
-    "year": "2002-2006",
-    "engine": "QR25DE 2.5L",
-    "ecu": "Hitachi",
-    "fuel": "gasolina",
-    "modules": ["ECM", "BCM", "NATS", "ABS", "SRS"],
-    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "O2B1S1", "O2B1S2", "MAF", "IAT", "STFT", "LTFT", "CKP", "CMP", "KNOCK"],
-    "tip_pro": "Si el carro pierde potencia y marca códigos de APP, revisa el conector del pedal; los pines suelen abrirse por el uso."
-  },
-  {
-    "brand": "Nissan",
-    "model": "Altima L32",
-    "year": "2007-2012",
-    "engine": "QR25DE 2.5L / VQ35DE 3.5L",
-    "ecu": "Hitachi",
-    "fuel": "gasolina",
-    "modules": ["ECM", "BCM", "NATS", "ABS", "SRS", "TCM", "IPDM"],
-    [
-  {
-    "brand": "Nissan",
-    "model": "Altima L32",
-    "year": "2007-2012",
-    "engine": "QR25DE 2.5L / VQ35DE 3.5L",
-    "ecu": "Hitachi",
-    "fuel": "gasolina",
-    "modules": ["ECM", "BCM", "NATS", "ABS", "SRS", "TCM", "IPDM"],
-    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "O2B1S1", "O2B1S2", "MAF", "IAT", "STFT", "LTFT", "CKP", "CMP", "KNOCK", "BOOST"],
-    "tip_pro": "Si el motor no acelera y hay códigos de red, revisa la IPDM; suele sulfatarse por la ubicación junto a la batería."
-  },
-  {
-    "brand": "Nissan",
-    "model": "Murano Z50",
-    "year": "2003-2008",
-    "engine": "VQ35DE 3.5L V6",
-    "ecu": "Hitachi",
-    "fuel": "gasolina",
-    "modules": ["ECM", "BCM", "CVT", "NATS", "SRS", "ABS", "IPDM"],
-    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "O2B1S1", "O2B1S2", "MAF", "IAT", "CKP", "CMP", "BOB1", "BOB2", "BOB3"]
-  },
-  {
-    "brand": "Nissan",
-    "model": "Frontier D22",
-    "year": "1998-2008",
-    "engine": "KA24 2.4L / VG33 3.3L",
-    "ecu": "Hitachi",
-    "fuel": "gasolina",
-    "modules": ["ECM", "BCM", "4WD"],
-    "sensors": ["RPM", "ECT", "TPS", "O2B1S1", "MAF", "IAT", "IAC", "STFT", "LTFT", "CKP", "FUEL"]
-  },
-  {
-    "brand": "Volkswagen",
-    "model": "Jetta A4",
-    "year": "1999-2006",
-    "engine": "2.0L AEG / 1.8T APH",
-    "ecu": "Bosch ME7.5",
-    "fuel": "gasolina",
-    "modules": ["ECM", "BCM", "IMMO3", "ABS", "SRS"],
-    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "MAF", "IAT", "O2B1S1", "O2B1S2", "STFT", "LTFT", "CKP", "CMP", "KNOCK", "BOOST"],
-    "pinout": [
-      { "n": 1, "name": "B+", "v": "12V" },
-      { "n": 2, "name": "GND", "v": "0V" },
-      { "n": 10, "name": "INJ1", "v": "PWM" },
-      { "n": 25, "name": "MAF", "v": "0-5V" },
-      { "n": 37, "name": "TPS", "v": "0.5-4.5V" },
-      { "n": 75, "name": "CAN-H", "v": "2.5-3.5V" }
-    ],
-    "tip_pro": "Si el carro se apaga al frenar o en ralentí, haz la adaptación del cuerpo de aceleración en el canal 060 con VAG-COM."
-  },
-  {
-    "brand": "Chevrolet",
-    "model": "Cavalier",
-    "year": "1995-2004",
-    "engine": "2.2L L61",
-    "ecu": "Delco E78",
-    "fuel": "gasolina",
-    "modules": ["PCM", "BCM", "ABS"],
-    "sensors": ["RPM", "ECT", "TPS", "O2B1S1", "MAP", "IAT", "IAC", "STFT", "LTFT", "CKP"],
-    "pinout": [
-      { "n": 1, "name": "B+", "v": "12V" },
-      { "n": 3, "name": "GND", "v": "0V" },
-      { "n": 5, "name": "TPS", "v": "0.5-4.5V" },
-      { "n": 21, "name": "MAP", "v": "0.5-4.5V" }
-    ]
-  },
-  {
-    "brand": "Chevrolet",
-    "model": "Aveo",
-    "year": "2005-2017",
-    "engine": "1.6L F16D3",
-    "ecu": "Delphi",
-    "fuel": "gasolina",
-    "modules": ["ECM", "BCM", "SRS", "IMMO"],
-    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "MAP", "IAT", "O2B1S1", "IAC", "CKP"],
-    "tip_pro": "Revisa siempre la banda de tiempo; en este motor si se rompe, dobla válvulas seguro."
-  },
-  {
-    "brand": "Ford",
-    "model": "Fiesta MK7",
-    "year": "2009-2018",
-    "engine": "1.6L Sigma",
-    "ecu": "Bosch ME17",
-    "fuel": "gasolina",
-    "modules": ["ECM", "TCM", "BCM", "SRS", "IMMO", "PATS"],
-    "sensors": ["RPM", "ECT", "TPS", "APP1", "APP2", "MAF", "O2B1S1", "STFT", "LTFT", "BOOST", "CKP", "CMP"],
-    "tip_pro": "Falla de PowerShift: Si pierde comunicación con TCM, limpia la tierra que está bajo la base de la batería."
-  }
-        ],
- {
-  "propart_database": {
-    "Gasolina": {
-      "Chevrolet": [
-        { "modelo": "Aveo", "pinout": {...}, "tip": "..." },
-        { "modelo": "Silverado", "pinout": {...}, "tip": "..." }
-      ],
-      "Nissan": [
-        { "modelo": "NP300", "pinout": {...}, "tip": "..." },
-        { "modelo": "Tsuru", "pinout": {...}, "tip": "..." }
-      ]
-    },
-    "Diesel": {
-      "Cummins": [
-        { "modelo": "ISX", "pinout": {...}, "tip": "..." }
-      ]
-    }
-  }
-}
+]
