@@ -118,5 +118,175 @@
     "ruta_destino": "ECM PLASTICO",
     "prueba": "DESCONECTAR ICP",
     "tip_pro": "Si no arranca, desconecta el ICP; si arranca con valor sustituto, el sensor está dañado."
+  },
+  [
+  {
+    "marca": "CHEVROLET",
+    "modelo": "S10 1989",
+    "sistema": "SWITCH IGNICION",
+    "componente": "PASTILLA DE ENCENDIDO",
+    "pin": "ROSA (IGN), MORADO (START)",
+    "color": "Rosa, Morado, Café, Rojo",
+    "ruta_origen": "BATERIA DIRECTO",
+    "ruta_destino": "TABLERO Y MARCHA",
+    "prueba": "12V EN POSICION ON",
+    "tip_pro": "Si el rosa no tiene corriente, la pastilla está quemada."
+  },
+  {
+    "marca": "NISSAN",
+    "modelo": "D21 2002",
+    "sistema": "FUSILERA / ECU",
+    "componente": "ALIMENTACION PRINCIPAL",
+    "pin": "PIN 1, PIN 2, PIN 5",
+    "color": "Blanco, Rojo/Blanco",
+    "ruta_origen": "FUSIBLE 10A CABINA",
+    "ruta_destino": "ECU / BOMBA",
+    "prueba": "12V CON SWITCH",
+    "tip_pro": "Checa el fusible de 10A en cabina para la señal IGN."
+  },
+  {
+    "marca": "FORD",
+    "modelo": "F-150 / RANGER (97-03)",
+    "sistema": "GEM / ECU 104 PINES",
+    "componente": "PCM ALIMENTACION",
+    "pin": "PIN 24, PIN 25, PIN 91",
+    "color": "Blanco/Azul, Negro/Naranja",
+    "ruta_origen": "FUSIBLE 21 COFRE (20A)",
+    "ruta_destino": "PCM / SENSORES",
+    "prueba": "5V REF EN PIN 91",
+    "tip_pro": "Si no hay comunicación, checa el fusible 21 del cofre (20A)."
+  },
+  {
+    "marca": "CHRYSLER",
+    "modelo": "VOYAGER / RAM (96-00)",
+    "sistema": "PCM",
+    "componente": "CONTROL DE RELEVADOR ASD",
+    "pin": "A11, A12, A20, C3",
+    "color": "Rojo/Blanco, Negro/Blanco",
+    "ruta_origen": "RELEVADOR ASD",
+    "ruta_destino": "BOBINA / SENSORES",
+    "prueba": "TIERRA EN PIN A12",
+    "tip_pro": "Falla común: El relevador ASD se corta si el sensor de cigüeñal está en corto."
+  },
+  {
+    "marca": "DODGE",
+    "modelo": "NEON / STRATUS (01-05)",
+    "sistema": "PCM 4 CONECTORES",
+    "componente": "INYECTOR 1 / ALIMENTACION",
+    "pin": "C1_PIN_1 (B+), C2_PIN_32 (INJ)",
+    "color": "Rojo/Verde, Café/Amarillo",
+    "ruta_origen": "CONECTOR VERDE C1",
+    "ruta_destino": "PCM / INYECTORES",
+    "prueba": "12V CONSTANTE EN C1_PIN_1",
+    "tip_pro": "Checa el conector C1 si tienes fallas de alimentación total."
+  },
+  {
+    "marca": "TOYOTA",
+    "modelo": "HILUX / TACOMA 2.7L (05-15)",
+    "sistema": "ECU 1TR-FE",
+    "componente": "SENSOR CKP",
+    "pin": "NE+ (Negro), NE- (Blanco)",
+    "color": "Negro, Blanco",
+    "ruta_origen": "BOMBA DE ACEITE",
+    "ruta_destino": "ECU MOTOR",
+    "prueba": "SEÑAL AC EN MARCHA",
+    "tip_pro": "Si no hay pulso, checa el relé EFI en la caja del cofre."
+  },
+  {
+    "marca": "HONDA",
+    "modelo": "CIVIC 1.7L (01-05)",
+    "sistema": "PCM 4 CONECTORES",
+    "componente": "BOMBA GASOLINA / IGN",
+    "pin": "A15 (IGN), C18 (BOMBA)",
+    "color": "Amarillo/Negro, Verde/Amarillo",
+    "ruta_origen": "PCM BAJO TABLERO",
+    "ruta_destino": "BOMBA / RELÉ",
+    "prueba": "TIERRA EN C18 AL ABRIR SWITCH",
+    "tip_pro": "Ojo con el sensor CKP detrás de la polea; si le cae aceite se corta."
+  },
+  {
+    "marca": "MAZDA",
+    "modelo": "MAZDA 3 (04-09)",
+    "sistema": "PCM",
+    "componente": "CONTROL ALTERNADOR",
+    "pin": "PIN 23",
+    "color": "Blanco/Verde",
+    "ruta_origen": "PCM",
+    "ruta_destino": "REGULADOR ALTERNADOR",
+    "prueba": "SEÑAL PWM 5V",
+    "tip_pro": "El alternador es controlado por ECU. Si no carga, checa el cable antes de bajarlo."
+  },
+  {
+    "marca": "NISSAN",
+    "modelo": "NP300 DIESEL (YD25)",
+    "sistema": "ECM DENSO",
+    "componente": "SENSOR PRESION RIEL (FRP)",
+    "pin": "PIN 41",
+    "color": "Blanco",
+    "ruta_origen": "RIEL DE COMBUSTIBLE",
+    "ruta_destino": "ECM",
+    "prueba": "1.3V A 1.7V EN RALENTI",
+    "tip_pro": "Si no arranca y marca FRP, checa el conector del riel; suele derretirse."
+  },
+  {
+    "marca": "MITSUBISHI",
+    "modelo": "L200 DIESEL (06-14)",
+    "sistema": "ECM 4D56",
+    "componente": "VALVULA SCV",
+    "pin": "C_112",
+    "color": "Azul/Rojo",
+    "ruta_origen": "BOMBA DE ALTA",
+    "ruta_destino": "ECM",
+    "prueba": "2.1 - 2.4 OHMS",
+    "tip_pro": "Si el ralentí es inestable (P0089), limpia la SCV antes de cambiarla."
+  },
+  {
+    "marca": "ISUZU",
+    "modelo": "ELF 400/500 (4HK1)",
+    "sistema": "ECM AZUL/GRIS",
+    "componente": "SENSORES CKP / CMP",
+    "pin": "121 (CKP), 122 (CMP)",
+    "color": "Varios",
+    "ruta_origen": "ARNES TRANSMISION",
+    "ruta_destino": "ECM",
+    "prueba": "SEÑAL DIGITAL 5V",
+    "tip_pro": "Si pierde potencia, checa el arnés sobre la caja; suele rozar con la lámina."
+  },
+  {
+    "marca": "CUMMINS",
+    "modelo": "ISX (CM871)",
+    "sistema": "ECM MOTOR",
+    "componente": "CAN BUS / ALIMENTACION",
+    "pin": "01 (B+), 20 (GND), 43/44 (CAN)",
+    "color": "Rojo, Negro, Amarillo, Verde",
+    "ruta_origen": "CAJA BATERIAS",
+    "ruta_destino": "ECM",
+    "prueba": "60 OHMS ENTRE 43 Y 44",
+    "tip_pro": "Si no hay comunicación, checa el fusible de 30A en la caja de baterías."
+  },
+  {
+    "marca": "VW",
+    "modelo": "JETTA A4 2.0L",
+    "sistema": "BOSCH ME7.5",
+    "componente": "CUERPO ACELERACION",
+    "pin": "75 (CAN H), 25 (MAF)",
+    "color": "Varios",
+    "ruta_origen": "PCM",
+    "ruta_destino": "COMPONENTES",
+    "prueba": "ADAPTACION CANAL 060",
+    "tip_pro": "Si marca EPC, limpia el cuerpo y haz ajuste básico con VAG-COM."
+  },
+  {
+    "marca": "NISSAN",
+    "modelo": "TSURU B13",
+    "sistema": "HITACHI ECCS",
+    "componente": "SENSOR OPTICO / PINOUT",
+    "pin": "22 (180), 31 (1), 38 (B+)",
+    "color": "Blanco/Negro, Amarillo/Verde",
+    "ruta_origen": "DISTRIBUIDOR",
+    "ruta_destino": "ECU",
+    "prueba": "5V PULSANTE EN PIN 22",
+    "tip_pro": "Si no hay señal en Pin 22, no hay pulsos de inyección."
   }
-]
+  ],[
+  { "
