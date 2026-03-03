@@ -286,7 +286,42 @@
     "ruta_origen": "DISTRIBUIDOR",
     "ruta_destino": "ECU",
     "prueba": "5V PULSANTE EN PIN 22",
-    "tip_pro": "Si no hay señal en Pin 22, no hay pulsos de inyección."
-  }
-  ],[
-  { "
+     "tip_pro": "Si no hay señal en Pin 22, no hay pulsos de inyección."
+   },
+[
+  { "marca": "CHEVROLET", "modelo": "S10 1989", "sistema": "IGNICION", "componente": "PASTILLA", "pin": "ROSA", "prueba": "12V ON", "tip_pro": "Si el rosa falla, la pastilla está quemada." },
+  { "marca": "NISSAN", "modelo": "D21 2002", "sistema": "ECU", "componente": "ALIMENTACION", "pin": "1, 2, 5", "prueba": "12V", "tip_pro": "Checa fusible 10A en cabina." },
+  { "marca": "FORD", "modelo": "F-150 97-03", "sistema": "PCM", "componente": "ALIMENTACION", "pin": "24, 25, 91", "prueba": "5V REF", "tip_pro": "Fusible 21 cofre (20A)." },
+  { "marca": "CHRYSLER", "modelo": "VOYAGER 96-00", "sistema": "PCM", "componente": "ASD RELAY", "pin": "A11, A12", "prueba": "TIERRA A12", "tip_pro": "ASD se corta si el CKP está en corto." },
+  { "marca": "DODGE", "modelo": "NEON 01-05", "sistema": "PCM", "componente": "C1 VERDE", "pin": "PIN 1", "prueba": "12V", "tip_pro": "Fallas de alimentación total en C1." },
+  { "marca": "TOYOTA", "modelo": "HILUX 05-15", "sistema": "1TR-FE", "componente": "CKP", "pin": "NE+/NE-", "prueba": "AC VOLTS", "tip_pro": "Si no hay pulso, checa relé EFI." },
+  { "marca": "HONDA", "modelo": "CIVIC 01-05", "sistema": "PCM", "componente": "CKP", "pin": "A15, C18", "prueba": "TIERRA C18", "tip_pro": "Sensor tras polea se llena de aceite." },
+  { "marca": "MAZDA", "modelo": "MAZDA 3 04-09", "sistema": "PCM", "componente": "ALT CTRL", "pin": "23", "prueba": "PWM 5V", "tip_pro": "Alternador controlado por ECU." },
+  { "marca": "NISSAN", "modelo": "NP300 YD25", "sistema": "DIESEL", "componente": "FRP RIEL", "pin": "41", "prueba": "1.3V-1.7V", "tip_pro": "Conector del riel se derrite." },
+  { "marca": "MITSUBISHI", "modelo": "L200 4D56", "sistema": "DIESEL", "componente": "SCV", "pin": "C112", "prueba": "2.1-2.4 OHMS", "tip_pro": "Limpiar SCV si P0089." },
+  { "marca": "ISUZU", "modelo": "ELF 400/500", "sistema": "4HK1", "componente": "CKP/CMP", "pin": "121/122", "prueba": "5V DIGITAL", "tip_pro": "Arnés roza en transmisión." },
+  { "marca": "CUMMINS", "modelo": "ISX CM871", "sistema": "ECM", "componente": "CAN BUS", "pin": "43/44", "prueba": "60 OHMS", "tip_pro": "Fusible 30A en baterías sulfatado." },
+  { "marca": "VW", "modelo": "JETTA A4 2.0", "sistema": "ME7.5", "componente": "EPC", "pin": "75/25", "prueba": "ADAPT 060", "tip_pro": "Limpiar cuerpo antes de adaptar." },
+  { "marca": "NISSAN", "modelo": "TSURU B13", "sistema": "ECCS", "componente": "OPTICO", "pin": "22/31", "prueba": "5V PULSE", "tip_pro": "Aceite ensucia sensor en distribuidor." },
+  { "marca": "NISSAN", "modelo": "SENTRA B14", "sistema": "NATS", "componente": "INMOVILIZADOR", "pin": "8/9", "prueba": "5V", "tip_pro": "Antena NATS bloquea inyectores." },
+  { "marca": "NISSAN", "modelo": "SENTRA B15 1.8", "sistema": "QG18", "componente": "IAC", "pin": "111", "prueba": "RESISTENCIA", "tip_pro": "IAC en corto quema driver de ECU." },
+  { "marca": "NISSAN", "modelo": "SENTRA B15 2.5", "sistema": "QR25", "componente": "ECM 112 PINES", "pin": "67/106", "prueba": "12V/0V", "tip_pro": "Mariposa electrónica falla mucho." },
+  { "marca": "NISSAN", "modelo": "ALTIMA L31", "sistema": "QR25", "componente": "APP PEDAL", "pin": "VARIOS", "prueba": "VOLTAJE", "tip_pro": "Pines del pedal se abren." },
+  { "marca": "NISSAN", "modelo": "ALTIMA L32", "sistema": "IPDM", "componente": "RELES", "pin": "CAN H/L", "prueba": "COMUNICACION", "tip_pro": "IPDM se sulfata por batería." },
+  { "marca": "NISSAN", "modelo": "KICKS P15", "sistema": "EPS", "componente": "DIRECCION", "pin": "46/47", "prueba": "CAN BUS", "tip_pro": "Falla EPS por batería baja." },
+  { "marca": "NISSAN", "modelo": "FRONTIER D22", "sistema": "KA24/VG33", "componente": "MAF", "pin": "5 PINES", "prueba": "1.0-1.7V", "tip_pro": "Falsos contactos en arnés MAF." },
+  { "marca": "CHEVROLET", "modelo": "SILVERADO 14-19", "sistema": "E83", "componente": "G102 GND", "pin": "X1/X2", "prueba": "TIERRA", "tip_pro": "Limpia poste G102 por códigos U." },
+  { "marca": "FORD", "modelo": "MUSTANG 15-20", "sistema": "COYOTE", "componente": "LIMP MODE", "pin": "A12", "prueba": "VOLTAJE", "tip_pro": "Conector cuerpo aceleración falsea." },
+  { "marca": "JEEP", "modelo": "GRAND CHEROKEE", "sistema": "PENTASTAR", "componente": "MISFIRE", "pin": "C2-33", "prueba": "PULSO", "tip_pro": "Arnés roza base filtro aceite." },
+  { "marca": "INTERNATIONAL", "modelo": "4300 DT466", "sistema": "IPR/ICP", "componente": "IPR", "pin": "X3-10", "prueba": "DESCO ICP", "tip_pro": "Si arranca sin ICP, sensor está mal." },
+  { "marca": "HINO", "modelo": "300/500", "sistema": "DENSO", "componente": "TPS PEDAL", "pin": "E10", "prueba": "0.5-4.5V", "tip_pro": "Cable se troza en base del pedal." },
+  { "marca": "RAM", "modelo": "CUMMINS 6.7", "sistema": "VGT", "componente": "TURBO", "pin": "14", "prueba": "PWM", "tip_pro": "Cable del VGT se tuesta por calor." },
+  { "marca": "FORD", "modelo": "POWERSTROKE 6.7", "sistema": "EGT", "componente": "ESCAPE", "pin": "C2-55", "prueba": "TEMP", "tip_pro": "EGT 12/13 bloquean arranque." },
+  { "marca": "CHEVROLET", "modelo": "AVEO 08-17", "sistema": "SIRIUS D42", "componente": "RELÉ BOMBA", "pin": "30 (ROSA)", "prueba": "12V", "tip_pro": "Pin 30 sin corriente = coche muerto." },
+  { "marca": "MERCEDES", "modelo": "SPRINTER", "sistema": "EDC16/17", "componente": "TURBO PRES", "pin": "15", "prueba": "0.5-4.5V", "tip_pro": "Carbonilla tapa sensor de turbo." },
+  { "marca": "FORD", "modelo": "TRANSIT 2.2", "sistema": "DIESEL", "componente": "CKP", "pin": "C5", "prueba": "PULSO", "tip_pro": "Vibración corta cable CKP en filtro." },
+  { "marca": "VW", "modelo": "JETTA 1.4T", "sistema": "WASTEGATE", "componente": "TURBO", "pin": "60", "prueba": "AJUSTE", "tip_pro": "Lubrica varilla de wastegate." },
+  { "marca": "HYUNDAI/KIA", "modelo": "TUCSON/SPORTAGE", "sistema": "GDI", "componente": "INJECTOR", "pin": "78/79", "prueba": "100V", "tip_pro": "No usar lámpara de prueba en GDI." }
+  ] 
+ ]
+]  
