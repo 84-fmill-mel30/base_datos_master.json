@@ -1,0 +1,2458 @@
+[
+  {
+    "id": "pp-001-x15-performance",
+    "ppid": "PP-001",
+    "marca": "CUMMINS",
+    "modelo": "X15 Performance",
+    "año": "2024-2026",
+    "motor": "15.0L Diesel",
+    "ecu": "CM2450 ECM",
+    "pines": 120,
+    "tipo": "diesel",
+    "region": "americano",
+    "sensor_critico": "Sensor Presion Riel",
+    "torque_cabeza": "150Nm + 180 grados",
+    "torque_bancada": "200Nm",
+    "link_diagrama": "https://propart-diag.com/diagrams/cummins-x15-2026",
+    "tags": [
+      {
+        "t": "15.0L Diesel",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "DIESEL",
+        "c": "rgba(255,107,47,.12)",
+        "tc": "var(--orange)"
+      },
+      {
+        "t": "PP-001",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria (+12V)",
+        "c": "Rojo",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente constante ECM",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "A2",
+        "s": "Tierra Principal ECM",
+        "c": "Negro",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a chasis",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "B15",
+        "s": "Sensor Presion Riel (FRP)",
+        "c": "Blanco/Azul",
+        "v": "0.5-4.5V",
+        "t": "SEN",
+        "n": "Riel comun inyeccion directa",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "B22",
+        "s": "CAN High J1939",
+        "c": "Amarillo",
+        "v": "2.5-3.5V",
+        "t": "CAN",
+        "n": "Red de datos pesado J1939",
+        "h": "#F9A825"
+      },
+      {
+        "p": "B23",
+        "s": "CAN Low J1939",
+        "c": "Verde",
+        "v": "1.5-2.5V",
+        "t": "CAN",
+        "n": "Red de datos pesado J1939",
+        "h": "#2E7D32"
+      },
+      {
+        "p": "C10",
+        "s": "Control Inyector Cil 1",
+        "c": "Blanco",
+        "v": "12V",
+        "t": "ACT",
+        "n": "Pulso negativo piezo",
+        "h": "#E0E0E0"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "SPN 157",
+        "desc": "Presion de riel baja (FMI 3)",
+        "sev": "CRITICA",
+        "sys": "Motor",
+        "sol": [
+          "Sensor FRP danado",
+          "Valvula reguladora riel atascada",
+          "Bomba alta presion desgastada"
+        ]
+      },
+      {
+        "code": "SPN 651",
+        "desc": "Falla circuito inyector cilindro 1",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Inyector en corto",
+          "Arnes quemado en balancines"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High J1939",
+        "color": "Amarillo",
+        "hex": "#F9A825",
+        "notas": "SAE J1939"
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low J1939",
+        "color": "Verde",
+        "hex": "#2E7D32",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-002-jetta-gli-mk8",
+    "ppid": "PP-002",
+    "marca": "VW",
+    "modelo": "Jetta GLI MK8",
+    "año": "2024-2026",
+    "motor": "2.0 TSI EA888 Gen4",
+    "ecu": "SIMOS 19.1",
+    "pines": 121,
+    "tipo": "gasolina",
+    "region": "europeo",
+    "sensor_critico": "Sensor MAF (G70)",
+    "torque_cabeza": "40Nm + 90 + 90",
+    "torque_bancada": "65Nm",
+    "link_diagrama": "https://propart-diag.com/diagrams/vw-gli-mk8-pinout",
+    "tags": [
+      {
+        "t": "2.0 TSI EA888 Gen4",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "GASOLINA",
+        "c": "rgba(0,196,140,.12)",
+        "tc": "var(--green)"
+      },
+      {
+        "t": "PP-002",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "T121/1",
+        "s": "Alimentacion Bateria (+30)",
+        "c": "Rojo/Negro",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente viva de bateria",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "T121/87",
+        "s": "Alimentacion Ignicion (+15)",
+        "c": "Negro/Verde",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente de switch",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "T121/2",
+        "s": "Tierra Principal ECU",
+        "c": "Marron",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa VAG",
+        "h": "#5D4037"
+      },
+      {
+        "p": "T60/25",
+        "s": "Sensor MAF G70",
+        "c": "Violeta/Blanco",
+        "v": "0.5-4.5V",
+        "t": "SEN",
+        "n": "Medidor masa de aire",
+        "h": "#6A1B9A"
+      },
+      {
+        "p": "T60/42",
+        "s": "CAN High Powertrain",
+        "c": "Naranja/Negro",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "HS-CAN tren motriz",
+        "h": "#E65100"
+      },
+      {
+        "p": "T60/43",
+        "s": "CAN Low Powertrain",
+        "c": "Naranja/Marron",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "HS-CAN tren motriz",
+        "h": "#E65100"
+      },
+      {
+        "p": "T60/55",
+        "s": "Control Bobina 1 (N70)",
+        "c": "Blanco/Azul",
+        "v": "12V",
+        "t": "ACT",
+        "n": "Bobina de lapiz cilindro 1",
+        "h": "#E0E0E0"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "P0087",
+        "desc": "Presion de riel combustible baja",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Filtro combustible obstruido",
+          "Bomba baja presion debil",
+          "Valvula reguladora riel pegada"
+        ]
+      },
+      {
+        "code": "P0171",
+        "desc": "Sistema combustible pobre Banco 1",
+        "sev": "MEDIA",
+        "sys": "Motor",
+        "sol": [
+          "MAF sucio o danado",
+          "Fuga vacio en admision"
+        ]
+      },
+      {
+        "code": "P0299",
+        "desc": "Subpresion turbocompresor",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Fuga en intercooler",
+          "Valvula wastegate atascada"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High HS-CAN",
+        "color": "Naranja/Negro",
+        "hex": "#E65100",
+        "notas": ""
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low HS-CAN",
+        "color": "Naranja/Marron",
+        "hex": "#E65100",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-003-serie-s-v8",
+    "ppid": "PP-003",
+    "marca": "SCANIA",
+    "modelo": "Serie S V8",
+    "año": "2022-2026",
+    "motor": "16.4L V8 Euro 6",
+    "ecu": "S8 EMS",
+    "pines": 128,
+    "tipo": "diesel",
+    "region": "europeo",
+    "sensor_critico": "Sensor NOx Salida",
+    "torque_cabeza": "80Nm + 90 + 90",
+    "torque_bancada": "110Nm",
+    "link_diagrama": "https://propart-diag.com/diagrams/scania-s8-v8-ems",
+    "tags": [
+      {
+        "t": "16.4L V8 Euro 6",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "DIESEL",
+        "c": "rgba(255,107,47,.12)",
+        "tc": "var(--orange)"
+      },
+      {
+        "t": "PP-003",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria 24V",
+        "c": "Rojo",
+        "v": "24V",
+        "t": "PWR",
+        "n": "Sistema 24V camion europeo",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "A2",
+        "s": "Tierra Principal EMS",
+        "c": "Negro",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a chasis",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "C55",
+        "s": "Sensor NOx Salida SCR",
+        "c": "Gris/Negro",
+        "v": "0.5-4.5V",
+        "t": "SEN",
+        "n": "Post catalizador SCR",
+        "h": "#757575"
+      },
+      {
+        "p": "C60",
+        "s": "CAN High EMS",
+        "c": "Amarillo",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "J1939 Red motor",
+        "h": "#F9A825"
+      },
+      {
+        "p": "C61",
+        "s": "CAN Low EMS",
+        "c": "Verde",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "J1939 Red motor",
+        "h": "#2E7D32"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "SPN 3216",
+        "desc": "Sensor NOx post-SCR fuera de rango",
+        "sev": "CRITICA",
+        "sys": "Escape",
+        "sol": [
+          "Sensor NOx saturado de sulfuro",
+          "Urea AdBlue contaminada",
+          "Sustituir sensor NOx"
+        ]
+      },
+      {
+        "code": "SPN 3031",
+        "desc": "Nivel de AdBlue bajo",
+        "sev": "ALTA",
+        "sys": "SCR",
+        "sol": [
+          "Rellenar deposito AdBlue",
+          "Verificar calidad del fluido"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High J1939",
+        "color": "Amarillo",
+        "hex": "#F9A825",
+        "notas": "24V europeo"
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low J1939",
+        "color": "Verde",
+        "hex": "#2E7D32",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-004-f-150-raptor-r",
+    "ppid": "PP-004",
+    "marca": "FORD",
+    "modelo": "F-150 Raptor R",
+    "año": "2024-2025",
+    "motor": "5.2L V8 Supercharged",
+    "ecu": "PCM-150 Elite",
+    "pines": 150,
+    "tipo": "gasolina",
+    "region": "americano",
+    "sensor_critico": "Sensor IAT 2",
+    "torque_cabeza": "35 lb-ft + 90 + 90",
+    "torque_bancada": "25 lb-ft + 105",
+    "link_diagrama": "https://propart-diag.com/diagrams/ford-raptor-r-pcm",
+    "tags": [
+      {
+        "t": "5.2L V8 Supercharged",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "GASOLINA",
+        "c": "rgba(0,196,140,.12)",
+        "tc": "var(--green)"
+      },
+      {
+        "t": "PP-004",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria (+12V)",
+        "c": "Rojo/Blanco",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente constante PCM",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "A3",
+        "s": "Tierra Principal PCM",
+        "c": "Negro/Gris",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a carroceria",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "B8",
+        "s": "Sensor IAT2 Entrada Supercargador",
+        "c": "Azul/Rojo",
+        "v": "0.5-4.5V",
+        "t": "SEN",
+        "n": "Temp aire a presion",
+        "h": "#1565C0"
+      },
+      {
+        "p": "B33",
+        "s": "CAN High HS-CAN",
+        "c": "Blanco/Azul",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "Red alta velocidad Ford",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "B34",
+        "s": "CAN Low HS-CAN",
+        "c": "Blanco/Verde",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "Red alta velocidad Ford",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "C12",
+        "s": "Control Bobina Cil 1",
+        "c": "Verde/Naranja",
+        "v": "12V",
+        "t": "ACT",
+        "n": "Bobina encendido",
+        "h": "#2E7D32"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "P0300",
+        "desc": "Falla multiple de encendido Misfire",
+        "sev": "CRITICA",
+        "sys": "Motor",
+        "sol": [
+          "Bujias de iridio desgastadas",
+          "Bobina defectuosa",
+          "Fuga compresion supercargador"
+        ]
+      },
+      {
+        "code": "P0234",
+        "desc": "Sobreboost supercargador",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Valvula bypass pegada cerrada"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High HS-CAN",
+        "color": "Blanco/Azul",
+        "hex": "#F5F5F5",
+        "notas": "Ford HS-CAN"
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low HS-CAN",
+        "color": "Blanco/Verde",
+        "hex": "#F5F5F5",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-005-t680-next-gen",
+    "ppid": "PP-005",
+    "marca": "KENWORTH",
+    "modelo": "T680 Next Gen",
+    "año": "2023-2026",
+    "motor": "PACCAR MX-13",
+    "ecu": "PCI 3.0 EPA24",
+    "pines": 120,
+    "tipo": "diesel",
+    "region": "americano",
+    "sensor_critico": "Sensor Posicion Turbo",
+    "torque_cabeza": "120Nm + 60 grados",
+    "torque_bancada": "150Nm + 120",
+    "link_diagrama": "https://propart-diag.com/diagrams/paccar-mx13-pci3",
+    "tags": [
+      {
+        "t": "PACCAR MX-13",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "DIESEL",
+        "c": "rgba(255,107,47,.12)",
+        "tc": "var(--orange)"
+      },
+      {
+        "t": "PP-005",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria 12V",
+        "c": "Rojo",
+        "v": "12V",
+        "t": "PWR",
+        "n": "PACCAR 12V en cabina",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "A2",
+        "s": "Tierra Principal PCI",
+        "c": "Negro",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a chasis",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "B44",
+        "s": "Sensor Posicion Turbo VGT",
+        "c": "Blanco/Verde",
+        "v": "0.5-4.5V",
+        "t": "SEN",
+        "n": "Paletas variables turbo",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "B60",
+        "s": "CAN High J1939",
+        "c": "Amarillo",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "Red pesado J1939",
+        "h": "#F9A825"
+      },
+      {
+        "p": "B61",
+        "s": "CAN Low J1939",
+        "c": "Verde",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "Red pesado J1939",
+        "h": "#2E7D32"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "SPN 639",
+        "desc": "Error comunicacion J1939",
+        "sev": "ALTA",
+        "sys": "CAN",
+        "sol": [
+          "Terminadores 120 ohms ausentes",
+          "Cable CAN roto en chasis",
+          "Modulo con falla interna"
+        ]
+      },
+      {
+        "code": "SPN 641",
+        "desc": "Actuador VGT respuesta incorrecta",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Actuador VGT carbonizado",
+          "Paletas turbo bloqueadas"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High J1939",
+        "color": "Amarillo",
+        "hex": "#F9A825",
+        "notas": "J1939 pesado"
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low J1939",
+        "color": "Verde",
+        "hex": "#2E7D32",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-006-np300---frontie",
+    "ppid": "PP-006",
+    "marca": "NISSAN",
+    "modelo": "NP300 / Frontier",
+    "año": "2021-2025",
+    "motor": "2.3L dCi YS23",
+    "ecu": "SID309",
+    "pines": 96,
+    "tipo": "diesel",
+    "region": "asiatico",
+    "sensor_critico": "Actuador VGT Turbo",
+    "torque_cabeza": "39Nm + 180 grados",
+    "torque_bancada": "55Nm",
+    "link_diagrama": "https://propart-diag.com/diagrams/nissan-ys23-sid309",
+    "tags": [
+      {
+        "t": "2.3L dCi YS23",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "DIESEL",
+        "c": "rgba(255,107,47,.12)",
+        "tc": "var(--orange)"
+      },
+      {
+        "t": "PP-006",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria (+12V)",
+        "c": "Rojo/Blanco",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Bateria constante",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "A2",
+        "s": "Tierra Principal SID309",
+        "c": "Negro",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a bloque",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "B15",
+        "s": "Actuador VGT Control Turbo",
+        "c": "Violeta/Blanco",
+        "v": "PWM",
+        "t": "ACT",
+        "n": "Solenoide paletas variables",
+        "h": "#6A1B9A"
+      },
+      {
+        "p": "B22",
+        "s": "CAN High Motor",
+        "c": "Naranja",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "CAN bus motor",
+        "h": "#E65100"
+      },
+      {
+        "p": "B23",
+        "s": "CAN Low Motor",
+        "c": "Azul",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "CAN bus motor",
+        "h": "#1565C0"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "P2263",
+        "desc": "Desempeno turbocompresor boost bajo",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Actuador VGT atascado por carbon",
+          "Manguera intercooler con fuga",
+          "Sensor MAP danado"
+        ]
+      },
+      {
+        "code": "P0401",
+        "desc": "Flujo EGR insuficiente",
+        "sev": "MEDIA",
+        "sys": "Motor",
+        "sol": [
+          "Valvula EGR carbonizada",
+          "Enfriador EGR tapado"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High",
+        "color": "Naranja",
+        "hex": "#E65100",
+        "notas": ""
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low",
+        "color": "Azul",
+        "hex": "#1565C0",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-007-hilux-revo",
+    "ppid": "PP-007",
+    "marca": "TOYOTA",
+    "modelo": "Hilux Revo",
+    "año": "2024-2026",
+    "motor": "2.8L 1GD-FTV",
+    "ecu": "Denso Gen4",
+    "pines": 128,
+    "tipo": "diesel",
+    "region": "asiatico",
+    "sensor_critico": "Sensor CKP Signal",
+    "torque_cabeza": "25Nm + 90 grados",
+    "torque_bancada": "40Nm + 90",
+    "link_diagrama": "https://propart-diag.com/diagrams/toyota-1gd-denso",
+    "tags": [
+      {
+        "t": "2.8L 1GD-FTV",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "DIESEL",
+        "c": "rgba(255,107,47,.12)",
+        "tc": "var(--orange)"
+      },
+      {
+        "t": "PP-007",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria (+12V)",
+        "c": "Negro/Rojo",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente constante ECU",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "A2",
+        "s": "Tierra Principal ECU",
+        "c": "Marron",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a bloque motor",
+        "h": "#5D4037"
+      },
+      {
+        "p": "B34",
+        "s": "Sensor CKP Signal (+)",
+        "c": "Verde/Rojo",
+        "v": "5V pulsante",
+        "t": "SEN",
+        "n": "Posicion ciguenal inductivo",
+        "h": "#2E7D32"
+      },
+      {
+        "p": "B33",
+        "s": "Sensor CKP Signal (-)",
+        "c": "Blanco",
+        "v": "Referencia",
+        "t": "SEN",
+        "n": "Retorno sensor ciguenal",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "C22",
+        "s": "CAN High Motor",
+        "c": "Blanco",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "CAN powertrain Toyota",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "C23",
+        "s": "CAN Low Motor",
+        "c": "Verde",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "CAN powertrain Toyota",
+        "h": "#2E7D32"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "P0335",
+        "desc": "Falla circuito sensor CKP",
+        "sev": "CRITICA",
+        "sys": "Motor",
+        "sol": [
+          "Sensor inductivo danado por calor",
+          "Entrehierro incorrecto max 1.5mm",
+          "Rueda fonica con diente[
+  {
+    "id": "pp-001-x15-performance",
+    "ppid": "PP-001",
+    "marca": "CUMMINS",
+    "modelo": "X15 Performance",
+    "año": "2024-2026",
+    "motor": "15.0L Diesel",
+    "ecu": "CM2450 ECM",
+    "pines": 120,
+    "tipo": "diesel",
+    "region": "americano",
+    "sensor_critico": "Sensor Presion Riel",
+    "torque_cabeza": "150Nm + 180 grados",
+    "torque_bancada": "200Nm",
+    "link_diagrama": "https://propart-diag.com/diagrams/cummins-x15-2026",
+    "tags": [
+      {
+        "t": "15.0L Diesel",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "DIESEL",
+        "c": "rgba(255,107,47,.12)",
+        "tc": "var(--orange)"
+      },
+      {
+        "t": "PP-001",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria (+12V)",
+        "c": "Rojo",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente constante ECM",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "A2",
+        "s": "Tierra Principal ECM",
+        "c": "Negro",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a chasis",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "B15",
+        "s": "Sensor Presion Riel (FRP)",
+        "c": "Blanco/Azul",
+        "v": "0.5-4.5V",
+        "t": "SEN",
+        "n": "Riel comun inyeccion directa",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "B22",
+        "s": "CAN High J1939",
+        "c": "Amarillo",
+        "v": "2.5-3.5V",
+        "t": "CAN",
+        "n": "Red de datos pesado J1939",
+        "h": "#F9A825"
+      },
+      {
+        "p": "B23",
+        "s": "CAN Low J1939",
+        "c": "Verde",
+        "v": "1.5-2.5V",
+        "t": "CAN",
+        "n": "Red de datos pesado J1939",
+        "h": "#2E7D32"
+      },
+      {
+        "p": "C10",
+        "s": "Control Inyector Cil 1",
+        "c": "Blanco",
+        "v": "12V",
+        "t": "ACT",
+        "n": "Pulso negativo piezo",
+        "h": "#E0E0E0"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "SPN 157",
+        "desc": "Presion de riel baja (FMI 3)",
+        "sev": "CRITICA",
+        "sys": "Motor",
+        "sol": [
+          "Sensor FRP danado",
+          "Valvula reguladora riel atascada",
+          "Bomba alta presion desgastada"
+        ]
+      },
+      {
+        "code": "SPN 651",
+        "desc": "Falla circuito inyector cilindro 1",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Inyector en corto",
+          "Arnes quemado en balancines"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High J1939",
+        "color": "Amarillo",
+        "hex": "#F9A825",
+        "notas": "SAE J1939"
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low J1939",
+        "color": "Verde",
+        "hex": "#2E7D32",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-002-jetta-gli-mk8",
+    "ppid": "PP-002",
+    "marca": "VW",
+    "modelo": "Jetta GLI MK8",
+    "año": "2024-2026",
+    "motor": "2.0 TSI EA888 Gen4",
+    "ecu": "SIMOS 19.1",
+    "pines": 121,
+    "tipo": "gasolina",
+    "region": "europeo",
+    "sensor_critico": "Sensor MAF (G70)",
+    "torque_cabeza": "40Nm + 90 + 90",
+    "torque_bancada": "65Nm",
+    "link_diagrama": "https://propart-diag.com/diagrams/vw-gli-mk8-pinout",
+    "tags": [
+      {
+        "t": "2.0 TSI EA888 Gen4",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "GASOLINA",
+        "c": "rgba(0,196,140,.12)",
+        "tc": "var(--green)"
+      },
+      {
+        "t": "PP-002",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "T121/1",
+        "s": "Alimentacion Bateria (+30)",
+        "c": "Rojo/Negro",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente viva de bateria",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "T121/87",
+        "s": "Alimentacion Ignicion (+15)",
+        "c": "Negro/Verde",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente de switch",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "T121/2",
+        "s": "Tierra Principal ECU",
+        "c": "Marron",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa VAG",
+        "h": "#5D4037"
+      },
+      {
+        "p": "T60/25",
+        "s": "Sensor MAF G70",
+        "c": "Violeta/Blanco",
+        "v": "0.5-4.5V",
+        "t": "SEN",
+        "n": "Medidor masa de aire",
+        "h": "#6A1B9A"
+      },
+      {
+        "p": "T60/42",
+        "s": "CAN High Powertrain",
+        "c": "Naranja/Negro",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "HS-CAN tren motriz",
+        "h": "#E65100"
+      },
+      {
+        "p": "T60/43",
+        "s": "CAN Low Powertrain",
+        "c": "Naranja/Marron",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "HS-CAN tren motriz",
+        "h": "#E65100"
+      },
+      {
+        "p": "T60/55",
+        "s": "Control Bobina 1 (N70)",
+        "c": "Blanco/Azul",
+        "v": "12V",
+        "t": "ACT",
+        "n": "Bobina de lapiz cilindro 1",
+        "h": "#E0E0E0"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "P0087",
+        "desc": "Presion de riel combustible baja",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Filtro combustible obstruido",
+          "Bomba baja presion debil",
+          "Valvula reguladora riel pegada"
+        ]
+      },
+      {
+        "code": "P0171",
+        "desc": "Sistema combustible pobre Banco 1",
+        "sev": "MEDIA",
+        "sys": "Motor",
+        "sol": [
+          "MAF sucio o danado",
+          "Fuga vacio en admision"
+        ]
+      },
+      {
+        "code": "P0299",
+        "desc": "Subpresion turbocompresor",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Fuga en intercooler",
+          "Valvula wastegate atascada"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High HS-CAN",
+        "color": "Naranja/Negro",
+        "hex": "#E65100",
+        "notas": ""
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low HS-CAN",
+        "color": "Naranja/Marron",
+        "hex": "#E65100",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-003-serie-s-v8",
+    "ppid": "PP-003",
+    "marca": "SCANIA",
+    "modelo": "Serie S V8",
+    "año": "2022-2026",
+    "motor": "16.4L V8 Euro 6",
+    "ecu": "S8 EMS",
+    "pines": 128,
+    "tipo": "diesel",
+    "region": "europeo",
+    "sensor_critico": "Sensor NOx Salida",
+    "torque_cabeza": "80Nm + 90 + 90",
+    "torque_bancada": "110Nm",
+    "link_diagrama": "https://propart-diag.com/diagrams/scania-s8-v8-ems",
+    "tags": [
+      {
+        "t": "16.4L V8 Euro 6",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "DIESEL",
+        "c": "rgba(255,107,47,.12)",
+        "tc": "var(--orange)"
+      },
+      {
+        "t": "PP-003",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria 24V",
+        "c": "Rojo",
+        "v": "24V",
+        "t": "PWR",
+        "n": "Sistema 24V camion europeo",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "A2",
+        "s": "Tierra Principal EMS",
+        "c": "Negro",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a chasis",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "C55",
+        "s": "Sensor NOx Salida SCR",
+        "c": "Gris/Negro",
+        "v": "0.5-4.5V",
+        "t": "SEN",
+        "n": "Post catalizador SCR",
+        "h": "#757575"
+      },
+      {
+        "p": "C60",
+        "s": "CAN High EMS",
+        "c": "Amarillo",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "J1939 Red motor",
+        "h": "#F9A825"
+      },
+      {
+        "p": "C61",
+        "s": "CAN Low EMS",
+        "c": "Verde",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "J1939 Red motor",
+        "h": "#2E7D32"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "SPN 3216",
+        "desc": "Sensor NOx post-SCR fuera de rango",
+        "sev": "CRITICA",
+        "sys": "Escape",
+        "sol": [
+          "Sensor NOx saturado de sulfuro",
+          "Urea AdBlue contaminada",
+          "Sustituir sensor NOx"
+        ]
+      },
+      {
+        "code": "SPN 3031",
+        "desc": "Nivel de AdBlue bajo",
+        "sev": "ALTA",
+        "sys": "SCR",
+        "sol": [
+          "Rellenar deposito AdBlue",
+          "Verificar calidad del fluido"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High J1939",
+        "color": "Amarillo",
+        "hex": "#F9A825",
+        "notas": "24V europeo"
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low J1939",
+        "color": "Verde",
+        "hex": "#2E7D32",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-004-f-150-raptor-r",
+    "ppid": "PP-004",
+    "marca": "FORD",
+    "modelo": "F-150 Raptor R",
+    "año": "2024-2025",
+    "motor": "5.2L V8 Supercharged",
+    "ecu": "PCM-150 Elite",
+    "pines": 150,
+    "tipo": "gasolina",
+    "region": "americano",
+    "sensor_critico": "Sensor IAT 2",
+    "torque_cabeza": "35 lb-ft + 90 + 90",
+    "torque_bancada": "25 lb-ft + 105",
+    "link_diagrama": "https://propart-diag.com/diagrams/ford-raptor-r-pcm",
+    "tags": [
+      {
+        "t": "5.2L V8 Supercharged",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "GASOLINA",
+        "c": "rgba(0,196,140,.12)",
+        "tc": "var(--green)"
+      },
+      {
+        "t": "PP-004",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria (+12V)",
+        "c": "Rojo/Blanco",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente constante PCM",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "A3",
+        "s": "Tierra Principal PCM",
+        "c": "Negro/Gris",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a carroceria",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "B8",
+        "s": "Sensor IAT2 Entrada Supercargador",
+        "c": "Azul/Rojo",
+        "v": "0.5-4.5V",
+        "t": "SEN",
+        "n": "Temp aire a presion",
+        "h": "#1565C0"
+      },
+      {
+        "p": "B33",
+        "s": "CAN High HS-CAN",
+        "c": "Blanco/Azul",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "Red alta velocidad Ford",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "B34",
+        "s": "CAN Low HS-CAN",
+        "c": "Blanco/Verde",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "Red alta velocidad Ford",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "C12",
+        "s": "Control Bobina Cil 1",
+        "c": "Verde/Naranja",
+        "v": "12V",
+        "t": "ACT",
+        "n": "Bobina encendido",
+        "h": "#2E7D32"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "P0300",
+        "desc": "Falla multiple de encendido Misfire",
+        "sev": "CRITICA",
+        "sys": "Motor",
+        "sol": [
+          "Bujias de iridio desgastadas",
+          "Bobina defectuosa",
+          "Fuga compresion supercargador"
+        ]
+      },
+      {
+        "code": "P0234",
+        "desc": "Sobreboost supercargador",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Valvula bypass pegada cerrada"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High HS-CAN",
+        "color": "Blanco/Azul",
+        "hex": "#F5F5F5",
+        "notas": "Ford HS-CAN"
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low HS-CAN",
+        "color": "Blanco/Verde",
+        "hex": "#F5F5F5",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-005-t680-next-gen",
+    "ppid": "PP-005",
+    "marca": "KENWORTH",
+    "modelo": "T680 Next Gen",
+    "año": "2023-2026",
+    "motor": "PACCAR MX-13",
+    "ecu": "PCI 3.0 EPA24",
+    "pines": 120,
+    "tipo": "diesel",
+    "region": "americano",
+    "sensor_critico": "Sensor Posicion Turbo",
+    "torque_cabeza": "120Nm + 60 grados",
+    "torque_bancada": "150Nm + 120",
+    "link_diagrama": "https://propart-diag.com/diagrams/paccar-mx13-pci3",
+    "tags": [
+      {
+        "t": "PACCAR MX-13",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "DIESEL",
+        "c": "rgba(255,107,47,.12)",
+        "tc": "var(--orange)"
+      },
+      {
+        "t": "PP-005",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria 12V",
+        "c": "Rojo",
+        "v": "12V",
+        "t": "PWR",
+        "n": "PACCAR 12V en cabina",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "A2",
+        "s": "Tierra Principal PCI",
+        "c": "Negro",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a chasis",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "B44",
+        "s": "Sensor Posicion Turbo VGT",
+        "c": "Blanco/Verde",
+        "v": "0.5-4.5V",
+        "t": "SEN",
+        "n": "Paletas variables turbo",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "B60",
+        "s": "CAN High J1939",
+        "c": "Amarillo",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "Red pesado J1939",
+        "h": "#F9A825"
+      },
+      {
+        "p": "B61",
+        "s": "CAN Low J1939",
+        "c": "Verde",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "Red pesado J1939",
+        "h": "#2E7D32"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "SPN 639",
+        "desc": "Error comunicacion J1939",
+        "sev": "ALTA",
+        "sys": "CAN",
+        "sol": [
+          "Terminadores 120 ohms ausentes",
+          "Cable CAN roto en chasis",
+          "Modulo con falla interna"
+        ]
+      },
+      {
+        "code": "SPN 641",
+        "desc": "Actuador VGT respuesta incorrecta",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Actuador VGT carbonizado",
+          "Paletas turbo bloqueadas"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High J1939",
+        "color": "Amarillo",
+        "hex": "#F9A825",
+        "notas": "J1939 pesado"
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low J1939",
+        "color": "Verde",
+        "hex": "#2E7D32",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-006-np300---frontie",
+    "ppid": "PP-006",
+    "marca": "NISSAN",
+    "modelo": "NP300 / Frontier",
+    "año": "2021-2025",
+    "motor": "2.3L dCi YS23",
+    "ecu": "SID309",
+    "pines": 96,
+    "tipo": "diesel",
+    "region": "asiatico",
+    "sensor_critico": "Actuador VGT Turbo",
+    "torque_cabeza": "39Nm + 180 grados",
+    "torque_bancada": "55Nm",
+    "link_diagrama": "https://propart-diag.com/diagrams/nissan-ys23-sid309",
+    "tags": [
+      {
+        "t": "2.3L dCi YS23",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "DIESEL",
+        "c": "rgba(255,107,47,.12)",
+        "tc": "var(--orange)"
+      },
+      {
+        "t": "PP-006",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria (+12V)",
+        "c": "Rojo/Blanco",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Bateria constante",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "A2",
+        "s": "Tierra Principal SID309",
+        "c": "Negro",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a bloque",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "B15",
+        "s": "Actuador VGT Control Turbo",
+        "c": "Violeta/Blanco",
+        "v": "PWM",
+        "t": "ACT",
+        "n": "Solenoide paletas variables",
+        "h": "#6A1B9A"
+      },
+      {
+        "p": "B22",
+        "s": "CAN High Motor",
+        "c": "Naranja",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "CAN bus motor",
+        "h": "#E65100"
+      },
+      {
+        "p": "B23",
+        "s": "CAN Low Motor",
+        "c": "Azul",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "CAN bus motor",
+        "h": "#1565C0"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "P2263",
+        "desc": "Desempeno turbocompresor boost bajo",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Actuador VGT atascado por carbon",
+          "Manguera intercooler con fuga",
+          "Sensor MAP danado"
+        ]
+      },
+      {
+        "code": "P0401",
+        "desc": "Flujo EGR insuficiente",
+        "sev": "MEDIA",
+        "sys": "Motor",
+        "sol": [
+          "Valvula EGR carbonizada",
+          "Enfriador EGR tapado"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High",
+        "color": "Naranja",
+        "hex": "#E65100",
+        "notas": ""
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low",
+        "color": "Azul",
+        "hex": "#1565C0",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-007-hilux-revo",
+    "ppid": "PP-007",
+    "marca": "TOYOTA",
+    "modelo": "Hilux Revo",
+    "año": "2024-2026",
+    "motor": "2.8L 1GD-FTV",
+    "ecu": "Denso Gen4",
+    "pines": 128,
+    "tipo": "diesel",
+    "region": "asiatico",
+    "sensor_critico": "Sensor CKP Signal",
+    "torque_cabeza": "25Nm + 90 grados",
+    "torque_bancada": "40Nm + 90",
+    "link_diagrama": "https://propart-diag.com/diagrams/toyota-1gd-denso",
+    "tags": [
+      {
+        "t": "2.8L 1GD-FTV",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "DIESEL",
+        "c": "rgba(255,107,47,.12)",
+        "tc": "var(--orange)"
+      },
+      {
+        "t": "PP-007",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria (+12V)",
+        "c": "Negro/Rojo",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente constante ECU",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "A2",
+        "s": "Tierra Principal ECU",
+        "c": "Marron",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a bloque motor",
+        "h": "#5D4037"
+      },
+      {
+        "p": "B34",
+        "s": "Sensor CKP Signal (+)",
+        "c": "Verde/Rojo",
+        "v": "5V pulsante",
+        "t": "SEN",
+        "n": "Posicion ciguenal inductivo",
+        "h": "#2E7D32"
+      },
+      {
+        "p": "B33",
+        "s": "Sensor CKP Signal (-)",
+        "c": "Blanco",
+        "v": "Referencia",
+        "t": "SEN",
+        "n": "Retorno sensor ciguenal",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "C22",
+        "s": "CAN High Motor",
+        "c": "Blanco",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "CAN powertrain Toyota",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "C23",
+        "s": "CAN Low Motor",
+        "c": "Verde",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "CAN powertrain Toyota",
+        "h": "#2E7D32"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "P0335",
+        "desc": "Falla circuito sensor CKP",
+        "sev": "CRITICA",
+        "sys": "Motor",
+        "sol": [
+          "Sensor inductivo danado por calor",
+          "Entrehierro incorrecto max 1.5mm",
+          "Rueda fonica con diente roto"
+        ]
+      },
+      {
+        "code": "P0087",
+        "desc": "Presion de riel baja Common Rail",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Bomba HP4 desgastada",
+          "Valvula reguladora riel pegada"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High",
+        "color": "Blanco",
+        "hex": "#E0E0E0",
+        "notas": "CAN Toyota diesel"
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low",
+        "color": "Verde",
+        "hex": "#2E7D32",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-008-silverado-1500",
+    "ppid": "PP-008",
+    "marca": "CHEVROLET",
+    "modelo": "Silverado 1500",
+    "año": "2022-2026",
+    "motor": "5.3L V8 Ecotec3",
+    "ecu": "GM E90 Global A",
+    "pines": 73,
+    "tipo": "gasolina",
+    "region": "americano",
+    "sensor_critico": "Sensor O2 Banco 1",
+    "torque_cabeza": "25Nm + 60 + 60",
+    "torque_bancada": "30Nm + 80",
+    "link_diagrama": "https://propart-diag.com/diagrams/gm-e90-silverado-pinout",
+    "tags": [
+      {
+        "t": "5.3L V8 Ecotec3",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "GASOLINA",
+        "c": "rgba(0,196,140,.12)",
+        "tc": "var(--green)"
+      },
+      {
+        "t": "PP-008",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "X1-1",
+        "s": "Alimentacion Bateria (+12V)",
+        "c": "Naranja/Negro",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente constante E90",
+        "h": "#E65100"
+      },
+      {
+        "p": "X1-2",
+        "s": "Tierra Principal E90",
+        "c": "Negro/Blanco",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa principal G102",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "X2-15",
+        "s": "Sensor O2 Banco 1 Senal",
+        "c": "Azul/Blanco",
+        "v": "0.1-0.9V",
+        "t": "SEN",
+        "n": "Lambda antes catalizador",
+        "h": "#1565C0"
+      },
+      {
+        "p": "X2-40",
+        "s": "CAN High HS-CAN",
+        "c": "Blanco/Azul",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "Red alta velocidad GM",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "X2-41",
+        "s": "CAN Low HS-CAN",
+        "c": "Blanco/Verde",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "Red alta velocidad GM",
+        "h": "#E0E0E0"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "P0171",
+        "desc": "Sistema combustible pobre Banco 1",
+        "sev": "MEDIA",
+        "sys": "Motor",
+        "sol": [
+          "Valvula PCV rota falla comun V8 5.3",
+          "MAF sucio",
+          "Inyectores con depositos"
+        ]
+      },
+      {
+        "code": "P0300",
+        "desc": "Misfire multiple V8 5.3",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "AFM falla en lifters",
+          "Bujias iridio gastadas"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High HS-CAN",
+        "color": "Blanco/Azul",
+        "hex": "#F5F5F5",
+        "notas": "GM HS-CAN"
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low HS-CAN",
+        "color": "Blanco/Verde",
+        "hex": "#F5F5F5",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-009-c15-acert",
+    "ppid": "PP-009",
+    "marca": "CATERPILLAR",
+    "modelo": "C15 ACERT",
+    "año": "2000-2015",
+    "motor": "15.2L Heavy Duty",
+    "ecu": "ADEM 4",
+    "pines": 70,
+    "tipo": "diesel",
+    "region": "americano",
+    "sensor_critico": "Sensor Presion Aceite",
+    "torque_cabeza": "250Nm",
+    "torque_bancada": "270Nm",
+    "link_diagrama": "https://propart-diag.com/diagrams/cat-c15-adem4",
+    "tags": [
+      {
+        "t": "15.2L Heavy Duty",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "DIESEL",
+        "c": "rgba(255,107,47,.12)",
+        "tc": "var(--orange)"
+      },
+      {
+        "t": "PP-009",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "J1-1",
+        "s": "Alimentacion Bateria (+12V)",
+        "c": "Rojo",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente constante ADEM",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "J1-2",
+        "s": "Tierra Principal ADEM",
+        "c": "Negro",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a bloque CAT",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "J2-25",
+        "s": "Sensor Presion Aceite",
+        "c": "Naranja/Blanco",
+        "v": "0.5-4.5V",
+        "t": "SEN",
+        "n": "Presion aceite motor",
+        "h": "#E65100"
+      },
+      {
+        "p": "J2-40",
+        "s": "CAN High J1939",
+        "c": "Amarillo",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "J1939 CAT",
+        "h": "#F9A825"
+      },
+      {
+        "p": "J2-41",
+        "s": "CAN Low J1939",
+        "c": "Verde",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "J1939 CAT",
+        "h": "#2E7D32"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "SPN 100",
+        "desc": "Presion de aceite motor baja",
+        "sev": "CRITICA",
+        "sys": "Lubricacion",
+        "sol": [
+          "Verificar nivel aceite inmediatamente",
+          "Sensor presion danado comun C15",
+          "Bomba aceite desgastada"
+        ]
+      },
+      {
+        "code": "SPN 190",
+        "desc": "Velocidad motor fuera de rango",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Sensor CKP falla",
+          "Governor electronico defectuoso"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High J1939",
+        "color": "Amarillo",
+        "hex": "#F9A825",
+        "notas": "CAT J1939"
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low J1939",
+        "color": "Verde",
+        "hex": "#2E7D32",
+        "notas": ""
+      }
+    ]
+  },
+  {
+    "id": "pp-010-series-60",
+    "ppid": "PP-010",
+    "marca": "DETROIT DIESEL",
+    "modelo": "Series 60",
+    "año": "2000-2012",
+    "motor": "14.0L Heavy Duty",
+    "ecu": "DDEC VI",
+    "pines": 121,
+    "tipo": "diesel",
+    "region": "americano",
+    "sensor_critico": "Inyector Control High",
+    "torque_cabeza": "250Nm",
+    "torque_bancada": "280Nm",
+    "link_diagrama": "https://propart-diag.com/diagrams/ddec6-series60",
+    "tags": [
+      {
+        "t": "14.0L Heavy Duty",
+        "c": "rgba(26,127,212,.12)",
+        "tc": "var(--blue)"
+      },
+      {
+        "t": "DIESEL",
+        "c": "rgba(255,107,47,.12)",
+        "tc": "var(--orange)"
+      },
+      {
+        "t": "PP-010",
+        "c": "rgba(155,89,247,.1)",
+        "tc": "var(--purple)"
+      }
+    ],
+    "pinout": [
+      {
+        "p": "A1",
+        "s": "Alimentacion Bateria (+12V)",
+        "c": "Rojo/Blanco",
+        "v": "12V",
+        "t": "PWR",
+        "n": "Corriente constante DDEC",
+        "h": "#D32F2F"
+      },
+      {
+        "p": "A2",
+        "s": "Tierra Principal DDEC",
+        "c": "Negro",
+        "v": "0V",
+        "t": "PWR",
+        "n": "Masa a bloque DD",
+        "h": "#1a1a1a"
+      },
+      {
+        "p": "B30",
+        "s": "Inyector Control High Side EUI",
+        "c": "Blanco",
+        "v": "100V pico",
+        "t": "ACT",
+        "n": "Control inyector electronico EUI",
+        "h": "#E0E0E0"
+      },
+      {
+        "p": "B40",
+        "s": "CAN High J1939",
+        "c": "Amarillo",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "J1939 red pesada",
+        "h": "#F9A825"
+      },
+      {
+        "p": "B41",
+        "s": "CAN Low J1939",
+        "c": "Verde",
+        "v": "2.5V",
+        "t": "CAN",
+        "n": "J1939 red pesada",
+        "h": "#2E7D32"
+      }
+    ],
+    "dtcs": [
+      {
+        "code": "SPN 651",
+        "desc": "Falla inyector cilindro 1 Control High",
+        "sev": "CRITICA",
+        "sys": "Motor",
+        "sol": [
+          "Inyector EUI danado",
+          "Arnes balancines quemado zona caliente",
+          "Resistencia inyector: 0.5-2 ohms"
+        ]
+      },
+      {
+        "code": "SPN 84",
+        "desc": "Velocidad vehiculo senal perdida",
+        "sev": "MEDIA",
+        "sys": "Transmision",
+        "sol": [
+          "Sensor VSS en diferencial",
+          "Cable VSS roto en arnes chasis"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High J1939",
+        "color": "Amarillo",
+        "hex": "#F9A825",
+        "notas": "DDEC J1939"
+      },
+      {
+        "pin": "14",
+        "funcion": "CAN Low J1939",
+        "color": "Verde",
+        "hex": "#2E7D32",
+        "notas": ""
+      }
+    ]
+  }
+]roto"
+        ]
+      },
+      {
+        "code": "P0087",
+        "desc": "Presion de riel baja Common Rail",
+        "sev": "ALTA",
+        "sys": "Motor",
+        "sol": [
+          "Bomba HP4 desgastada",
+.           "Valvula reguladora riel pegada"
+        ]
+      }
+    ],
+    "obd2": [
+      {
+        "pin": "6",
+        "funcion": "CAN High",
+        "color": "Blanco",
+         "hex": "#E0E0E0",
+        "notas": "CAN Toyota diesel"
+      },
+      {
+        "pin": "14",
+        "func
+
+
+
+
+[
+  {
+    "marca": "CHEVROLET",
+    "modelo": "S10 1989",
+    "sistema": "SWITCH IGNICION",
+    "componente": "PASTILLA DE ENCENDIDO",
+    "pin": "ROSA (IGN), MORADO (START)",
+    "color": "Rosa, Morado, Café, Rojo",
+    "ruta_origen": "BATERIA DIRECTO",
+    "ruta_destino": "TABLERO Y MARCHA",
+    "prueba": "12V EN POSICION ON",
+    "tip_pro": "Si el rosa no tiene corriente, la pastilla está quemada."
+  },
+  {
+    "marca": "NISSAN",
+    "modelo": "D21 2002",
+    "sistema": "FUSILERA / ECU",
+    "componente": "ALIMENTACION PRINCIPAL",
+    "pin": "PIN 1, PIN 2, PIN 5",
+    "color": "Blanco, Rojo/Blanco",
+    "ruta_origen": "FUSIBLE 10A CABINA",
+    "ruta_destino": "ECU / BOMBA",
+    "prueba": "12V CON SWITCH",
+    "tip_pro": "Checa el fusible de 10A en cabina para la señal IGN."
+  },
+  {
+    "marca": "FORD",
+    "modelo": "F-150 / RANGER (97-03)",
+    "sistema": "GEM / ECU 104 PINES",
+    "componente": "PCM ALIMENTACION",
+    "pin": "PIN 24, PIN 25, PIN 91",
+    "color": "Blanco/Azul, Negro/Naranja",
+    "ruta_origen": "FUSIBLE 21 COFRE (20A)",
+    "ruta_destino": "PCM / SENSORES",
+    "prueba": "5V REF EN PIN 91",
+    "tip_pro": "Si no hay comunicación, checa el fusible 21 del cofre (20A)."
+  },
+  {
+    "marca": "CHRYSLER",
+    "modelo": "VOYAGER / RAM (96-00)",
+    "sistema": "PCM",
+    "componente": "CONTROL DE RELEVADOR ASD",
+    "pin": "A11, A12, A20, C3",
+    "color": "Rojo/Blanco, Negro/Blanco",
+    "ruta_origen": "RELEVADOR ASD",
+    "ruta_destino": "BOBINA / SENSORES",
+    "prueba": "TIERRA EN PIN A12",
+    "tip_pro": "Falla común: El relevador ASD se corta si el sensor de cigüeñal está en corto."
+  },
+  {
+    "marca": "ISUZU",
+    "modelo": "ELF 400/500 (DIESEL)",
+    "sistema": "ECM 4HK1",
+    "componente": "SINCRONIZACION CKP/CMP",
+    "pin": "121 (CKP), 122 (CMP)",
+    "color": "Verde/Blanco, Rojo/Amarillo",
+    "ruta_origen": "ARNES TRANSMISION",
+    "ruta_destino": "ECM CONECTOR GRIS",
+    "prueba": "SEÑAL DIGITAL 5V",
+    "tip_pro": "Si pierde potencia, checa el arnés sobre la transmisión; el roce con la lámina hace corto."
+  },
+  {
+    "marca": "CUMMINS",
+    "modelo": "ISX (CM871)",
+    "sistema": "ECM MOTOR",
+    "componente": "RED CAN BUS / ALIMENTACION",
+    "pin": "01 (B+), 20 (GND), 43/44 (CAN)",
+    "color": "Rojo, Negro, Amarillo, Verde",
+    "ruta_origen": "CAJA BATERIAS",
+    "ruta_destino": "ECM CHASIS",
+    "prueba": "60 OHMS ENTRE 43 Y 44",
+    "tip_pro": "Si no comunica, checa el fusible de 30A en la caja de baterías, suele sulfatarse."
+  },
+  {
+    "marca": "NISSAN",
+    "modelo": "TSURU B13",
+    "sistema": "HITACHI ECCS",
+    "componente": "SENSOR OPTICO DISTRIBUIDOR",
+    "pin": "22 (180), 31 (1)",
+    "color": "Amarillo/Verde",
+    "ruta_origen": "DISTRIBUIDOR",
+    "ruta_destino": "ECM PIN 22",
+    "prueba": "5V PULSANTE DIGITAL",
+    "tip_pro": "Si el Pin 22 no tiene señal, no hay pulsos de inyección. El aceite en el distribuidor ensucia el sensor."
+  },
+  {
+    "marca": "VW",
+    "modelo": "JETTA A4 2.0L",
+    "sistema": "BOSCH ME7.5",
+    "componente": "CUERPO ACELERACION EPC",
+    "pin": "CAN 75, MAF 25",
+    "color": "Diversos",
+    "ruta_origen": "FUSIBLE S43",
+    "ruta_destino": "CANAL 060 VAGCOM",
+    "prueba": "RESISTENCIA MOTOR TPS",
+    "tip_pro": "Si marca falla de EPC, limpia el cuerpo de aceleración y haz ajuste básico en canal 060."
+  },
+  {
+    "marca": "FREIGHTLINER",
+    "modelo": "CASCADIA M2",
+    "sistema": "SAM CAB",
+    "componente": "DISTRIBUCION ENERGIA",
+    "pin": "B1_A (IGN), C2_F (GND)",
+    "color": "Gris/Rojo",
+    "ruta_origen": "MODULO SAM CAB",
+    "ruta_destino": "ACCESORIOS CABINA",
+    "prueba": "CONTINUIDAD CONECTORES",
+    "tip_pro": "Si fallan limpiaparabrisas o luces, los conectores de la SAM CAB suelen aflojarse con la vibración."
+  },
+  {
+    "marca": "INTERNATIONAL",
+    "modelo": "4300 DT466E",
+    "sistema": "ECM MAXXFORCE",
+    "componente": "SENSOR ICP / VALVULA IPR",
+    "pin": "X2_15 (IAT), X3_10 (INJ1)",
+    "color": "Rojo/Azul",
+    "ruta_origen": "LINEA DE ACEITE ALTA",
+    "ruta_destino": "ECM PLASTICO",
+    "prueba": "DESCONECTAR ICP",
+    "tip_pro": "Si no arranca, desconecta el ICP; si arranca con valor sustituto, el sensor está dañado."
+  },
+  [
+  {
+    "marca": "CHEVROLET",
+    "modelo": "S10 1989",
+    "sistema": "SWITCH IGNICION",
+    "componente": "PASTILLA DE ENCENDIDO",
+    "pin": "ROSA (IGN), MORADO (START)",
+    "color": "Rosa, Morado, Café, Rojo",
+    "ruta_origen": "BATERIA DIRECTO",
+    "ruta_destino": "TABLERO Y MARCHA",
+    "prueba": "12V EN POSICION ON",
+    "tip_pro": "Si el rosa no tiene corriente, la pastilla está quemada."
+  },
+  {
+    "marca": "NISSAN",
+    "modelo": "D21 2002",
+    "sistema": "FUSILERA / ECU",
+    "componente": "ALIMENTACION PRINCIPAL",
+    "pin": "PIN 1, PIN 2, PIN 5",
+    "color": "Blanco, Rojo/Blanco",
+    "ruta_origen": "FUSIBLE 10A CABINA",
+    "ruta_destino": "ECU / BOMBA",
+    "prueba": "12V CON SWITCH",
+    "tip_pro": "Checa el fusible de 10A en cabina para la señal IGN."
+  },
+  {
+    "marca": "FORD",
+    "modelo": "F-150 / RANGER (97-03)",
+    "sistema": "GEM / ECU 104 PINES",
+    "componente": "PCM ALIMENTACION",
+    "pin": "PIN 24, PIN 25, PIN 91",
+    "color": "Blanco/Azul, Negro/Naranja",
+    "ruta_origen": "FUSIBLE 21 COFRE (20A)",
+    "ruta_destino": "PCM / SENSORES",
+    "prueba": "5V REF EN PIN 91",
+    "tip_pro": "Si no hay comunicación, checa el fusible 21 del cofre (20A)."
+  },
+  {
+    "marca": "CHRYSLER",
+    "modelo": "VOYAGER / RAM (96-00)",
+    "sistema": "PCM",
+    "componente": "CONTROL DE RELEVADOR ASD",
+    "pin": "A11, A12, A20, C3",
+    "color": "Rojo/Blanco, Negro/Blanco",
+    "ruta_origen": "RELEVADOR ASD",
+    "ruta_destino": "BOBINA / SENSORES",
+    "prueba": "TIERRA EN PIN A12",
+    "tip_pro": "Falla común: El relevador ASD se corta si el sensor de cigüeñal está en corto."
+  },
+  {
+    "marca": "DODGE",
+    "modelo": "NEON / STRATUS (01-05)",
+    "sistema": "PCM 4 CONECTORES",
+    "componente": "INYECTOR 1 / ALIMENTACION",
+    "pin": "C1_PIN_1 (B+), C2_PIN_32 (INJ)",
+    "color": "Rojo/Verde, Café/Amarillo",
+    "ruta_origen": "CONECTOR VERDE C1",
+    "ruta_destino": "PCM / INYECTORES",
+    "prueba": "12V CONSTANTE EN C1_PIN_1",
+    "tip_pro": "Checa el conector C1 si tienes fallas de alimentación total."
+  },
+  {
+    "marca": "TOYOTA",
+    "modelo": "HILUX / TACOMA 2.7L (05-15)",
+    "sistema": "ECU 1TR-FE",
+    "componente": "SENSOR CKP",
+    "pin": "NE+ (Negro), NE- (Blanco)",
+    "color": "Negro, Blanco",
+    "ruta_origen": "BOMBA DE ACEITE",
+    "ruta_destino": "ECU MOTOR",
+    "prueba": "SEÑAL AC EN MARCHA",
+    "tip_pro": "Si no hay pulso, checa el relé EFI en la caja del cofre."
+  },
+  {
+    "marca": "HONDA",
+    "modelo": "CIVIC 1.7L (01-05)",
+    "sistema": "PCM 4 CONECTORES",
+    "componente": "BOMBA GASOLINA / IGN",
+    "pin": "A15 (IGN), C18 (BOMBA)",
+    "color": "Amarillo/Negro, Verde/Amarillo",
+    "ruta_origen": "PCM BAJO TABLERO",
+    "ruta_destino": "BOMBA / RELÉ",
+    "prueba": "TIERRA EN C18 AL ABRIR SWITCH",
+    "tip_pro": "Ojo con el sensor CKP detrás de la polea; si le cae aceite se corta."
+  },
+  {
+    "marca": "MAZDA",
+    "modelo": "MAZDA 3 (04-09)",
+    "sistema": "PCM",
+    "componente": "CONTROL ALTERNADOR",
+    "pin": "PIN 23",
+    "color": "Blanco/Verde",
+    "ruta_origen": "PCM",
+    "ruta_destino": "REGULADOR ALTERNADOR",
+    "prueba": "SEÑAL PWM 5V",
+    "tip_pro": "El alternador es controlado por ECU. Si no carga, checa el cable antes de bajarlo."
+  },
+  {
+    "marca": "NISSAN",
+    "modelo": "NP300 DIESEL (YD25)",
+    "sistema": "ECM DENSO",
+    "componente": "SENSOR PRESION RIEL (FRP)",
+    "pin": "PIN 41",
+    "color": "Blanco",
+    "ruta_origen": "RIEL DE COMBUSTIBLE",
+    "ruta_destino": "ECM",
+    "prueba": "1.3V A 1.7V EN RALENTI",
+    "tip_pro": "Si no arranca y marca FRP, checa el conector del riel; suele derretirse."
+  },
+  {
+    "marca": "MITSUBISHI",
+    "modelo": "L200 DIESEL (06-14)",
+    "sistema": "ECM 4D56",
+    "componente": "VALVULA SCV",
+    "pin": "C_112",
+    "color": "Azul/Rojo",
+    "ruta_origen": "BOMBA DE ALTA",
+    "ruta_destino": "ECM",
+    "prueba": "2.1 - 2.4 OHMS",
+    "tip_pro": "Si el ralentí es inestable (P0089), limpia la SCV antes de cambiarla."
+  },
+  {
+    "marca": "ISUZU",
+    "modelo": "ELF 400/500 (4HK1)",
+    "sistema": "ECM AZUL/GRIS",
+    "componente": "SENSORES CKP / CMP",
+    "pin": "121 (CKP), 122 (CMP)",
+    "color": "Varios",
+    "ruta_origen": "ARNES TRANSMISION",
+    "ruta_destino": "ECM",
+    "prueba": "SEÑAL DIGITAL 5V",
+    "tip_pro": "Si pierde potencia, checa el arnés sobre la caja; suele rozar con la lámina."
+  },
+  {
+    "marca": "CUMMINS",
+    "modelo": "ISX (CM871)",
+    "sistema": "ECM MOTOR",
+    "componente": "CAN BUS / ALIMENTACION",
+    "pin": "01 (B+), 20 (GND), 43/44 (CAN)",
+    "color": "Rojo, Negro, Amarillo, Verde",
+    "ruta_origen": "CAJA BATERIAS",
+    "ruta_destino": "ECM",
+    "prueba": "60 OHMS ENTRE 43 Y 44",
+    "tip_pro": "Si no hay comunicación, checa el fusible de 30A en la caja de baterías."
+  },
+  {
+    "marca": "VW",
+    "modelo": "JETTA A4 2.0L",
+    "sistema": "BOSCH ME7.5",
+    "componente": "CUERPO ACELERACION",
+    "pin": "75 (CAN H), 25 (MAF)",
+    "color": "Varios",
+    "ruta_origen": "PCM",
+    "ruta_destino": "COMPONENTES",
+    "prueba": "ADAPTACION CANAL 060",
+    "tip_pro": "Si marca EPC, limpia el cuerpo y haz ajuste básico con VAG-COM."
+  },
+  {
+    "marca": "NISSAN",
+    "modelo": "TSURU B13",
+    "sistema": "HITACHI ECCS",
+    "componente": "SENSOR OPTICO / PINOUT",
+    "pin": "22 (180), 31 (1), 38 (B+)",
+    "color": "Blanco/Negro, Amarillo/Verde",
+    "ruta_origen": "DISTRIBUIDOR",
+    "ruta_destino": "ECU",
+    "prueba": "5V PULSANTE EN PIN 22",
+     "tip_pro": "Si no hay señal en Pin 22, no hay pulsos de inyección."
+   },
+[
+  { "marca": "CHEVROLET", "modelo": "S10 1989", "sistema": "IGNICION", "componente": "PASTILLA", "pin": "ROSA", "prueba": "12V ON", "tip_pro": "Si el rosa falla, la pastilla está quemada." },
+  { "marca": "NISSAN", "modelo": "D21 2002", "sistema": "ECU", "componente": "ALIMENTACION", "pin": "1, 2, 5", "prueba": "12V", "tip_pro": "Checa fusible 10A en cabina." },
+  { "marca": "FORD", "modelo": "F-150 97-03", "sistema": "PCM", "componente": "ALIMENTACION", "pin": "24, 25, 91", "prueba": "5V REF", "tip_pro": "Fusible 21 cofre (20A)." },
+  { "marca": "CHRYSLER", "modelo": "VOYAGER 96-00", "sistema": "PCM", "componente": "ASD RELAY", "pin": "A11, A12", "prueba": "TIERRA A12", "tip_pro": "ASD se corta si el CKP está en corto." },
+  { "marca": "DODGE", "modelo": "NEON 01-05", "sistema": "PCM", "componente": "C1 VERDE", "pin": "PIN 1", "prueba": "12V", "tip_pro": "Fallas de alimentación total en C1." },
+  { "marca": "TOYOTA", "modelo": "HILUX 05-15", "sistema": "1TR-FE", "componente": "CKP", "pin": "NE+/NE-", "prueba": "AC VOLTS", "tip_pro": "Si no hay pulso, checa relé EFI." },
+  { "marca": "HONDA", "modelo": "CIVIC 01-05", "sistema": "PCM", "componente": "CKP", "pin": "A15, C18", "prueba": "TIERRA C18", "tip_pro": "Sensor tras polea se llena de aceite." },
+  { "marca": "MAZDA", "modelo": "MAZDA 3 04-09", "sistema": "PCM", "componente": "ALT CTRL", "pin": "23", "prueba": "PWM 5V", "tip_pro": "Alternador controlado por ECU." },
+  { "marca": "NISSAN", "modelo": "NP300 YD25", "sistema": "DIESEL", "componente": "FRP RIEL", "pin": "41", "prueba": "1.3V-1.7V", "tip_pro": "Conector del riel se derrite." },
+  { "marca": "MITSUBISHI", "modelo": "L200 4D56", "sistema": "DIESEL", "componente": "SCV", "pin": "C112", "prueba": "2.1-2.4 OHMS", "tip_pro": "Limpiar SCV si P0089." },
+  { "marca": "ISUZU", "modelo": "ELF 400/500", "sistema": "4HK1", "componente": "CKP/CMP", "pin": "121/122", "prueba": "5V DIGITAL", "tip_pro": "Arnés roza en transmisión." },
+  { "marca": "CUMMINS", "modelo": "ISX CM871", "sistema": "ECM", "componente": "CAN BUS", "pin": "43/44", "prueba": "60 OHMS", "tip_pro": "Fusible 30A en baterías sulfatado." },
+  { "marca": "VW", "modelo": "JETTA A4 2.0", "sistema": "ME7.5", "componente": "EPC", "pin": "75/25", "prueba": "ADAPT 060", "tip_pro": "Limpiar cuerpo antes de adaptar." },
+  { "marca": "NISSAN", "modelo": "TSURU B13", "sistema": "ECCS", "componente": "OPTICO", "pin": "22/31", "prueba": "5V PULSE", "tip_pro": "Aceite ensucia sensor en distribuidor." },
+  { "marca": "NISSAN", "modelo": "SENTRA B14", "sistema": "NATS", "componente": "INMOVILIZADOR", "pin": "8/9", "prueba": "5V", "tip_pro": "Antena NATS bloquea inyectores." },
+  { "marca": "NISSAN", "modelo": "SENTRA B15 1.8", "sistema": "QG18", "componente": "IAC", "pin": "111", "prueba": "RESISTENCIA", "tip_pro": "IAC en corto quema driver de ECU." },
+  { "marca": "NISSAN", "modelo": "SENTRA B15 2.5", "sistema": "QR25", "componente": "ECM 112 PINES", "pin": "67/106", "prueba": "12V/0V", "tip_pro": "Mariposa electrónica falla mucho." },
+  { "marca": "NISSAN", "modelo": "ALTIMA L31", "sistema": "QR25", "componente": "APP PEDAL", "pin": "VARIOS", "prueba": "VOLTAJE", "tip_pro": "Pines del pedal se abren." },
+  { "marca": "NISSAN", "modelo": "ALTIMA L32", "sistema": "IPDM", "componente": "RELES", "pin": "CAN H/L", "prueba": "COMUNICACION", "tip_pro": "IPDM se sulfata por batería." },
+  { "marca": "NISSAN", "modelo": "KICKS P15", "sistema": "EPS", "componente": "DIRECCION", "pin": "46/47", "prueba": "CAN BUS", "tip_pro": "Falla EPS por batería baja." },
+  { "marca": "NISSAN", "modelo": "FRONTIER D22", "sistema": "KA24/VG33", "componente": "MAF", "pin": "5 PINES", "prueba": "1.0-1.7V", "tip_pro": "Falsos contactos en arnés MAF." },
+  { "marca": "CHEVROLET", "modelo": "SILVERADO 14-19", "sistema": "E83", "componente": "G102 GND", "pin": "X1/X2", "prueba": "TIERRA", "tip_pro": "Limpia poste G102 por códigos U." },
+  { "marca": "FORD", "modelo": "MUSTANG 15-20", "sistema": "COYOTE", "componente": "LIMP MODE", "pin": "A12", "prueba": "VOLTAJE", "tip_pro": "Conector cuerpo aceleración falsea." },
+  { "marca": "JEEP", "modelo": "GRAND CHEROKEE", "sistema": "PENTASTAR", "componente": "MISFIRE", "pin": "C2-33", "prueba": "PULSO", "tip_pro": "Arnés roza base filtro aceite." },
+  { "marca": "INTERNATIONAL", "modelo": "4300 DT466", "sistema": "IPR/ICP", "componente": "IPR", "pin": "X3-10", "prueba": "DESCO ICP", "tip_pro": "Si arranca sin ICP, sensor está mal." },
+  { "marca": "HINO", "modelo": "300/500", "sistema": "DENSO", "componente": "TPS PEDAL", "pin": "E10", "prueba": "0.5-4.5V", "tip_pro": "Cable se troza en base del pedal." },
+  { "marca": "RAM", "modelo": "CUMMINS 6.7", "sistema": "VGT", "componente": "TURBO", "pin": "14", "prueba": "PWM", "tip_pro": "Cable del VGT se tuesta por calor." },
+  { "marca": "FORD", "modelo": "POWERSTROKE 6.7", "sistema": "EGT", "componente": "ESCAPE", "pin": "C2-55", "prueba": "TEMP", "tip_pro": "EGT 12/13 bloquean arranque." },
+  { "marca": "CHEVROLET", "modelo": "AVEO 08-17", "sistema": "SIRIUS D42", "componente": "RELÉ BOMBA", "pin": "30 (ROSA)", "prueba": "12V", "tip_pro": "Pin 30 sin corriente = coche muerto." },
+  { "marca": "MERCEDES", "modelo": "SPRINTER", "sistema": "EDC16/17", "componente": "TURBO PRES", "pin": "15", "prueba": "0.5-4.5V", "tip_pro": "Carbonilla tapa sensor de turbo." },
+  { "marca": "FORD", "modelo": "TRANSIT 2.2", "sistema": "DIESEL", "componente": "CKP", "pin": "C5", "prueba": "PULSO", "tip_pro": "Vibración corta cable CKP en filtro." },
+  { "marca": "VW", "modelo": "JETTA 1.4T", "sistema": "WASTEGATE", "componente": "TURBO", "pin": "60", "prueba": "AJUSTE", "tip_pro": "Lubrica varilla de wastegate." },
+  { "marca": "HYUNDAI/KIA", "modelo": "TUCSON/SPORTAGE", "sistema": "GDI", "componente": "INJECTOR", "pin": "78/79", "prueba": "100V", "tip_pro": "No usar lámpara de prueba en GDI." }
+  ] 
+ ]
+]  
